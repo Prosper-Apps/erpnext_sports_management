@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-09-22 15:42:37.225471",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "country",
+  "sports_type",
+  "info",
+  "column_break_hvczy",
+  "age_from",
+  "age_to",
+  "deadline",
+  "picture",
+  "section_break_fkkbq",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type",
+   "options": "Sports Type"
+  },
+  {
+   "fieldname": "age_from",
+   "fieldtype": "Int",
+   "label": "Age from"
+  },
+  {
+   "fieldname": "age_to",
+   "fieldtype": "Int",
+   "label": "Age to"
+  },
+  {
+   "fieldname": "info",
+   "fieldtype": "Data",
+   "label": "Info"
+  },
+  {
+   "fieldname": "deadline",
+   "fieldtype": "Date",
+   "label": "Deadline"
+  },
+  {
+   "fieldname": "column_break_hvczy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "section_break_fkkbq",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-22 17:26:22.744507",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Age Group",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
