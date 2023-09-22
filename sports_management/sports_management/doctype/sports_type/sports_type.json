@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-09-22 14:40:42.033441",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sport",
+  "time_entry_in_events",
+  "picture"
+ ],
+ "fields": [
+  {
+   "default": "Team",
+   "fieldname": "sport",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sport",
+   "options": "Team\nIndividual Sports",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "time_entry_in_events",
+   "fieldtype": "Check",
+   "label": "Time entry in events?"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-22 14:44:29.210159",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Sports Type",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
