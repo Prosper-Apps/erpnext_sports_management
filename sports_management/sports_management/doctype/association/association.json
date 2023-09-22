@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-09-22 17:35:41.918626",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "medium_length_name",
+  "short_name",
+  "sports_type",
+  "website",
+  "club_foundation",
+  "year_of_foundation",
+  "club_dissolved",
+  "year_resolution",
+  "picture_tab",
+  "flag",
+  "picture",
+  "map_with_flag",
+  "copyright_of_the_image",
+  "description_tab",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "medium_length_name",
+   "fieldtype": "Data",
+   "label": "Medium length name"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Short name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type",
+   "options": "Sports Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "club_foundation",
+   "fieldtype": "Date",
+   "label": "Club foundation"
+  },
+  {
+   "fieldname": "year_of_foundation",
+   "fieldtype": "Int",
+   "label": "year of foundation"
+  },
+  {
+   "fieldname": "club_dissolved",
+   "fieldtype": "Date",
+   "label": "Club dissolved"
+  },
+  {
+   "fieldname": "year_resolution",
+   "fieldtype": "Int",
+   "label": "year resolution"
+  },
+  {
+   "fieldname": "picture_tab",
+   "fieldtype": "Tab Break",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "flag",
+   "fieldtype": "Attach Image",
+   "label": "Flag"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "map_with_flag",
+   "fieldtype": "Attach Image",
+   "label": "Map with flag"
+  },
+  {
+   "fieldname": "copyright_of_the_image",
+   "fieldtype": "Data",
+   "label": "Copyright of the image"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-22 17:37:25.882639",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Association",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

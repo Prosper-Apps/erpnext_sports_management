@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"A2MV0-1Qim\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sports Type\",\"col\":3}},{\"id\":\"WcYWZKxZFF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Age Group\",\"col\":3}}]",
+ "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"A2MV0-1Qim\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sports Type\",\"col\":3}},{\"id\":\"WcYWZKxZFF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Age Group\",\"col\":3}},{\"id\":\"aBo4Inx_Lf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Association\",\"col\":3}}]",
  "creation": "2023-09-22 14:34:51.711343",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Sports Management",
  "links": [],
- "modified": "2023-09-22 17:29:17.195299",
+ "modified": "2023-09-22 17:38:18.011221",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
@@ -24,6 +24,13 @@
  "roles": [],
  "sequence_id": 24.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Association",
+   "link_to": "Association",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
