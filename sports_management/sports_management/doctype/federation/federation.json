@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2023-09-22 17:35:41.918626",
+ "creation": "2023-09-22 17:42:33.013301",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -13,7 +13,7 @@
   "short_name",
   "sports_type",
   "website",
-  "column_break_ej0bg",
+  "column_break_tydeh",
   "club_foundation",
   "year_of_foundation",
   "club_dissolved",
@@ -112,16 +112,16 @@
    "label": "Description"
   },
   {
-   "fieldname": "column_break_ej0bg",
+   "fieldname": "column_break_tydeh",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 17:43:18.034507",
+ "modified": "2023-09-22 17:43:05.576552",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Association",
+ "name": "Federation",
  "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
