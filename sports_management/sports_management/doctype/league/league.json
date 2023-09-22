@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-09-22 17:50:54.551719",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "middle_name",
+  "short_name",
+  "website",
+  "country",
+  "league_level",
+  "column_break_hhuqu",
+  "date_of_first_delivery",
+  "year_of_first_delivery",
+  "league_end_date",
+  "end_of_the_league_year",
+  "are_all_champions_present_in_the_league",
+  "assign_current_season",
+  "status",
+  "general_requirements_tab",
+  "sports_type",
+  "age_group",
+  "pictures_tab",
+  "league_image",
+  "copyright_of_the_image",
+  "description_tab",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle name"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Short name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "league_level",
+   "fieldtype": "Select",
+   "label": "League level",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20"
+  },
+  {
+   "fieldname": "column_break_hhuqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_first_delivery",
+   "fieldtype": "Date",
+   "label": "Date of first delivery"
+  },
+  {
+   "fieldname": "year_of_first_delivery",
+   "fieldtype": "Int",
+   "label": "Year of first delivery"
+  },
+  {
+   "fieldname": "league_end_date",
+   "fieldtype": "Date",
+   "label": "League end date"
+  },
+  {
+   "fieldname": "end_of_the_league_year",
+   "fieldtype": "Int",
+   "label": "End of the league year"
+  },
+  {
+   "default": "0",
+   "fieldname": "are_all_champions_present_in_the_league",
+   "fieldtype": "Check",
+   "label": "Are all champions present in the league?"
+  },
+  {
+   "default": "0",
+   "fieldname": "assign_current_season",
+   "fieldtype": "Check",
+   "label": "Assign current season"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Status"
+  },
+  {
+   "fieldname": "general_requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "General requirements"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type",
+   "options": "Sports Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pictures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pictures"
+  },
+  {
+   "fieldname": "league_image",
+   "fieldtype": "Attach Image",
+   "label": "League image"
+  },
+  {
+   "fieldname": "copyright_of_the_image",
+   "fieldtype": "Data",
+   "label": "Copyright of the image"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Table",
+   "label": "Age Group",
+   "options": "League Age Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-22 18:04:35.488736",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "League",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
