@@ -64,7 +64,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "sports_management.install.before_install"
-# after_install = "sports_management.install.after_install"
+after_install = "sports_management.setup.install.after_install"
 
 # Uninstallation
 # ------------
