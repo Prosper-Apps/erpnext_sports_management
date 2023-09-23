@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Sports Management",
  "links": [],
- "modified": "2023-09-23 09:06:10.621741",
+ "modified": "2023-09-23 14:32:00.030269",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
@@ -34,13 +34,6 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Game Day",
-   "link_to": "Game Day",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
    "label": "Federation",
    "link_to": "Federation",
    "type": "DocType"
@@ -53,6 +46,15 @@
    "type": "DocType"
   },
   {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Enabled",
+   "label": "Match",
+   "link_to": "Match",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
    "color": "Grey",
    "doc_view": "List",
    "label": "Sports Type",
@@ -60,17 +62,28 @@
    "type": "DocType"
   },
   {
-   "color": "Grey",
+   "color": "Blue",
    "doc_view": "List",
-   "label": "Team",
-   "link_to": "Team",
+   "format": "{} Enabled",
+   "label": "Game Day",
+   "link_to": "Game Day",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Enabled",
+   "label": "Tournament",
+   "link_to": "Tournament",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
    "type": "DocType"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Match",
-   "link_to": "Match",
+   "label": "Team",
+   "link_to": "Team",
    "type": "DocType"
   },
   {
@@ -92,13 +105,6 @@
    "doc_view": "List",
    "label": "Person",
    "link_to": "Person",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Tournament",
-   "link_to": "Tournament",
    "type": "DocType"
   },
   {

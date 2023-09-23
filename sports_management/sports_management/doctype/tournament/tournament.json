@@ -25,7 +25,6 @@
   "age_group",
   "section_break_ofzwl",
   "teams",
-  "use_league_champion",
   "description_tab",
   "description",
   "competition_tab",
@@ -42,7 +41,7 @@
   "schedule_type",
   "time_for_games",
   "column_break_btx5u",
-  "interval",
+  "game_day_interval",
   "starting_day"
  ],
  "fields": [
@@ -128,12 +127,6 @@
    "fieldtype": "Table",
    "label": "Teams",
    "options": "Tournament Team"
-  },
-  {
-   "default": "0",
-   "fieldname": "use_league_champion",
-   "fieldtype": "Check",
-   "label": "Use League Champion"
   },
   {
    "fieldname": "description_tab",
@@ -222,12 +215,6 @@
    "label": "Time for Games"
   },
   {
-   "default": "7",
-   "fieldname": "interval",
-   "fieldtype": "Int",
-   "label": "Game day interval (days)"
-  },
-  {
    "fieldname": "starting_day",
    "fieldtype": "Date",
    "label": "Starting day"
@@ -254,11 +241,22 @@
    "fieldname": "live_update",
    "fieldtype": "Check",
    "label": "Live Update"
+  },
+  {
+   "default": "7",
+   "fieldname": "game_day_interval",
+   "fieldtype": "Int",
+   "label": "Game day interval (days)"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-09-23 09:44:10.120368",
+ "links": [
+  {
+   "link_doctype": "Game Day",
+   "link_fieldname": "tournament"
+  }
+ ],
+ "modified": "2023-09-23 14:27:51.985102",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
