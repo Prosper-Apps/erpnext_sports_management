@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-09-23 06:42:54.934809",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "contact",
+  "user",
+  "address",
+  "status",
+  "birthday",
+  "death_day",
+  "height",
+  "weight",
+  "national_id",
+  "section_break_3f1pf",
+  "association",
+  "general_requirements_tab",
+  "sports_type",
+  "person",
+  "age_group",
+  "type",
+  "description_tab",
+  "description",
+  "seasons_tab",
+  "seasons",
+  "status_tab",
+  "injury",
+  "suspension",
+  "absence",
+  "pictures_tab",
+  "picture",
+  "copyright_of_the_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "birthday",
+   "fieldtype": "Date",
+   "label": "Birthday"
+  },
+  {
+   "fieldname": "death_day",
+   "fieldtype": "Date",
+   "label": "Death day"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID/Passport"
+  },
+  {
+   "fieldname": "section_break_3f1pf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "association",
+   "fieldtype": "Table",
+   "label": "Association",
+   "options": "Person Association"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "general_requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "General Requirements"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sports Type",
+   "options": "Sports Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "person",
+   "fieldtype": "Table",
+   "label": "Person",
+   "options": "Person Position"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Table",
+   "label": "Age Group",
+   "options": "Person Age Group"
+  },
+  {
+   "default": "Single",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Single\nDouble"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "seasons_tab",
+   "fieldtype": "Tab Break",
+   "label": "Seasons"
+  },
+  {
+   "fieldname": "seasons",
+   "fieldtype": "Table",
+   "label": "Participating Seasons",
+   "options": "Person Season"
+  },
+  {
+   "fieldname": "status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "injury",
+   "fieldtype": "Check",
+   "label": "Injury"
+  },
+  {
+   "default": "0",
+   "fieldname": "suspension",
+   "fieldtype": "Check",
+   "label": "Suspension"
+  },
+  {
+   "default": "0",
+   "fieldname": "absence",
+   "fieldtype": "Check",
+   "label": "Absence"
+  },
+  {
+   "fieldname": "pictures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pictures"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "copyright_of_the_image",
+   "fieldtype": "Data",
+   "label": "Copyright of the image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-23 06:59:11.809598",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Person",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
