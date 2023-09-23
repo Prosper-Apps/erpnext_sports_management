@@ -67,8 +67,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Club",
-   "options": "Club",
-   "reqd": 1
+   "options": "Club"
   },
   {
    "fieldname": "age_group",
@@ -139,7 +138,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 06:36:43.718715",
+ "modified": "2023-09-23 09:30:27.069164",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",

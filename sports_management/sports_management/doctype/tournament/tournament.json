@@ -9,18 +9,18 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "status",
+  "sports_type",
   "league",
   "season",
   "type",
   "column_break_hxzug",
   "project_art",
-  "project_live_update",
+  "administrator",
+  "editor",
+  "live_update",
   "national",
   "result_release",
-  "adminstrator",
-  "editor",
-  "sports_type",
+  "disabled",
   "section_break_jjbnz",
   "age_group",
   "section_break_ofzwl",
@@ -28,9 +28,6 @@
   "use_league_champion",
   "description_tab",
   "description",
-  "dates_tab",
-  "start_date",
-  "match_start_time",
   "competition_tab",
   "regular_play_time",
   "number_of_playing_halves",
@@ -44,6 +41,7 @@
   "round_robin_tab",
   "schedule_type",
   "time_for_games",
+  "column_break_btx5u",
   "interval",
   "starting_day"
  ],
@@ -52,12 +50,6 @@
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "default": "0",
-   "fieldname": "status",
-   "fieldtype": "Check",
-   "label": "Enabled"
   },
   {
    "fieldname": "league",
@@ -93,12 +85,6 @@
   },
   {
    "default": "0",
-   "fieldname": "project_live_update",
-   "fieldtype": "Check",
-   "label": "Project Live Update"
-  },
-  {
-   "default": "0",
    "fieldname": "national",
    "fieldtype": "Check",
    "label": "National"
@@ -108,13 +94,6 @@
    "fieldname": "result_release",
    "fieldtype": "Check",
    "label": "Result release"
-  },
-  {
-   "fieldname": "adminstrator",
-   "fieldtype": "Link",
-   "label": "Adminstrator",
-   "options": "User",
-   "reqd": 1
   },
   {
    "fieldname": "editor",
@@ -165,21 +144,6 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
-  },
-  {
-   "fieldname": "dates_tab",
-   "fieldtype": "Tab Break",
-   "label": "Dates"
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "match_start_time",
-   "fieldtype": "Time",
-   "label": "Match Start Time"
   },
   {
    "fieldname": "competition_tab",
@@ -267,11 +231,34 @@
    "fieldname": "starting_day",
    "fieldtype": "Date",
    "label": "Starting day"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "administrator",
+   "fieldtype": "Link",
+   "label": "Administrator",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_btx5u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "live_update",
+   "fieldtype": "Check",
+   "label": "Live Update"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 09:08:17.188700",
+ "modified": "2023-09-23 09:44:10.120368",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",

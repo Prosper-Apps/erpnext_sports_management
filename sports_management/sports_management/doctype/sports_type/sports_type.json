@@ -9,7 +9,6 @@
  "engine": "InnoDB",
  "field_order": [
   "sport",
-  "time_entry_in_events",
   "picture"
  ],
  "fields": [
@@ -24,12 +23,6 @@
    "reqd": 1
   },
   {
-   "default": "1",
-   "fieldname": "time_entry_in_events",
-   "fieldtype": "Check",
-   "label": "Time entry in events?"
-  },
-  {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
    "label": "Picture"
@@ -37,7 +30,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 15:18:16.562799",
+ "modified": "2023-09-23 09:22:50.794758",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Type",

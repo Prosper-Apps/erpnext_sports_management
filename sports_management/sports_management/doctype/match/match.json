@@ -11,10 +11,13 @@
   "details_tab",
   "naming_series",
   "home",
+  "column_break_kw41f",
+  "guest",
+  "section_break_dnckx",
+  "game_day",
   "date",
   "time",
   "column_break_yovge",
-  "guest",
   "venue",
   "spectators",
   "status",
@@ -66,11 +69,14 @@
   {
    "fieldname": "time",
    "fieldtype": "Time",
-   "label": "Time"
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
   },
   {
    "fieldname": "venue",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Venue",
    "options": "Venue"
   },
@@ -89,6 +95,7 @@
   {
    "fieldname": "home",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Home",
    "options": "Team",
    "reqd": 1
@@ -96,6 +103,7 @@
   {
    "fieldname": "guest",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Guest",
    "options": "Team",
    "reqd": 1
@@ -268,11 +276,25 @@
    "fieldtype": "Select",
    "label": "Field Condition",
    "options": "Normal\nDry\nWet\nSnow"
+  },
+  {
+   "fieldname": "game_day",
+   "fieldtype": "Link",
+   "label": "Game Day",
+   "options": "Game Day"
+  },
+  {
+   "fieldname": "column_break_kw41f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dnckx",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 08:38:28.745177",
+ "modified": "2023-09-23 09:51:38.807567",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",

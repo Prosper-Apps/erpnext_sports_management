@@ -8,6 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "details_tab",
   "country",
   "sports_type",
   "info",
@@ -15,8 +16,9 @@
   "age_from",
   "age_to",
   "deadline",
+  "pictures_tab",
   "picture",
-  "section_break_fkkbq",
+  "description_tab",
   "description"
  ],
  "fields": [
@@ -67,13 +69,24 @@
    "label": "Picture"
   },
   {
-   "fieldname": "section_break_fkkbq",
-   "fieldtype": "Section Break"
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "pictures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pictures"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 18:01:15.108415",
+ "modified": "2023-09-23 09:25:06.221996",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",

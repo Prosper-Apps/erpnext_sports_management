@@ -12,19 +12,19 @@
   "contact",
   "user",
   "address",
-  "status",
   "birthday",
+  "column_break_dyyce",
   "death_day",
   "height",
   "weight",
   "national_id",
+  "disabled",
   "section_break_3f1pf",
   "association",
-  "general_requirements_tab",
+  "requirements_tab",
   "sports_type",
   "person",
   "age_group",
-  "type",
   "description_tab",
   "description",
   "seasons_tab",
@@ -55,12 +55,6 @@
    "fieldtype": "Link",
    "label": "Address",
    "options": "Address"
-  },
-  {
-   "default": "0",
-   "fieldname": "status",
-   "fieldtype": "Check",
-   "label": "Enabled"
   },
   {
    "fieldname": "birthday",
@@ -103,11 +97,6 @@
    "label": "Details"
   },
   {
-   "fieldname": "general_requirements_tab",
-   "fieldtype": "Tab Break",
-   "label": "General Requirements"
-  },
-  {
    "fieldname": "sports_type",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -126,13 +115,6 @@
    "fieldtype": "Table",
    "label": "Age Group",
    "options": "Person Age Group"
-  },
-  {
-   "default": "Single",
-   "fieldname": "type",
-   "fieldtype": "Select",
-   "label": "Type",
-   "options": "Single\nDouble"
   },
   {
    "fieldname": "description_tab",
@@ -192,11 +174,26 @@
    "fieldname": "copyright_of_the_image",
    "fieldtype": "Data",
    "label": "Copyright of the image"
+  },
+  {
+   "fieldname": "column_break_dyyce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "Requirements"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 06:59:11.809598",
+ "modified": "2023-09-23 09:37:47.924617",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",

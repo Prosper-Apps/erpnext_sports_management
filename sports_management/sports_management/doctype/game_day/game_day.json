@@ -11,8 +11,9 @@
   "details_tab",
   "naming_series",
   "start",
+  "tournament",
+  "column_break_nlusw",
   "end",
-  "tournament_round",
   "picture_tab",
   "picture",
   "copyright_of_the_image"
@@ -33,6 +34,7 @@
   {
    "fieldname": "start",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Start"
   },
   {
@@ -56,15 +58,21 @@
    "label": "Copyright of the image"
   },
   {
-   "default": "0",
-   "fieldname": "tournament_round",
-   "fieldtype": "Check",
-   "label": "Tournament Round"
+   "fieldname": "tournament",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tournament",
+   "options": "Tournament"
+  },
+  {
+   "fieldname": "column_break_nlusw",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 08:26:30.731021",
+ "modified": "2023-09-23 09:47:33.011714",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",

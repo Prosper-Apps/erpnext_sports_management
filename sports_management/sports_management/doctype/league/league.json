@@ -9,20 +9,14 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "middle_name",
   "short_name",
   "website",
   "country",
-  "league_level",
   "column_break_hhuqu",
+  "league_level",
   "date_of_first_delivery",
-  "year_of_first_delivery",
   "league_end_date",
-  "end_of_the_league_year",
-  "are_all_champions_present_in_the_league",
-  "assign_current_season",
-  "status",
-  "general_requirements_tab",
+  "requirements_tab",
   "sports_type",
   "age_group",
   "pictures_tab",
@@ -36,11 +30,6 @@
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "fieldname": "middle_name",
-   "fieldtype": "Data",
-   "label": "Middle name"
   },
   {
    "fieldname": "short_name",
@@ -77,42 +66,9 @@
    "label": "Date of first delivery"
   },
   {
-   "fieldname": "year_of_first_delivery",
-   "fieldtype": "Int",
-   "label": "Year of first delivery"
-  },
-  {
    "fieldname": "league_end_date",
    "fieldtype": "Date",
    "label": "League end date"
-  },
-  {
-   "fieldname": "end_of_the_league_year",
-   "fieldtype": "Int",
-   "label": "End of the league year"
-  },
-  {
-   "default": "0",
-   "fieldname": "are_all_champions_present_in_the_league",
-   "fieldtype": "Check",
-   "label": "Are all champions present in the league?"
-  },
-  {
-   "default": "0",
-   "fieldname": "assign_current_season",
-   "fieldtype": "Check",
-   "label": "Assign current season"
-  },
-  {
-   "default": "0",
-   "fieldname": "status",
-   "fieldtype": "Check",
-   "label": "Status"
-  },
-  {
-   "fieldname": "general_requirements_tab",
-   "fieldtype": "Tab Break",
-   "label": "General requirements"
   },
   {
    "fieldname": "sports_type",
@@ -151,11 +107,16 @@
    "fieldtype": "Table",
    "label": "Age Group",
    "options": "League Age Group"
+  },
+  {
+   "fieldname": "requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "Requirements"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 06:03:32.622085",
+ "modified": "2023-09-23 09:20:02.592269",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",
