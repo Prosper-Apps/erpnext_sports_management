@@ -1,8 +1,13 @@
 # Copyright (c) 2023, KAINOTOMO PH LTD and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 class Tournament(Document):
+	pass
+
+@frappe.whitelist()
+def create_matches(tournament):
+	# Use the tournament argument in your function
 	pass
