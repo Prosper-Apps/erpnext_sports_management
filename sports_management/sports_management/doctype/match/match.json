@@ -1,0 +1,298 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-09-23 08:13:50.687312",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "naming_series",
+  "home",
+  "date",
+  "time",
+  "column_break_yovge",
+  "guest",
+  "venue",
+  "spectators",
+  "status",
+  "result_tab",
+  "full_time_home_result",
+  "half_time_home_result",
+  "column_break_vdrjs",
+  "full_time_guest_result",
+  "half_time_guest_result",
+  "match_preview_tab",
+  "preview",
+  "match_details_tab",
+  "details",
+  "is_cancel",
+  "reason_of_cancel",
+  "overtime",
+  "alternate_decision",
+  "decision_after_the_match",
+  "reasons_for_the_new_score",
+  "new_score_home",
+  "new_score_guest",
+  "winner",
+  "score_sheet_tab",
+  "show_match_report",
+  "scoresheet",
+  "advanced_tab",
+  "link_to_the_external_match_report",
+  "youtube_video",
+  "tv_broadcast",
+  "weather",
+  "temperature",
+  "field_condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "SPR-MTC-.YYYY.-"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Link",
+   "label": "Venue",
+   "options": "Venue"
+  },
+  {
+   "default": "0",
+   "fieldname": "spectators",
+   "fieldtype": "Int",
+   "label": "Spectators",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "home",
+   "fieldtype": "Link",
+   "label": "Home",
+   "options": "Team",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Team",
+   "reqd": 1
+  },
+  {
+   "fieldname": "result_tab",
+   "fieldtype": "Tab Break",
+   "label": "Result"
+  },
+  {
+   "fieldname": "full_time_home_result",
+   "fieldtype": "Int",
+   "label": "Full Time Home Result",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "half_time_home_result",
+   "fieldtype": "Int",
+   "label": "Half Time Home Result",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_vdrjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_time_guest_result",
+   "fieldtype": "Int",
+   "label": "Full Time Guest Result",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "half_time_guest_result",
+   "fieldtype": "Int",
+   "label": "Half Time Guest Result",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_yovge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "match_preview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Match Preview"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Text Editor",
+   "label": "preview"
+  },
+  {
+   "fieldname": "match_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Match Details"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Heading",
+   "label": "Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_cancel",
+   "fieldtype": "Check",
+   "label": "Cancel / Relocation"
+  },
+  {
+   "fieldname": "reason_of_cancel",
+   "fieldtype": "Data",
+   "label": "Reason of cancel"
+  },
+  {
+   "fieldname": "overtime",
+   "fieldtype": "Int",
+   "label": "Overtime",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "alternate_decision",
+   "fieldtype": "Heading",
+   "label": "Alternate Decision"
+  },
+  {
+   "default": "0",
+   "fieldname": "decision_after_the_match",
+   "fieldtype": "Check",
+   "label": "Decision after the match"
+  },
+  {
+   "fieldname": "reasons_for_the_new_score",
+   "fieldtype": "Small Text",
+   "label": "Reasons for the new Score"
+  },
+  {
+   "fieldname": "new_score_home",
+   "fieldtype": "Int",
+   "label": "New Score Home",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "new_score_guest",
+   "fieldtype": "Int",
+   "label": "New Score Guest",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "winner",
+   "fieldtype": "Select",
+   "label": "Final victory / defeat decision",
+   "options": "None\nHome\nGuest\nBoth lose\nBoth win"
+  },
+  {
+   "fieldname": "score_sheet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Score Sheet"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_match_report",
+   "fieldtype": "Check",
+   "label": "Show match report"
+  },
+  {
+   "fieldname": "scoresheet",
+   "fieldtype": "Text Editor",
+   "label": "Scoresheet"
+  },
+  {
+   "fieldname": "advanced_tab",
+   "fieldtype": "Tab Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "link_to_the_external_match_report",
+   "fieldtype": "Data",
+   "label": "Link to the external match report.",
+   "options": "URL"
+  },
+  {
+   "fieldname": "youtube_video",
+   "fieldtype": "Data",
+   "label": "YouTube Video",
+   "options": "URL"
+  },
+  {
+   "fieldname": "tv_broadcast",
+   "fieldtype": "HTML",
+   "label": "TV broadcast"
+  },
+  {
+   "fieldname": "weather",
+   "fieldtype": "Select",
+   "label": "Weather",
+   "options": "Foggy\nDry\nRainy\nSunny\nWindy\nSnowing"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Int",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "field_condition",
+   "fieldtype": "Select",
+   "label": "Field Condition",
+   "options": "Normal\nDry\nWet\nSnow"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-23 08:38:28.745177",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Match",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
