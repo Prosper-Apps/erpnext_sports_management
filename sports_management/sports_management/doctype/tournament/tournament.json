@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2023-09-23 07:18:46.223516",
+ "creation": "2023-09-23 07:59:16.192765",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -77,6 +77,10 @@
    "options": "Simple League\nDivision League\nTournament Mode\nFriendly Matches"
   },
   {
+   "fieldname": "column_break_hxzug",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "project_art",
    "fieldtype": "Select",
    "label": "Project Art",
@@ -95,18 +99,10 @@
    "label": "National"
   },
   {
-   "fieldname": "column_break_hxzug",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ofzwl",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "teams",
-   "fieldtype": "Table",
-   "label": "Teams",
-   "options": "Sports Project Team"
+   "default": "0",
+   "fieldname": "result_release",
+   "fieldtype": "Check",
+   "label": "Result release"
   },
   {
    "fieldname": "adminstrator",
@@ -123,10 +119,31 @@
    "reqd": 1
   },
   {
-   "default": "0",
-   "fieldname": "result_release",
-   "fieldtype": "Check",
-   "label": "Result release"
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type",
+   "options": "Sports Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jjbnz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Table",
+   "label": "Age Group",
+   "options": "Tournament Age Group"
+  },
+  {
+   "fieldname": "section_break_ofzwl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "teams",
+   "fieldtype": "Table",
+   "label": "Teams",
+   "options": "Tournament Team"
   },
   {
    "default": "0",
@@ -143,23 +160,6 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
-  },
-  {
-   "fieldname": "sports_type",
-   "fieldtype": "Link",
-   "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_jjbnz",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "age_group",
-   "fieldtype": "Table",
-   "label": "Age Group",
-   "options": "Sports Project Age Group"
   },
   {
    "fieldname": "dates_tab",
@@ -197,6 +197,10 @@
    "non_negative": 1
   },
   {
+   "fieldname": "column_break_cmqdi",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "15",
    "fieldname": "lenght_of_break",
    "fieldtype": "Int",
@@ -218,10 +222,6 @@
    "label": "Extra Time"
   },
   {
-   "fieldname": "column_break_cmqdi",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "pictures_tab",
    "fieldtype": "Tab Break",
    "label": "Pictures"
@@ -239,10 +239,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 07:37:06.318362",
+ "modified": "2023-09-23 07:59:16.192765",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Sports Project",
+ "name": "Tournament",
  "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
