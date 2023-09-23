@@ -52,7 +52,8 @@
   {
    "fieldname": "website",
    "fieldtype": "Data",
-   "label": "Website"
+   "label": "Website",
+   "options": "URL"
   },
   {
    "fieldname": "country",
@@ -154,7 +155,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 18:04:35.488736",
+ "modified": "2023-09-23 06:03:32.622085",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",

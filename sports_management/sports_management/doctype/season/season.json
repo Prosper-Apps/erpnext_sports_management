@@ -8,19 +8,19 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "description"
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "description",
-   "fieldtype": "Text Editor",
-   "in_list_view": 1,
-   "label": "Description"
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Enabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 05:47:38.833017",
+ "modified": "2023-09-23 05:48:44.004026",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Season",

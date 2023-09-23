@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2023-09-22 17:42:33.013301",
+ "creation": "2023-09-23 06:29:34.365646",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -11,20 +11,22 @@
   "details_tab",
   "medium_length_name",
   "short_name",
+  "contact",
+  "column_break_uuud3",
   "sports_type",
-  "website",
-  "column_break_tydeh",
-  "club_foundation",
-  "year_of_foundation",
-  "club_dissolved",
-  "year_resolution",
-  "picture_tab",
-  "flag",
-  "picture",
-  "map_with_flag",
-  "copyright_of_the_image",
+  "club",
+  "venue",
+  "section_break_tuepb",
+  "age_group",
+  "seasons",
   "description_tab",
-  "description"
+  "description",
+  "pictures_tab",
+  "picture",
+  "copyright_of_the_image",
+  "advanced_tab",
+  "team_of_the_club_since",
+  "team_of_the_club_to"
  ],
  "fields": [
   {
@@ -35,72 +37,60 @@
   {
    "fieldname": "medium_length_name",
    "fieldtype": "Data",
-   "label": "Medium length name"
+   "label": "Medium length name",
+   "options": "Name"
   },
   {
    "fieldname": "short_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Short name",
+   "options": "Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
   },
   {
    "fieldname": "sports_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Sports Type",
    "options": "Sports Type",
    "reqd": 1
   },
   {
-   "fieldname": "website",
-   "fieldtype": "Data",
-   "label": "Website",
-   "options": "URL"
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Club",
+   "options": "Club",
+   "reqd": 1
   },
   {
-   "fieldname": "club_foundation",
-   "fieldtype": "Date",
-   "label": "Club foundation"
+   "fieldname": "age_group",
+   "fieldtype": "Table",
+   "label": "Age Group",
+   "options": "Team Age Group"
   },
   {
-   "fieldname": "year_of_foundation",
-   "fieldtype": "Int",
-   "label": "year of foundation"
+   "fieldname": "venue",
+   "fieldtype": "Link",
+   "label": "Venue",
+   "options": "Venue"
   },
   {
-   "fieldname": "club_dissolved",
-   "fieldtype": "Date",
-   "label": "Club dissolved"
+   "fieldname": "column_break_uuud3",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "year_resolution",
-   "fieldtype": "Int",
-   "label": "year resolution"
-  },
-  {
-   "fieldname": "picture_tab",
-   "fieldtype": "Tab Break",
-   "label": "Picture"
-  },
-  {
-   "fieldname": "flag",
-   "fieldtype": "Attach Image",
-   "label": "Flag"
-  },
-  {
-   "fieldname": "picture",
-   "fieldtype": "Attach Image",
-   "label": "Picture"
-  },
-  {
-   "fieldname": "map_with_flag",
-   "fieldtype": "Attach Image",
-   "label": "Map with flag"
-  },
-  {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "label": "Copyright of the image"
+   "fieldname": "seasons",
+   "fieldtype": "Table",
+   "label": "Seasons",
+   "options": "Team Season"
   },
   {
    "fieldname": "description_tab",
@@ -113,16 +103,46 @@
    "label": "Description"
   },
   {
-   "fieldname": "column_break_tydeh",
-   "fieldtype": "Column Break"
+   "fieldname": "pictures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pictures"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "copyright_of_the_image",
+   "fieldtype": "Data",
+   "label": "Copyright of the image"
+  },
+  {
+   "fieldname": "advanced_tab",
+   "fieldtype": "Tab Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "team_of_the_club_since",
+   "fieldtype": "Date",
+   "label": "Team of the club since"
+  },
+  {
+   "fieldname": "team_of_the_club_to",
+   "fieldtype": "Date",
+   "label": "Team of the club to"
+  },
+  {
+   "fieldname": "section_break_tuepb",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 06:03:59.143753",
+ "modified": "2023-09-23 06:36:43.718715",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Federation",
+ "name": "Team",
  "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
