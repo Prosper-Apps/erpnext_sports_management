@@ -13,16 +13,29 @@ class Tournament(Document):
 def create_matches(tournament):
 	# Get the tournament document
 	tournament_doc = frappe.get_doc('Tournament', tournament)
-
-	# Get the necessary fields from the tournament document
 	schedule_type = tournament_doc.schedule_type
-	time_for_games = tournament_doc.time_for_games
 	game_day_interval = tournament_doc.game_day_interval
 	starting_day = tournament_doc.starting_day
+	starting_day = generate_round(tournament, tournament_doc, 1, starting_day, game_day_interval)
+	if schedule_type == "Double round robin tournament":
+		generate_round(tournament, tournament_doc, 2, starting_day + datetime.timedelta(days=game_day_interval), game_day_interval)
+
+	# Send a frappe message to the user
+	frappe.msgprint('Matches created successfully!')
+
+
+def generate_round(tournament, tournament_doc, round_number, starting_day, game_day_interval=7):
+
+	# Get the necessary fields from the tournament document
+	time_for_games = tournament_doc.time_for_games
 	teams = tournament_doc.teams
 
 	# Create a list of team names
 	team_names = [team.team for team in teams]
+
+	# If round_number is 2, reverse order of team_names
+	if round_number == 2:
+		team_names = team_names[::-1]
 
 	# Create a list of game days
 	num_teams = len(team_names)
@@ -47,8 +60,7 @@ def create_matches(tournament):
 			match_doc.time = time_for_games
 			match_doc.insert()
 
-	# Send a frappe message to the user
-	frappe.msgprint('Matches created successfully!')
+	return game_days[r]
 	
 def circle_method(teams):
 
