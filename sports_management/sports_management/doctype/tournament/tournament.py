@@ -29,18 +29,19 @@ def create_matches(tournament):
 
 	# Create a list of game days
 	game_days = []
+	current_day = starting_day
 	for i in range(num_rounds):
-		game_days.append(starting_day)
-		starting_day += datetime.timedelta(days=game_day_interval)
+		game_days.append(current_day)
+		current_day += datetime.timedelta(days=game_day_interval)
 
 	# Create a list of matches for each round
 	matches = []
 	for i in range(num_rounds):
 		round_matches = []
 		for j in range(num_teams // 2):
-			home_team = team_names[j]
-			away_team = team_names[num_teams - j - 1]
-			round_matches.append((home_team, away_team))
+			home = team_names[j]
+			away = team_names[num_teams - j - 1]
+			round_matches.append((home, away))
 		matches.append(round_matches)
 
 		# Rotate the team names for the next round
@@ -51,18 +52,31 @@ def create_matches(tournament):
 		game_day_doc = frappe.new_doc('Game Day')
 		game_day_doc.tournament = tournament
 		game_day_doc.start = game_day
-		game_day_doc.end = game_day
 		game_day_doc.insert()
 
-		for home_team, away_team in matches[i]:
-			match_doc = frappe.new_doc('Match')
-			match_doc.tournament = tournament
-			match_doc.game_day = game_day_doc.name
-			match_doc.home = home_team
-			match_doc.guest = away_team
-			match_doc.date = game_day
-			match_doc.time = time_for_games
-			match_doc.insert()
-	
+		for round_matches in matches:
+			for home, away in round_matches:
+				match_doc = frappe.new_doc('Match')
+				match_doc.tournament = tournament
+				match_doc.game_day = game_day_doc.name
+				match_doc.home = home
+				match_doc.guest = away
+				match_doc.date = game_day
+				match_doc.time = time_for_games
+				match_doc.insert()
+
+		# For double round robin tournaments, create a second round of matches
+		if schedule_type == 'Double Round Robin':
+			round_matches = [(away, home) for home, away in round_matches]
+			for home, away in round_matches:
+				match_doc = frappe.new_doc('Match')
+				match_doc.tournament = tournament
+				match_doc.game_day = game_day_doc.name
+				match_doc.home = home
+				match_doc.guest = away
+				match_doc.date = game_day
+				match_doc.time = time_for_games
+				match_doc.insert()
+
 	# Send a frappe message to the user
 	frappe.msgprint('Matches created successfully!')
