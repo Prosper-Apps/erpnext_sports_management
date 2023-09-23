@@ -61,6 +61,7 @@ def create_matches(tournament):
 			match_doc.home = home_team
 			match_doc.guest = away_team
 			match_doc.date = game_day
+			match_doc.time = time_for_games
 			match_doc.insert()
 	
 	# Send a frappe message to the user
