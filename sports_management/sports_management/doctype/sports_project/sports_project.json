@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-09-23 07:18:46.223516",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "status",
+  "league",
+  "season",
+  "type",
+  "column_break_hxzug",
+  "project_art",
+  "project_live_update",
+  "national",
+  "result_release",
+  "adminstrator",
+  "editor",
+  "sports_type",
+  "section_break_jjbnz",
+  "age_group",
+  "section_break_ofzwl",
+  "teams",
+  "use_league_champion",
+  "description_tab",
+  "description",
+  "dates_tab",
+  "start_date",
+  "match_start_time",
+  "competition_tab",
+  "regular_play_time",
+  "number_of_playing_halves",
+  "column_break_cmqdi",
+  "lenght_of_break",
+  "regular_points",
+  "extra_time",
+  "pictures_tab",
+  "picture",
+  "copyright_of_the_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "league",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "League",
+   "options": "League",
+   "reqd": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Season",
+   "options": "Season",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Simple League\nDivision League\nTournament Mode\nFriendly Matches"
+  },
+  {
+   "fieldname": "project_art",
+   "fieldtype": "Select",
+   "label": "Project Art",
+   "options": "Team Only\nTeam and Players\nPlayers Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "project_live_update",
+   "fieldtype": "Check",
+   "label": "Project Live Update"
+  },
+  {
+   "default": "0",
+   "fieldname": "national",
+   "fieldtype": "Check",
+   "label": "National"
+  },
+  {
+   "fieldname": "column_break_hxzug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ofzwl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "teams",
+   "fieldtype": "Table",
+   "label": "Teams",
+   "options": "Sports Project Team"
+  },
+  {
+   "fieldname": "adminstrator",
+   "fieldtype": "Link",
+   "label": "Adminstrator",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "editor",
+   "fieldtype": "Link",
+   "label": "Editor",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "result_release",
+   "fieldtype": "Check",
+   "label": "Result release"
+  },
+  {
+   "default": "0",
+   "fieldname": "use_league_champion",
+   "fieldtype": "Check",
+   "label": "Use League Champion"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type",
+   "options": "Sports Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jjbnz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Table",
+   "label": "Age Group",
+   "options": "Sports Project Age Group"
+  },
+  {
+   "fieldname": "dates_tab",
+   "fieldtype": "Tab Break",
+   "label": "Dates"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "match_start_time",
+   "fieldtype": "Time",
+   "label": "Match Start Time"
+  },
+  {
+   "fieldname": "competition_tab",
+   "fieldtype": "Tab Break",
+   "label": "Competition"
+  },
+  {
+   "default": "90",
+   "description": "minutes",
+   "fieldname": "regular_play_time",
+   "fieldtype": "Int",
+   "label": "Regular play time"
+  },
+  {
+   "default": "2",
+   "description": "Number of the Periods. (For example, 2 (halves) in football, or 3 (third) for Ice Hockey)",
+   "fieldname": "number_of_playing_halves",
+   "fieldtype": "Int",
+   "label": "Number of playing halves",
+   "non_negative": 1
+  },
+  {
+   "default": "15",
+   "fieldname": "lenght_of_break",
+   "fieldtype": "Int",
+   "label": "Lenght of break",
+   "non_negative": 1
+  },
+  {
+   "default": "3,1,0",
+   "description": "Regular points, separated by commas. Format: win, draw, lost. (3,1,0)",
+   "fieldname": "regular_points",
+   "fieldtype": "Data",
+   "label": "Regular points"
+  },
+  {
+   "default": "0",
+   "description": "Overtime or penalty (or similar.) possible?",
+   "fieldname": "extra_time",
+   "fieldtype": "Check",
+   "label": "Extra Time"
+  },
+  {
+   "fieldname": "column_break_cmqdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pictures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pictures"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "copyright_of_the_image",
+   "fieldtype": "Data",
+   "label": "Copyright of the image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-23 07:37:06.318362",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Sports Project",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
