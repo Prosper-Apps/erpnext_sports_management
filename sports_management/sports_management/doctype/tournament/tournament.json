@@ -14,6 +14,7 @@
   "league",
   "season",
   "type",
+  "country",
   "column_break_hxzug",
   "administrator",
   "editor",
@@ -254,6 +255,13 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
@@ -269,7 +277,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-24 05:43:01.646943",
+ "modified": "2023-09-24 05:59:22.646882",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
