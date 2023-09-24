@@ -33,9 +33,11 @@
   "competition_tab",
   "regular_play_time",
   "number_of_playing_halves",
-  "column_break_cmqdi",
   "lenght_of_break",
-  "regular_points",
+  "column_break_cmqdi",
+  "win_points",
+  "draw_points",
+  "loss_points",
   "extra_time",
   "pictures_tab",
   "picture",
@@ -167,13 +169,6 @@
    "non_negative": 1
   },
   {
-   "default": "3,1,0",
-   "description": "Regular points, separated by commas. Format: win, draw, lost. (3,1,0)",
-   "fieldname": "regular_points",
-   "fieldtype": "Data",
-   "label": "Regular points"
-  },
-  {
    "default": "0",
    "description": "Overtime or penalty (or similar.) possible?",
    "fieldname": "extra_time",
@@ -262,6 +257,24 @@
    "label": "Country",
    "options": "Country",
    "reqd": 1
+  },
+  {
+   "default": "3",
+   "fieldname": "win_points",
+   "fieldtype": "Int",
+   "label": "Win Points"
+  },
+  {
+   "default": "1",
+   "fieldname": "draw_points",
+   "fieldtype": "Int",
+   "label": "Draw Points"
+  },
+  {
+   "default": "0",
+   "fieldname": "loss_points",
+   "fieldtype": "Int",
+   "label": "Loss Points"
   }
  ],
  "has_web_view": 1,
@@ -277,7 +290,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-24 05:59:22.646882",
+ "modified": "2023-09-24 06:55:58.653383",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",

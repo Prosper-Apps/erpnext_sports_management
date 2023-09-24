@@ -7,10 +7,12 @@ from frappe.website.website_generator import WebsiteGenerator
 
 class Tournament(WebsiteGenerator):
 	def get_context(self, context):
-		tournaments = frappe.get_all('Tournament', fields=['name', 'picture', 'description'])
-		for tournament in tournaments:
-			tournament.url = frappe.utils.get_url_to_form('Tournament', tournament.name)
-		context.tournaments = tournaments
+		teams = self.teams
+		# for each team get it's picture
+		for team in teams:
+			team.picture = frappe.get_value('Team', team.team, 'picture')
+			
+		context.rankings = sorted(teams, key=lambda x: x.rank, reverse=False)
 
 @frappe.whitelist()
 def create_matches(tournament):

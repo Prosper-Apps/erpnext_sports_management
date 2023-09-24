@@ -2,12 +2,59 @@
 
 {% block page_content %}
 
+<div class="page-header">
+    <h1>{{ name }}</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th></th>
+                    <th>Team</th>
+                    <th>Played</th>
+                    <th>Wins</th>
+                    <th>Draws</th>
+                    <th>Losses</th>
+                    <th>Points</th>
+                    <th>Score For</th>
+                    <th>Score Against</th>
+                    <th>Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ranking in rankings %}
+                <tr>
+                    <td>{{ ranking.rank }}</td>
+                    {% if ranking.picture %}
+                    <td><img alt="{{ ranking.team }}" src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
+                    </td>
+                    {% else %}
+                    <td></td>
+                    {% endif %}
+                    <td>{{ ranking.team }}</td>
+                    <td>{{ ranking.played }}</td>
+                    <td>{{ ranking.wins }}</td>
+                    <td>{{ ranking.draws }}</td>
+                    <td>{{ ranking.losses }}</td>
+                    <td>{{ ranking.points }}</td>
+                    <td>{{ ranking.score_for }}</td>
+                    <td>{{ ranking.score_against }}</td>
+                    <td>{{ ranking.difference }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
 <div class="py-20 row">
     <div class="col-sm-2">
         <img alt="{{ name }}" src="{{ picture }}" />
     </div>
     <div class="col">
-        <h1>{{ name }}</h1>
         <p class="lead">Sports Type: {{ sports_type }}</p>
         <div>
 
@@ -41,7 +88,7 @@
                     </tbody>
                 </table>
             </div>
-        </div>        
+        </div>
         <p>{{ description }}</p>
     </div>
 </div>

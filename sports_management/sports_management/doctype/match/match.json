@@ -21,6 +21,7 @@
   "column_break_yovge",
   "time",
   "spectators",
+  "status",
   "disabled",
   "result_tab",
   "full_time_home_result",
@@ -297,11 +298,18 @@
    "fieldtype": "Link",
    "label": "Tournament",
    "options": "Tournament"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nPlaying\nCompleted\nCancelled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-24 03:59:24.526002",
+ "modified": "2023-09-24 06:26:42.968372",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",

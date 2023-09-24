@@ -7,7 +7,16 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "team"
+  "team",
+  "rank",
+  "played",
+  "wins",
+  "draws",
+  "losses",
+  "points",
+  "score_for",
+  "score_against",
+  "difference"
  ],
  "fields": [
   {
@@ -17,12 +26,73 @@
    "label": "Team",
    "options": "Team",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "played",
+   "fieldtype": "Int",
+   "label": "Played",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "wins",
+   "fieldtype": "Int",
+   "label": "Wins",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "losses",
+   "fieldtype": "Int",
+   "label": "Losses",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "points",
+   "fieldtype": "Int",
+   "label": "Points"
+  },
+  {
+   "default": "0",
+   "fieldname": "score_for",
+   "fieldtype": "Int",
+   "label": "Score for",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "score_against",
+   "fieldtype": "Int",
+   "label": "Score against",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "difference",
+   "fieldtype": "Int",
+   "label": "Difference"
+  },
+  {
+   "default": "0",
+   "fieldname": "rank",
+   "fieldtype": "Int",
+   "label": "Rank",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "draws",
+   "fieldtype": "Int",
+   "label": "Draws",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-23 07:58:42.889528",
+ "modified": "2023-09-24 07:50:12.686604",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament Team",
