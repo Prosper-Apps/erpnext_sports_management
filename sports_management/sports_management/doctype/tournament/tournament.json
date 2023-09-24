@@ -254,9 +254,13 @@
   {
    "link_doctype": "Game Day",
    "link_fieldname": "tournament"
+  },
+  {
+   "link_doctype": "Match",
+   "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-23 14:36:33.285956",
+ "modified": "2023-09-24 03:57:01.980803",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
