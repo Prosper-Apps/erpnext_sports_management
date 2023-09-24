@@ -11,6 +11,7 @@ class Tournament(WebsiteGenerator):
 		# for each team get it's picture
 		for team in teams:
 			team.picture = frappe.get_value('Team', team.team, 'picture')
+			team.route = frappe.get_value('Team', team.team, 'route')
 			
 		context.rankings = sorted(teams, key=lambda x: x.rank, reverse=False)
 

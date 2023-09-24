@@ -1,0 +1,109 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="py-20 row">
+    <div class="col-sm-2">
+        <img alt="{{ name }}" src="{{ picture }}" />
+    </div>
+    <div class="col">
+        <h1>{{ name }}</h1>
+        <p class="lead">Sports Type: {{ sports_type }}</p>
+        <div>
+            <span class="badge badge-info">{{ short_name }}</span>
+        </div>
+        <div class="mt-4">
+            {% if club %}
+            <div>Club: <strong>{{ club }}</strong></div>
+            {% endif %}
+            {% if venue %}
+            <div>Venue: <strong>{{ venue }}</strong></div>
+            {% endif %}
+        </div>
+        <p>{{ description }}</p>
+
+        <div class="page-header">
+            <h4>Tournaments</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Tournament</th>
+                            <th></th>
+                            <th>Rank</th>
+                            <th>Played</th>
+                            <th>Wins</th>
+                            <th>Draws</th>
+                            <th>Losses</th>
+                            <th>Points</th>
+                            <th>Score For</th>
+                            <th>Score Against</th>
+                            <th>Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for tournament in tournaments %}
+                        <tr>
+                            <td><a href="/{{ tournament.route }}">{{ tournament.parent }}</a></td>
+                            <td>{{ tournament.rank }}</td>
+                            {% if tournament.picture %}
+                            <td><img alt="{{ tournament.team }}" src="{{ tournament.picture }}"
+                                    style="width: 25px; height: 25px;" />
+                            </td>
+                            {% else %}
+                            <td></td>
+                            {% endif %}
+                            <td>{{ tournament.played }}</td>
+                            <td>{{ tournament.wins }}</td>
+                            <td>{{ tournament.draws }}</td>
+                            <td>{{ tournament.losses }}</td>
+                            <td>{{ tournament.points }}</td>
+                            <td>{{ tournament.score_for }}</td>
+                            <td>{{ tournament.score_against }}</td>
+                            <td>{{ tournament.difference }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page-header">
+            <h4>Age Groups</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for ag in age_group %}
+                        <tr>
+                            <td>{{ ag.age_group }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page-header">
+            <h4>Seasons</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for item in seasons %}
+                        <tr>
+                            <td>{{ item.season }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

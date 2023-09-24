@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 06:29:34.365646",
@@ -12,10 +13,12 @@
   "medium_length_name",
   "short_name",
   "contact",
+  "route",
   "column_break_uuud3",
   "sports_type",
   "club",
   "venue",
+  "published",
   "section_break_tuepb",
   "age_group",
   "seasons",
@@ -134,11 +137,24 @@
   {
    "fieldname": "section_break_tuepb",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-09-23 09:30:27.069164",
+ "modified": "2023-09-24 08:04:21.452636",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
@@ -179,6 +195,7 @@
    "share": 1
   }
  ],
+ "route": "teams",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

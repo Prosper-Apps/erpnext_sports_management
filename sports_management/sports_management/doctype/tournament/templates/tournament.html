@@ -34,7 +34,7 @@
                     {% else %}
                     <td></td>
                     {% endif %}
-                    <td>{{ ranking.team }}</td>
+                    <td><a href="/{{ ranking.route }}">{{ ranking.team }}</a></td>
                     <td>{{ ranking.played }}</td>
                     <td>{{ ranking.wins }}</td>
                     <td>{{ ranking.draws }}</td>
@@ -55,24 +55,13 @@
         <img alt="{{ name }}" src="{{ picture }}" />
     </div>
     <div class="col">
-        <p class="lead">Sports Type: {{ sports_type }}</p>
-        <div>
-
-            {%- if status == 'Available' -%}
-
-            <span class="badge badge-success">Available</span>
-            {%- elif status == 'Issued' -%}
-
-            <span class="badge badge-primary">Issued</span>
-
-            {%- endif -%}
-
-        </div>
+        <p class="lead">Sports Type: {{ sports_type }}</p>        
         <div class="mt-4">
             <div>League: <strong>{{ league }}</strong></div>
             <div>Season: <strong>{{ season }}</strong></div>
             <div>Country: <strong>{{ country }}</strong></div>
         </div>
+        <p>{{ description }}</p>
         <div class="page-header">
             <h4>Age Groups</h4>
         </div>
@@ -89,7 +78,6 @@
                 </table>
             </div>
         </div>
-        <p>{{ description }}</p>
     </div>
 </div>
 
