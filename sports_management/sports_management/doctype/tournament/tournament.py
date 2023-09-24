@@ -6,7 +6,11 @@ import datetime
 from frappe.website.website_generator import WebsiteGenerator
 
 class Tournament(WebsiteGenerator):
-	pass
+	def get_context(self, context):
+		tournaments = frappe.get_all('Tournament', fields=['name', 'picture', 'description'])
+		for tournament in tournaments:
+			tournament.url = frappe.utils.get_url_to_form('Tournament', tournament.name)
+		context.tournaments = tournaments
 
 @frappe.whitelist()
 def create_matches(tournament):

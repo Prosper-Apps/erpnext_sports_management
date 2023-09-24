@@ -1,7 +1,49 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title }}</h1>
-{% endblock %}
 
-<!-- this is a sample default web page template -->
+<div class="py-20 row">
+    <div class="col-sm-2">
+        <img alt="{{ name }}" src="{{ picture }}" />
+    </div>
+    <div class="col">
+        <h1>{{ name }}</h1>
+        <p class="lead">Sports Type: {{ sports_type }}</p>
+        <div>
+
+            {%- if status == 'Available' -%}
+
+            <span class="badge badge-success">Available</span>
+            {%- elif status == 'Issued' -%}
+
+            <span class="badge badge-primary">Issued</span>
+
+            {%- endif -%}
+
+        </div>
+        <div class="mt-4">
+            <div>League: <strong>{{ league }}</strong></div>
+            <div>Season: <strong>{{ season }}</strong></div>
+            <div>Country: <strong>{{ country }}</strong></div>
+        </div>
+        <div class="page-header">
+            <h4>Age Groups</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for ag in age_group %}
+                        <tr>
+                            <td>{{ ag.age_group }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>        
+        <p>{{ description }}</p>
+    </div>
+</div>
+
+{% endblock %}
