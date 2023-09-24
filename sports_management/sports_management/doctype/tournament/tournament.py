@@ -3,9 +3,9 @@
 
 import frappe
 import datetime
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
-class Tournament(Document):
+class Tournament(WebsiteGenerator):
 	pass
 
 @frappe.whitelist()
