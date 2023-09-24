@@ -3,7 +3,6 @@
 
 import frappe
 import datetime
-from itertools import cycle, islice
 from frappe.model.document import Document
 
 class Tournament(Document):
