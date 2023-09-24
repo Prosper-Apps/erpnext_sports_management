@@ -154,7 +154,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-24 08:04:21.452636",
+ "modified": "2023-09-24 15:51:07.522204",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
@@ -186,13 +186,17 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Sports User",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "route": "teams",

@@ -84,7 +84,7 @@
    "link_fieldname": "game_day"
   }
  ],
- "modified": "2023-09-24 03:51:43.872982",
+ "modified": "2023-09-24 16:02:19.953126",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",
@@ -102,6 +102,27 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports User",
+   "share": 1
   }
  ],
  "sort_field": "modified",

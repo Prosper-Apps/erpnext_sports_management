@@ -3,7 +3,7 @@
 
 frappe.ui.form.on('Tournament', {
 	refresh: function(frm) {
-		if (!frm.doc.__islocal) {
+		if (!frm.doc.__islocal && frm.perm[0].write) {
 			frm.add_custom_button(__('Create Matches'), function() {
 				var tournament = frm.doc.name;
 				frappe.call({

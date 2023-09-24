@@ -9,7 +9,6 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "administrator",
   "address",
   "contact",
   "column_break_7labf",
@@ -29,12 +28,6 @@
   "away_shirt"
  ],
  "fields": [
-  {
-   "fieldname": "administrator",
-   "fieldtype": "Link",
-   "label": "Administrator",
-   "options": "User"
-  },
   {
    "fieldname": "address",
    "fieldtype": "Link",
@@ -132,7 +125,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 09:29:43.190379",
+ "modified": "2023-09-24 15:51:21.942489",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",
@@ -164,13 +157,17 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Sports User",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
