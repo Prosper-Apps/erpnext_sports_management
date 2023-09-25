@@ -18,7 +18,25 @@
 
             <div><span class="badge badge-info">{{ status }}</span></div>
 
-            <table class="table table-striped">
+            <div class="mt-2">Date: <strong>{{ frappe.format(date, {'fieldtype': 'Date'}) }} {{ frappe.format(time, {'fieldtype': 'Time'}) }}</strong></div>
+
+            {% if venue %}
+            <div>Club: <strong><a href="/{{ venue.route }}">{{ venue.name }}</a></strong></div>
+            {% endif %}            
+
+            {% if tournament %}
+            <div>Tournament: <strong><a href="/{{ tournament.route }}">{{ tournament.name }}</a></strong></div>
+            {% endif %}
+
+            {% if game_day %}
+            <div>Game Day: <strong><a href="/{{ game_day.route }}">{{ game_day.name }}</a></strong></div>
+            {% endif %}
+
+            {% if spectators %}
+            <div>Spectators: <strong>{{ spectators }}</strong></div>
+            {% endif %}
+
+            <table class="table table-striped mt-4  ">
                 <tbody>
                     <tr>
                         <td class="font-weight-bold text-center"><a href="/{{ home.route }}">{{ home.name }}</a></td>
@@ -43,29 +61,65 @@
 
                 </tbody>
             </table>
-
-            <div class="mt-2">Date: <strong>{{ frappe.format(date, {'fieldtype': 'Date'}) }} {{ frappe.format(time, {'fieldtype': 'Time'}) }}</strong></div>
-
-            {% if venue %}
-            <div>Club: <strong><a href="/{{ venue.route }}">{{ venue.name }}</a></strong></div>
-            {% endif %}            
-
-            {% if tournament %}
-            <div>Tournament: <strong><a href="/{{ tournament.route }}">{{ tournament.name }}</a></strong></div>
-            {% endif %}
-
-            {% if game_day %}
-            <div>Game Day: <strong><a href="/{{ game_day.route }}">{{ game_day.name }}</a></strong></div>
-            {% endif %}
-
-            {% if spectators %}
-            <div>Spectators: <strong>{{ spectators }}</strong></div>
-            {% endif %}
             
         </div>
 
-        {% if description %}
-        <p>{{ description }}</p>
+        <div class="mt-4">
+            <h2>Match Preview</h2>
+            <p>{{ preview }}</p>
+        </div>
+
+        <div class="mt-4">
+            <h2>Match Details</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="font-weight-bold" colspan="2">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Cancel / Relocation</td>
+                        <td>{% if is_cancel %}Yes{% else %}No{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td>Reason of cancel</td>
+                        <td>{{ reason_of_cancel }}</td>
+                    </tr>
+                    <tr>
+                        <td>Overtime</td>
+                        <td>{{ overtime }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold" colspan="2">Alternate Decision</td>
+                    </tr>
+                    <tr>
+                        <td>Decision after the match</td>
+                        <td>{% if decision_after_the_match %}Yes{% else %}No{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td>Reasons for the new Score</td>
+                        <td>{{ reasons_for_the_new_score }}</td>
+                    </tr>
+                    <tr>
+                        <td>New Score Home</td>
+                        <td>{{ new_score_home }}</td>
+                    </tr>
+                    <tr>
+                        <td>New Score Guest</td>
+                        <td>{{ new_score_guest }}</td>
+                    </tr>
+                    <tr>
+                        <td>Final victory / defeat decision</td>
+                        <td>{{ winner }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        {% if scoresheet %}
+        <div class="mt-4">
+            <h2>Score sheet</h2>
+            <p>{{ scoresheet }}</p>
+        </div>
         {% endif %}
 
     </div>

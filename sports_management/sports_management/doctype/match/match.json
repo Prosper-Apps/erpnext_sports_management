@@ -46,7 +46,6 @@
   "new_score_guest",
   "winner",
   "score_sheet_tab",
-  "show_match_report",
   "scoresheet",
   "advanced_tab",
   "link_to_the_external_match_report",
@@ -158,7 +157,7 @@
   {
    "fieldname": "preview",
    "fieldtype": "Text Editor",
-   "label": "preview"
+   "label": "Preview"
   },
   {
    "fieldname": "match_details_tab",
@@ -225,12 +224,6 @@
    "fieldname": "score_sheet_tab",
    "fieldtype": "Tab Break",
    "label": "Score Sheet"
-  },
-  {
-   "default": "0",
-   "fieldname": "show_match_report",
-   "fieldtype": "Check",
-   "label": "Show match report"
   },
   {
    "fieldname": "scoresheet",
@@ -325,7 +318,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-25 09:11:43.022994",
+ "modified": "2023-09-25 11:13:51.992107",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
