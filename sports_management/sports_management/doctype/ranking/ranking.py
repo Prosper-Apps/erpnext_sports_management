@@ -5,12 +5,12 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 
-class TournamentTeam(Document):
+class Ranking(Document):
 	def validate(self):
-		validate_unique_tournament_team(self, "save")
+		validate_unique_ranking(self, "save")
 
 
-def validate_unique_tournament_team(doc, method):
+def validate_unique_ranking(doc, method):
 	# Check if the tournament and team link fields are set
 	if doc.tournament and doc.team:
 		# Check if there is another "Tournament Team" document with the same tournament and team link fields

@@ -113,7 +113,7 @@
  "modified": "2023-09-25 14:53:07.185591",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Tournament Team",
+ "name": "Ranking",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
