@@ -21,8 +21,6 @@
   "disabled",
   "section_break_jjbnz",
   "age_group",
-  "section_break_ofzwl",
-  "teams",
   "description_tab",
   "description",
   "competition_tab",
@@ -92,16 +90,6 @@
    "fieldtype": "Table",
    "label": "Age Group",
    "options": "Tournament Age Group"
-  },
-  {
-   "fieldname": "section_break_ofzwl",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "teams",
-   "fieldtype": "Table",
-   "label": "Teams",
-   "options": "Tournament Team"
   },
   {
    "fieldname": "description_tab",
@@ -248,6 +236,10 @@
  "is_published_field": "published",
  "links": [
   {
+   "link_doctype": "Tournament Team",
+   "link_fieldname": "tournament"
+  },
+  {
    "link_doctype": "Game Day",
    "link_fieldname": "tournament"
   },
@@ -256,7 +248,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-25 08:59:21.674963",
+ "modified": "2023-09-25 14:45:24.026093",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
