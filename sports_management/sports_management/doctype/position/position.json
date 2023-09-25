@@ -57,7 +57,7 @@
    "fieldname": "role",
    "fieldtype": "Select",
    "label": "role",
-   "options": "Player\nTeam\nReferee\nClub Staff",
+   "options": "Player\nCoach\nStaff\nReferee",
    "reqd": 1
   },
   {
@@ -67,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 09:36:22.005076",
+ "modified": "2023-09-25 07:28:40.175941",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Position",

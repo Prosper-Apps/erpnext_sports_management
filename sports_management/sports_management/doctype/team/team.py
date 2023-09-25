@@ -22,3 +22,21 @@ class Team(WebsiteGenerator):
 
 		# Get the venue doctype and add it to the context
 		context.venue = frappe.get_doc("Venue", self.venue)
+
+		# For each of the team_player get the name and route and add it to the context
+		for team_player in context.team_player:
+			team_player.route = frappe.get_value('Person', team_player.person, 'route')
+			team_player.name = frappe.get_value('Person', team_player.person, 'name')
+			team_player.picture = frappe.get_value('Person', team_player.person, 'picture')
+
+		# Do the same for the team staff
+		for team_staff in context.team_staff:
+			team_staff.route = frappe.get_value('Person', team_staff.person, 'route')
+			team_staff.name = frappe.get_value('Person', team_staff.person, 'name')
+			team_staff.picture = frappe.get_value('Person', team_staff.person, 'picture')
+
+		# The same for the team coach
+		for team_coach in context.team_coach:
+			team_coach.route = frappe.get_value('Person', team_coach.person, 'route')
+			team_coach.name = frappe.get_value('Person', team_coach.person, 'name')
+			team_coach.picture = frappe.get_value('Person', team_coach.person, 'picture')

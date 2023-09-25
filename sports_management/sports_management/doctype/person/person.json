@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 06:42:54.934809",
@@ -17,7 +18,8 @@
   "death_day",
   "height",
   "weight",
-  "national_id",
+  "route",
+  "published",
   "disabled",
   "section_break_3f1pf",
   "association",
@@ -75,11 +77,6 @@
    "fieldname": "weight",
    "fieldtype": "Float",
    "label": "Weight"
-  },
-  {
-   "fieldname": "national_id",
-   "fieldtype": "Data",
-   "label": "National ID/Passport"
   },
   {
    "fieldname": "section_break_3f1pf",
@@ -189,11 +186,24 @@
    "fieldname": "requirements_tab",
    "fieldtype": "Tab Break",
    "label": "Requirements"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-09-24 15:52:42.652170",
+ "modified": "2023-09-25 07:43:03.323052",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
@@ -238,6 +248,7 @@
    "write": 1
   }
  ],
+ "route": "persons",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

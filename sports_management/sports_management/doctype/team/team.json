@@ -21,6 +21,9 @@
   "section_break_tuepb",
   "age_group",
   "seasons",
+  "team_coach",
+  "team_player",
+  "team_staff",
   "description_tab",
   "description",
   "pictures_tab",
@@ -60,7 +63,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Club",
-   "options": "Club"
+   "options": "Club",
+   "reqd": 1
   },
   {
    "fieldname": "age_group",
@@ -123,13 +127,31 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "team_coach",
+   "fieldtype": "Table",
+   "label": "Team Coach",
+   "options": "Team Coach"
+  },
+  {
+   "fieldname": "team_player",
+   "fieldtype": "Table",
+   "label": "Team Player",
+   "options": "Team Player"
+  },
+  {
+   "fieldname": "team_staff",
+   "fieldtype": "Table",
+   "label": "Team Staff",
+   "options": "Team Staff"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-25 06:37:58.068407",
+ "modified": "2023-09-25 07:26:25.571284",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",

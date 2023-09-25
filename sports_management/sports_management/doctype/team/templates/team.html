@@ -107,6 +107,82 @@
                 </table>
             </div>
         </div>
+
+        {% if team_coach %}
+        <div class="page-header">
+            <h4>Coaches</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for item in team_coach %}
+                        <tr>
+                            <td><a href="/{{ item.route }}">{{ item.person }}</a></td>
+                            <td>
+                                {% if item.picture %}
+                                <img alt="{{ item.person }}" src="{{ item.picture }}"
+                                    style="max-height: 50px;" />
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if team_player %}
+        <div class="page-header">
+            <h4>Players</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for item in team_player %}
+                        <tr>
+                            <td><a href="/{{ item.route }}">{{ item.person }}</a></td>
+                            <td>
+                                {% if item.picture %}
+                                <img alt="{{ item.person }}" src="{{ item.picture }}"
+                                    style="max-height: 50px;" />
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if team_staff %}
+        <div class="page-header">
+            <h4>Staff</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for item in team_staff %}
+                        <tr>
+                            <td><a href="/{{ item.route }}">{{ item.person }}</a></td>
+                            <td>
+                                {% if item.picture %}
+                                <img alt="{{ item.person }}" src="{{ item.picture }}"
+                                    style="max-height: 50px;" />
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
     </div>
 </div>
 
