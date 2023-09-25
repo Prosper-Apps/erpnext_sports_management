@@ -4,12 +4,29 @@
 frappe.ui.form.on('Tournament', {
 	refresh: function(frm) {
 		if (!frm.doc.__islocal && frm.perm[0].write) {
+			
 			frm.add_custom_button(__('Create Matches'), function() {
 				var tournament = frm.doc.name;
 				frappe.call({
 					method: 'sports_management.sports_management.doctype.tournament.tournament.create_matches',
 					args: {
 						tournament: tournament
+					},
+					callback: function(r) {
+						if (r.message) {
+							frappe.msgprint(r.message);
+						}
+					}
+				});
+			});
+
+			frm.add_custom_button(__('Calculate Rankings'), function() {
+				var tournament = frm.doc.name;
+				frappe.call({
+					method: 'sports_management.sports_management.doctype.tournament.tournament.calculate_rankings',
+					args: {
+						tournament: tournament,
+						send_message: true
 					},
 					callback: function(r) {
 						if (r.message) {
