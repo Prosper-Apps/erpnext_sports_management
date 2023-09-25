@@ -51,7 +51,7 @@
                     <tbody>
                         {% for tournament in tournaments %}
                         <tr>
-                            <td><a href="/{{ tournament.route }}">{{ tournament.parent }}</a></td>
+                            <td><a href="/{{ tournament.route }}">{{ tournament.tournament }}</a></td>
                             <td>{{ tournament.rank }}</td>
                             {% if tournament.picture %}
                             <td><img alt="{{ tournament.team }}" src="{{ tournament.picture }}"

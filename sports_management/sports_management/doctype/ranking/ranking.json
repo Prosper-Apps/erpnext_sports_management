@@ -8,14 +8,19 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "details_section",
   "naming_series",
   "tournament",
+  "column_break_jfqqk",
   "team",
+  "statistics_tab",
   "rank",
+  "section_break_pbcjn",
   "played",
   "wins",
   "draws",
   "losses",
+  "column_break_4nihf",
   "points",
   "score_for",
   "score_against",
@@ -106,11 +111,33 @@
    "label": "Tournament",
    "options": "Tournament",
    "reqd": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_jfqqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "statistics_tab",
+   "fieldtype": "Tab Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "column_break_4nihf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pbcjn",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-25 14:53:07.185591",
+ "modified": "2023-09-25 15:36:42.203797",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",

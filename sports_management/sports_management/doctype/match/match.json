@@ -10,28 +10,32 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
+  "status",
+  "column_break_ppsyd",
+  "date",
+  "column_break_ee061",
+  "time",
+  "section_break_rqx5g",
+  "section_break_dnckx",
   "naming_series",
   "home",
   "column_break_kw41f",
   "guest",
-  "section_break_dnckx",
-  "date",
-  "venue",
-  "tournament",
-  "game_day",
-  "column_break_yovge",
-  "time",
-  "spectators",
-  "status",
-  "route",
-  "published",
-  "disabled",
-  "result_tab",
+  "section_break_ukssl",
   "full_time_home_result",
   "half_time_home_result",
   "column_break_vdrjs",
   "full_time_guest_result",
   "half_time_guest_result",
+  "section_break_t9dyl",
+  "venue",
+  "tournament",
+  "game_day",
+  "column_break_yovge",
+  "spectators",
+  "route",
+  "published",
+  "disabled",
   "match_preview_tab",
   "preview",
   "match_details_tab",
@@ -111,11 +115,6 @@
    "label": "Guest",
    "options": "Team",
    "reqd": 1
-  },
-  {
-   "fieldname": "result_tab",
-   "fieldtype": "Tab Break",
-   "label": "Result"
   },
   {
    "fieldname": "full_time_home_result",
@@ -313,13 +312,34 @@
    "fieldtype": "Data",
    "label": "Embed Live broadcast Link",
    "options": "URL"
+  },
+  {
+   "fieldname": "section_break_rqx5g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_t9dyl",
+   "fieldtype": "Section Break",
+   "label": "Extra"
+  },
+  {
+   "fieldname": "column_break_ppsyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ee061",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ukssl",
+   "fieldtype": "Section Break"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-25 11:38:54.170118",
+ "modified": "2023-09-25 18:20:40.962749",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",

@@ -7,7 +7,10 @@ from frappe.website.website_generator import WebsiteGenerator
 
 class Tournament(WebsiteGenerator):
 	def get_context(self, context):
-		teams = self.teams
+
+		# Get the rankings of the tournament
+		teams = frappe.get_all('Ranking', 
+			filters={'tournament': self.name}, fields=['team', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	
 		# for each team get it's picture
 		for team in teams:
 			team.picture = frappe.get_value('Team', team.team, 'picture')
@@ -37,15 +40,15 @@ def create_matches(tournament):
 	# Send a frappe message to the user
 	frappe.msgprint('Matches created successfully!')
 
-
 def generate_round(tournament, tournament_doc, round_number, starting_day, game_day_interval=7):
 
 	# Get the necessary fields from the tournament document
 	time_for_games = tournament_doc.time_for_games
-	teams = tournament_doc.teams
+	# Get the ranking of the tournament
+	rankings = frappe.get_all('Ranking', filters={'tournament': tournament}, fields=['team', 'rank'])
 
 	# Create a list of team names
-	team_names = [team.team for team in teams]
+	team_names = [team.team for team in rankings]
 
 	# If round_number is 2, reverse order of team_names
 	if round_number == 2:
@@ -116,3 +119,80 @@ def circle_method(teams):
 
 	return matches
 	
+@frappe.whitelist()
+def calculate_rankings(tournament, send_message=False):
+	# Get all the matches for the tournament with status completed ordered ascending by date
+	matches = frappe.get_all('Match', filters={'tournament': tournament, 'status': 'Completed'}, fields=['name', 'home', 'guest', 'full_time_home_result', 'full_time_guest_result', 'date', 'time', 'venue'], order_by='date asc')
+	# Get the tournament document win_points, draw_points and loss_points and the tournament rankings
+	tournament_doc = frappe.get_doc('Tournament', tournament)
+	win_points = tournament_doc.win_points
+	draw_points = tournament_doc.draw_points
+	loss_points = tournament_doc.loss_points
+	# Get the ranking of the tournament
+	rankings = frappe.get_all('Ranking', filters={'tournament': tournament}, fields=['name', 'team', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'])	
+	
+	# for each team set the points to 0
+	for ranking in rankings:
+		ranking.rank = 0
+		ranking.played = 0
+		ranking.points = 0
+		ranking.wins = 0
+		ranking.draws = 0
+		ranking.losses = 0
+		ranking.score_for = 0
+		ranking.score_against = 0
+		ranking.difference = 0
+
+	# For each match calculate the points for each team
+	for match in matches:
+		# Get the home team from rankings
+		home_team = [team for team in rankings if team.team == match.home]
+		# Get the guest team from rankings
+		guest_team = [team for team in rankings if team.team == match.guest]
+		# Update the home team stats
+		home_team[0].played += 1
+		home_team[0].score_for += match.full_time_home_result
+		home_team[0].score_against += match.full_time_guest_result
+		home_team[0].difference += match.full_time_home_result - match.full_time_guest_result
+		# Update the guest team stats
+		guest_team[0].played += 1
+		guest_team[0].score_for += match.full_time_guest_result
+		guest_team[0].score_against += match.full_time_home_result
+		guest_team[0].difference += match.full_time_guest_result - match.full_time_home_result
+		# Update the wins, draws and losses			
+		if match.full_time_home_result > match.full_time_guest_result:
+			home_team[0].wins += 1
+			guest_team[0].losses += 1
+			home_team[0].points += win_points
+			guest_team[0].points += loss_points
+		elif match.full_time_home_result == match.full_time_guest_result:
+			home_team[0].draws += 1
+			guest_team[0].draws += 1
+			home_team[0].points += draw_points
+			guest_team[0].points += draw_points				
+		else:
+			home_team[0].losses += 1
+			guest_team[0].wins += 1
+			home_team[0].points += loss_points
+			guest_team[0].points += win_points
+	
+	# Assign the rank for each team. The team with the most points is ranked first
+	rankings = sorted(rankings, key=lambda x: x.points, reverse=True)
+	for i in range(len(rankings)):
+		rankings[i].rank = i + 1		
+		# Save the ranking with frappe.db.set_value. Include all the calculated fields but use only one command
+		frappe.db.set_value('Ranking', rankings[i].name, {
+			'rank': rankings[i].rank,
+			'played': rankings[i].played,
+			'wins': rankings[i].wins,
+			'draws': rankings[i].draws,
+			'losses': rankings[i].losses,
+			'points': rankings[i].points,
+			'score_for': rankings[i].score_for,
+			'score_against': rankings[i].score_against,
+			'difference': rankings[i].difference
+		})
+		
+	# Send a frappe message to the user
+	if send_message:
+		frappe.msgprint('Rankings calculated successfully!')

@@ -236,7 +236,7 @@
  "is_published_field": "published",
  "links": [
   {
-   "link_doctype": "Tournament Team",
+   "link_doctype": "Ranking",
    "link_fieldname": "tournament"
   },
   {
@@ -248,7 +248,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-25 14:45:24.026093",
+ "modified": "2023-09-25 14:55:45.698650",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
