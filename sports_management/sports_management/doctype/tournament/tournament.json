@@ -13,17 +13,12 @@
   "sports_type",
   "league",
   "season",
+  "column_break_hxzug",
   "type",
   "country",
-  "column_break_hxzug",
-  "administrator",
-  "editor",
-  "live_update",
-  "national",
-  "result_release",
-  "disabled",
   "route",
   "published",
+  "disabled",
   "section_break_jjbnz",
   "age_group",
   "section_break_ofzwl",
@@ -80,25 +75,6 @@
   {
    "fieldname": "column_break_hxzug",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "national",
-   "fieldtype": "Check",
-   "label": "National"
-  },
-  {
-   "default": "0",
-   "fieldname": "result_release",
-   "fieldtype": "Check",
-   "label": "Result release"
-  },
-  {
-   "fieldname": "editor",
-   "fieldtype": "Link",
-   "label": "Editor",
-   "options": "User",
-   "reqd": 1
   },
   {
    "fieldname": "sports_type",
@@ -199,17 +175,20 @@
    "fieldname": "schedule_type",
    "fieldtype": "Select",
    "label": "Schedule Type",
-   "options": "Single round robin tournament\nDouble round robin tournament"
+   "options": "Single round robin tournament\nDouble round robin tournament",
+   "reqd": 1
   },
   {
    "fieldname": "time_for_games",
    "fieldtype": "Time",
-   "label": "Time for Games"
+   "label": "Time for Games",
+   "reqd": 1
   },
   {
    "fieldname": "starting_day",
    "fieldtype": "Date",
-   "label": "Starting day"
+   "label": "Starting day",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -218,27 +197,15 @@
    "label": "Disabled"
   },
   {
-   "fieldname": "administrator",
-   "fieldtype": "Link",
-   "label": "Administrator",
-   "options": "User",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_btx5u",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "live_update",
-   "fieldtype": "Check",
-   "label": "Live Update"
   },
   {
    "default": "7",
    "fieldname": "game_day_interval",
    "fieldtype": "Int",
-   "label": "Game day interval (days)"
+   "label": "Game day interval (days)",
+   "reqd": 1
   },
   {
    "fieldname": "route",
@@ -255,8 +222,7 @@
    "fieldname": "country",
    "fieldtype": "Link",
    "label": "Country",
-   "options": "Country",
-   "reqd": 1
+   "options": "Country"
   },
   {
    "default": "3",
@@ -290,7 +256,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-24 06:55:58.653383",
+ "modified": "2023-09-25 08:59:21.674963",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",

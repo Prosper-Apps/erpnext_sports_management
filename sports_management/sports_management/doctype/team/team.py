@@ -20,8 +20,9 @@ class Team(WebsiteGenerator):
 		# Get the club doctype of the team and add it to the context
 		context.club = frappe.get_doc("Club", self.club)
 
-		# Get the venue doctype and add it to the context
-		context.venue = frappe.get_doc("Venue", self.venue)
+		# Get the venue doctype and add it to the context if it exists
+		if self.venue:
+			context.venue = frappe.get_doc("Venue", self.venue)
 
 		# For each of the team_player get the name and route and add it to the context
 		for team_player in context.team_player:
@@ -40,3 +41,9 @@ class Team(WebsiteGenerator):
 			team_coach.route = frappe.get_value('Person', team_coach.person, 'route')
 			team_coach.name = frappe.get_value('Person', team_coach.person, 'name')
 			team_coach.picture = frappe.get_value('Person', team_coach.person, 'picture')
+
+		# Get the matches that are associated with the club and add it to the context
+		context.matches = frappe.get_all("Match", filters={"home": self.name}, fields=["name", "route", "home", "guest", "full_time_home_result", "full_time_guest_result", "date", "time", "venue"], order_by="date asc")	
+		context.matches += frappe.get_all("Match", filters={"guest": self.name}, fields=["name", "route", "home", "guest", "full_time_home_result", "full_time_guest_result", "date", "time", "venue"], order_by="date asc")	
+		# Order the context.matches by date
+		context.matches = sorted(context.matches, key=lambda k: k['date'])	

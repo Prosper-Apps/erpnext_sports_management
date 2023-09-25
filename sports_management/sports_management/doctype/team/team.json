@@ -150,8 +150,13 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
- "links": [],
- "modified": "2023-09-25 07:26:25.571284",
+ "links": [
+  {
+   "link_doctype": "Match",
+   "link_fieldname": "home"
+  }
+ ],
+ "modified": "2023-09-25 10:21:50.941383",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",

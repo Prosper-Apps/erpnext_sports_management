@@ -15,6 +15,14 @@ class Tournament(WebsiteGenerator):
 			
 		context.rankings = sorted(teams, key=lambda x: x.rank, reverse=False)
 
+		# Get the game days with name and route
+		context.game_days = frappe.get_all('Game Day', filters={'tournament': self.name}, fields=['name', 'route', 'start'], order_by='start')
+
+		# Get the matches with name and route
+		context.matches = frappe.get_all('Match', filters={'tournament': self.name}, fields=['name', 'route', 'home', 'guest', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result'], order_by='date')
+		for match in context.matches:
+			match.time = (datetime.datetime.min + match.time).time().strftime('%H:%M')
+
 @frappe.whitelist()
 def create_matches(tournament):
 	# Get the tournament document
@@ -55,6 +63,7 @@ def generate_round(tournament, tournament_doc, round_number, starting_day, game_
 		game_day_doc = frappe.new_doc('Game Day')
 		game_day_doc.tournament = tournament
 		game_day_doc.start = game_days[r]
+		game_day_doc.published = 1
 		game_day_doc.insert()
 		for match in rounds[r]:
 			match_doc = frappe.new_doc('Match')
@@ -65,6 +74,7 @@ def generate_round(tournament, tournament_doc, round_number, starting_day, game_
 			match_doc.venue = frappe.get_value('Team', match_doc.home, 'venue')
 			match_doc.date = game_days[r]
 			match_doc.time = time_for_games
+			match_doc.published = 1
 			match_doc.insert()
 
 	return game_days[r]

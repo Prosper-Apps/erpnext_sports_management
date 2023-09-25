@@ -1,0 +1,56 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="py-20 row">
+    <div class="col-sm-2">
+        {% if picture %}
+        <img alt="{{ name }}" src="{{ picture }}" />
+        {% endif %}
+    </div>
+    <div class="col">
+        <h1>{{ name }}</h1>
+        <p class="lead">Tournament: <a href="/{{ tournament.route }}">{{ tournament.name }}</a></p>
+
+        {% if description %}
+        <p>{{ description }}</p>
+        {% endif %}
+
+        {% if matches %}
+        <div class="page-header">
+            <h4>Matches</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Date</th>
+                            <th>Home</th>
+                            <th></th>
+                            <th></th>
+                            <th>Guest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for match in matches %}
+                        <tr>
+                            <td><a href="/{{ match.route }}">{{ match.name }}</a></td>
+                            <td>{{ frappe.format(match.date, {'fieldtype': 'Date'}) }} {{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
+                            <td>{{ match.home }}</td>
+                            <td>{% if match.full_time_home_result %} {{ match.full_time_home_result }}{% endif %}</td>
+                            <td>{% if match.full_time_guest_result %} {{ match.full_time_guest_result }}{% endif %}</td>
+                            <td>{{ match.guest }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

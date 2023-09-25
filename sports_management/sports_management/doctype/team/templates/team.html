@@ -26,6 +26,7 @@
         </div>
         <p>{{ description }}</p>
 
+        {% if tournaments %}
         <div class="page-header">
             <h4>Tournaments</h4>
         </div>
@@ -73,7 +74,9 @@
                 </table>
             </div>
         </div>
+        {% endif %}
 
+        {% if age_group %}
         <div class="page-header">
             <h4>Age Groups</h4>
         </div>
@@ -90,7 +93,9 @@
                 </table>
             </div>
         </div>
+        {% endif %}
 
+        {%if seasons %}
         <div class="page-header">
             <h4>Seasons</h4>
         </div>
@@ -107,6 +112,7 @@
                 </table>
             </div>
         </div>
+        {% endif %}
 
         {% if team_coach %}
         <div class="page-header">
@@ -175,6 +181,40 @@
                                     style="max-height: 50px;" />
                                 {% endif %}
                             </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if matches %}
+        <div class="page-header">
+            <h4>Matches</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Date</th>
+                            <th>Home</th>
+                            <th></th>
+                            <th></th>
+                            <th>Guest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for match in matches %}
+                        <tr>
+                            <td><a href="/{{ match.route }}">{{ match.name }}</a></td>
+                            <td>{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
+                            <td>{{ match.home }}</td>
+                            <td>{% if match.full_time_home_result %} {{ match.full_time_home_result }}{% endif %}</td>
+                            <td>{% if match.full_time_guest_result %} {{ match.full_time_guest_result }}{% endif %}</td>
+                            <td>{{ match.guest }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

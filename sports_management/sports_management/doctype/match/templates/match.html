@@ -1,0 +1,74 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="py-20 row">
+    <div class="col-sm-2">
+        {% if picture %}
+        <img alt="{{ name }}" src="{{ picture }}" />
+        {% endif %}
+    </div>
+    <div class="col">
+        <h1>{{ name }}</h1>
+        {% if venue %}
+        <p class="lead">Venue: <a href="/{{ venue.route }}">{{ venue.name }}</a></p>
+        {% endif %}
+
+        <div class="mt-4">
+
+            <div><span class="badge badge-info">{{ status }}</span></div>
+
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td class="font-weight-bold text-center"><a href="/{{ home.route }}">{{ home.name }}</a></td>
+                        <td class="font-weight-bold text-center"><a href="/{{ guest.route }}">{{ guest.name }}</a></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">Full Time Result</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold text-center">{{ full_time_home_result }}</td>
+                        <td class="font-weight-bold text-center">{{ full_time_guest_result }}</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">Half Time Result</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold text-center">{{ half_time_home_result }}</td>
+                        <td class="font-weight-bold text-center">{{ half_time_guest_result }}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="mt-2">Date: <strong>{{ frappe.format(date, {'fieldtype': 'Date'}) }} {{ frappe.format(time, {'fieldtype': 'Time'}) }}</strong></div>
+
+            {% if venue %}
+            <div>Club: <strong><a href="/{{ venue.route }}">{{ venue.name }}</a></strong></div>
+            {% endif %}            
+
+            {% if tournament %}
+            <div>Tournament: <strong><a href="/{{ tournament.route }}">{{ tournament.name }}</a></strong></div>
+            {% endif %}
+
+            {% if game_day %}
+            <div>Game Day: <strong><a href="/{{ game_day.route }}">{{ game_day.name }}</a></strong></div>
+            {% endif %}
+
+            {% if spectators %}
+            <div>Spectators: <strong>{{ spectators }}</strong></div>
+            {% endif %}
+            
+        </div>
+
+        {% if description %}
+        <p>{{ description }}</p>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

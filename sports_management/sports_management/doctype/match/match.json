@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 08:13:50.687312",
@@ -22,6 +23,8 @@
   "time",
   "spectators",
   "status",
+  "route",
+  "published",
   "disabled",
   "result_tab",
   "full_time_home_result",
@@ -305,11 +308,24 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Pending\nPlaying\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-09-24 16:02:01.953209",
+ "modified": "2023-09-25 09:11:43.022994",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -350,6 +366,7 @@
    "share": 1
   }
  ],
+ "route": "matches",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

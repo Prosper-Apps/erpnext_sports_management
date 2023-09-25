@@ -14,3 +14,6 @@ class Venue(WebsiteGenerator):
 
 		# Get the teams that are associated with the club and add it to the context
 		context.teams = frappe.get_all("Team", filters={"club": self.club}, fields=["name", "route"])
+
+		# Get the matches that are associated with the venue and add it to the context
+		context.matches = frappe.get_all("Match", filters={"venue": self.name}, fields=["name", "route", "home", "guest", "full_time_home_result", "full_time_guest_result", "date", "time", "venue"], order_by="date asc")
