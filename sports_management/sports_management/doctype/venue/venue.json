@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 05:54:21.887551",
@@ -10,23 +11,22 @@
  "field_order": [
   "details_tab",
   "short_name",
-  "field_size",
+  "nickname",
+  "playing_surface",
   "google_map_address",
-  "column_break_e20js",
   "address",
+  "column_break_e20js",
   "website",
+  "field_size",
   "max_capacity",
   "club",
-  "section_break_fqznp",
-  "location",
-  "description_tab",
-  "sports_venue_description",
+  "route",
+  "published",
   "picture_tab",
   "picture",
   "copyright_of_the_image",
-  "advanced_tab",
-  "nickname",
-  "playing_surface"
+  "description_tab",
+  "description"
  ],
  "fields": [
   {
@@ -58,11 +58,6 @@
    "options": "Address"
   },
   {
-   "fieldname": "location",
-   "fieldtype": "Geolocation",
-   "label": "Location"
-  },
-  {
    "fieldname": "website",
    "fieldtype": "Data",
    "label": "Website",
@@ -84,18 +79,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_fqznp",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "description_tab",
    "fieldtype": "Tab Break",
    "label": "Description"
-  },
-  {
-   "fieldname": "sports_venue_description",
-   "fieldtype": "Text Editor",
-   "label": "Sports venue description"
   },
   {
    "fieldname": "picture_tab",
@@ -113,11 +99,6 @@
    "label": "Copyright of the image"
   },
   {
-   "fieldname": "advanced_tab",
-   "fieldtype": "Tab Break",
-   "label": "Advanced"
-  },
-  {
    "fieldname": "nickname",
    "fieldtype": "Data",
    "label": "Nickname"
@@ -126,17 +107,35 @@
    "fieldname": "playing_surface",
    "fieldtype": "Select",
    "label": "Playing surface",
-   "options": "\nsynthetic grass\nnatural grass\nHybrid Lawn (synthetic / natural grass mix)\nGrand\nAsh\nRubberized court"
+   "options": "\nSynthetic Grass\nNatural Grass\nHybrid Lawn (synthetic / natural grass mix)\nGrand\nAsh\nRubberized court"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Sports venue description"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [
   {
    "link_doctype": "Match",
    "link_fieldname": "venue"
   }
  ],
- "modified": "2023-09-24 03:58:17.934942",
+ "modified": "2023-09-25 06:23:12.825874",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",
@@ -177,6 +176,7 @@
    "share": 1
   }
  ],
+ "route": "venues",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

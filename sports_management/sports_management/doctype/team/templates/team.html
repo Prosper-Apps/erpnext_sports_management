@@ -4,7 +4,9 @@
 
 <div class="py-20 row">
     <div class="col-sm-2">
+        {% if picture %}
         <img alt="{{ name }}" src="{{ picture }}" />
+        {% endif %}
     </div>
     <div class="col">
         <h1>{{ name }}</h1>

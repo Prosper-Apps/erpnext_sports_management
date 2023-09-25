@@ -9,19 +9,12 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "medium_length_name",
   "short_name",
+  "column_break_djz2u",
   "sports_type",
   "website",
-  "column_break_tydeh",
-  "club_foundation",
-  "year_of_foundation",
-  "club_dissolved",
-  "year_resolution",
   "picture_tab",
-  "flag",
   "picture",
-  "map_with_flag",
   "copyright_of_the_image",
   "description_tab",
   "description"
@@ -31,11 +24,6 @@
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "fieldname": "medium_length_name",
-   "fieldtype": "Data",
-   "label": "Medium length name"
   },
   {
    "fieldname": "short_name",
@@ -48,8 +36,7 @@
    "fieldname": "sports_type",
    "fieldtype": "Link",
    "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
+   "options": "Sports Type"
   },
   {
    "fieldname": "website",
@@ -58,44 +45,14 @@
    "options": "URL"
   },
   {
-   "fieldname": "club_foundation",
-   "fieldtype": "Date",
-   "label": "Club foundation"
-  },
-  {
-   "fieldname": "year_of_foundation",
-   "fieldtype": "Int",
-   "label": "year of foundation"
-  },
-  {
-   "fieldname": "club_dissolved",
-   "fieldtype": "Date",
-   "label": "Club dissolved"
-  },
-  {
-   "fieldname": "year_resolution",
-   "fieldtype": "Int",
-   "label": "year resolution"
-  },
-  {
    "fieldname": "picture_tab",
    "fieldtype": "Tab Break",
    "label": "Picture"
   },
   {
-   "fieldname": "flag",
-   "fieldtype": "Attach Image",
-   "label": "Flag"
-  },
-  {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
    "label": "Picture"
-  },
-  {
-   "fieldname": "map_with_flag",
-   "fieldtype": "Attach Image",
-   "label": "Map with flag"
   },
   {
    "fieldname": "copyright_of_the_image",
@@ -113,13 +70,13 @@
    "label": "Description"
   },
   {
-   "fieldname": "column_break_tydeh",
+   "fieldname": "column_break_djz2u",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 06:03:59.143753",
+ "modified": "2023-09-25 05:12:05.858149",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Federation",

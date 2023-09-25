@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Sports Management",
  "links": [],
- "modified": "2023-09-24 15:55:24.640584",
+ "modified": "2023-09-25 05:06:04.186789",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
@@ -24,6 +24,14 @@
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{} All",
+   "label": "Sports Type",
+   "link_to": "Sports Type",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
@@ -59,13 +67,6 @@
    "label": "Match",
    "link_to": "Match",
    "stats_filter": "{\"disabled\":[\"=\",0]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Sports Type",
-   "link_to": "Sports Type",
    "type": "DocType"
   },
   {

@@ -9,13 +9,11 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "country",
   "sports_type",
-  "info",
+  "country",
   "column_break_hvczy",
-  "age_from",
   "age_to",
-  "deadline",
+  "age_from",
   "pictures_tab",
   "picture",
   "description_tab",
@@ -43,16 +41,6 @@
    "fieldname": "age_to",
    "fieldtype": "Int",
    "label": "Age to"
-  },
-  {
-   "fieldname": "info",
-   "fieldtype": "Data",
-   "label": "Info"
-  },
-  {
-   "fieldname": "deadline",
-   "fieldtype": "Date",
-   "label": "Deadline"
   },
   {
    "fieldname": "column_break_hvczy",
@@ -86,7 +74,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 09:25:06.221996",
+ "modified": "2023-09-25 05:04:26.950785",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",

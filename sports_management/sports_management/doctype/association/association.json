@@ -9,15 +9,9 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "medium_length_name",
   "short_name",
   "sports_type",
   "website",
-  "column_break_ej0bg",
-  "club_foundation",
-  "year_of_foundation",
-  "club_dissolved",
-  "year_resolution",
   "picture_tab",
   "flag",
   "picture",
@@ -33,11 +27,6 @@
    "label": "Details"
   },
   {
-   "fieldname": "medium_length_name",
-   "fieldtype": "Data",
-   "label": "Medium length name"
-  },
-  {
    "fieldname": "short_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -48,34 +37,13 @@
    "fieldname": "sports_type",
    "fieldtype": "Link",
    "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
+   "options": "Sports Type"
   },
   {
    "fieldname": "website",
    "fieldtype": "Data",
    "label": "Website",
    "options": "URL"
-  },
-  {
-   "fieldname": "club_foundation",
-   "fieldtype": "Date",
-   "label": "Club foundation"
-  },
-  {
-   "fieldname": "year_of_foundation",
-   "fieldtype": "Int",
-   "label": "year of foundation"
-  },
-  {
-   "fieldname": "club_dissolved",
-   "fieldtype": "Date",
-   "label": "Club dissolved"
-  },
-  {
-   "fieldname": "year_resolution",
-   "fieldtype": "Int",
-   "label": "year resolution"
   },
   {
    "fieldname": "picture_tab",
@@ -111,15 +79,11 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
-  },
-  {
-   "fieldname": "column_break_ej0bg",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 06:04:12.515933",
+ "modified": "2023-09-25 05:08:52.501652",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Association",
