@@ -49,8 +49,8 @@
   "scoresheet",
   "advanced_tab",
   "link_to_the_external_match_report",
-  "youtube_video",
-  "tv_broadcast",
+  "live_broadcast_link",
+  "embed_live_broadcast_link",
   "weather",
   "temperature",
   "field_condition"
@@ -242,17 +242,6 @@
    "options": "URL"
   },
   {
-   "fieldname": "youtube_video",
-   "fieldtype": "Data",
-   "label": "YouTube Video",
-   "options": "URL"
-  },
-  {
-   "fieldname": "tv_broadcast",
-   "fieldtype": "HTML",
-   "label": "TV broadcast"
-  },
-  {
    "fieldname": "weather",
    "fieldtype": "Select",
    "label": "Weather",
@@ -312,13 +301,25 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "live_broadcast_link",
+   "fieldtype": "Data",
+   "label": "Live Broadcast Link",
+   "options": "URL"
+  },
+  {
+   "fieldname": "embed_live_broadcast_link",
+   "fieldtype": "Data",
+   "label": "Embed Live broadcast Link",
+   "options": "URL"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-25 11:13:51.992107",
+ "modified": "2023-09-25 11:38:54.170118",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",

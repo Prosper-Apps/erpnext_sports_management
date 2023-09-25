@@ -61,8 +61,24 @@
 
                 </tbody>
             </table>
+
+            {% if link_to_the_external_match_report %}
+            <div><a href="{{ link_to_the_external_match_report }}" target="_blank">Link to the external match report</a></div>
+            {% endif %}
+
+            {% if live_broadcast_link %}
+            <div><a href="{{ live_broadcast_link }}" target="_blank">Live broadcast link</a></div>
+            {% endif %}
             
         </div>
+
+        {% if embed_live_broadcast_link %}
+        <div class="mt-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ embed_live_broadcast_link }}" allowfullscreen></iframe>
+            </div>
+        </div>
+        {% endif %}
 
         <div class="mt-4">
             <h2>Match Preview</h2>
