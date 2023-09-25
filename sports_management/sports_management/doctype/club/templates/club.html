@@ -1,0 +1,87 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="py-20 row">
+    <div class="col-sm-2">
+        {% if picture %}
+        <img alt="{{ name }}" src="{{ picture }}" />
+        {% endif %}
+    </div>
+    <div class="col">
+        <h1>{{ name }}</h1>
+        <div class="mt-4">
+
+            {% if venue %}
+            <div>Venue: <strong><a href="/{{ venue.route }}">{{ venue.name }}</a></strong></div>
+            {% endif %}
+
+            {% if president %}
+            <div>President: <strong>{{ president }}</strong></div>
+            {% endif %}
+
+            {% if club_manager %}
+            <div>Manager: <strong>{{ club_manager }}</strong></div>
+            {% endif %}
+
+            {% if club_foundation %}
+            <div>Foundation: <strong>{{ club_foundation }}</strong></div>
+            {% endif %}
+
+            {% if club_dissolved %}
+            <div>Dissolved: <strong>{{ club_dissolved }}</strong></div>
+            {% endif %}
+
+        </div>
+
+        {% if description %}
+        <p>{{ description }}</p>
+        {% endif %}
+
+        {% if address %}
+        <div class="mt-4 card">
+            <div class="card-header">Address</div>
+            <div class="card-body">
+                <strong>Address Line 1:</strong> {{ address.address_line1 }}<br />
+                <strong>Address Line 2:</strong> {{ address.address_line2 }}<br />
+                <strong>City:</strong> {{ address.city }}<br />
+                <strong>State:</strong> {{ address.state }}<br />
+                <strong>Pincode:</strong> {{ address.pincode }}<br />
+                <strong>Country:</strong> {{ address.country }}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if contact %}
+        <div class="mt-4 card">
+            <div class="card-header">Contact</div>
+            <div class="card-body">
+                <strong>First Name:</strong> {{ contact.first_name }}<br/>
+                <strong>Last Name:</strong> {{ contact.last_name }}<br/>
+                <strong>Email:</strong> {{ contact.email_id }}<br/>
+                <strong>Mobile:</strong> {{ contact.mobile_no }}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="page-header">
+            <h4>Associations</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for item in association %}
+                        <tr>
+                            <td>{{ item.association }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -17,7 +17,7 @@
         <div class="mt-4">
 
             {% if club %}
-            <div>Club: <strong><a href="{{ club.route }}">{{ club.name }}</a></strong></div>
+            <div>Club: <strong><a href="/{{ club.route }}">{{ club.name }}</a></strong></div>
             {% endif %}
 
             {% if playing_surface %}
@@ -37,6 +37,10 @@
             {% endif %}
 
         </div>
+
+        {% if description %}
+        <p>{{ description }}</p>
+        {% endif %}
 
         {% if address %}
         <div class="mt-4 card">
@@ -71,11 +75,7 @@
                 <strong>Country:</strong> {{ address.country }}
             </div>
         </div>
-        {% endif %}
-
-        {% if address %}
-        <p>{{ description }}</p>
-        {% endif %}
+        {% endif %}        
         
     </div>
 </div>

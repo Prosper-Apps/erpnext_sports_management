@@ -51,9 +51,11 @@
 </div>
 
 <div class="py-20 row">
+    {% if picture %}
     <div class="col-sm-2">
         <img alt="{{ name }}" src="{{ picture }}" />
     </div>
+    {% endif %}
     <div class="col">
         <p class="lead">Sports Type: {{ sports_type }}</p>        
         <div class="mt-4">

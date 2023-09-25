@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 06:14:31.871077",
@@ -12,15 +13,17 @@
   "address",
   "contact",
   "club_manager",
-  "column_break_7labf",
   "president",
+  "column_break_7labf",
   "club_foundation",
   "club_dissolved",
   "venue",
+  "route",
+  "published",
   "section_break_vkrqd",
   "association",
   "pictures_tab",
-  "large_club_logo",
+  "picture",
   "copyright_of_the_image",
   "home_shirt",
   "away_shirt",
@@ -89,11 +92,6 @@
    "label": "Pictures"
   },
   {
-   "fieldname": "large_club_logo",
-   "fieldtype": "Attach Image",
-   "label": "Large club logo (150x150px)"
-  },
-  {
    "fieldname": "copyright_of_the_image",
    "fieldtype": "Data",
    "label": "Copyright of the image"
@@ -121,11 +119,34 @@
   {
    "fieldname": "section_break_vkrqd",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Large club logo (150x150px)"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-09-25 05:33:33.962279",
+ "is_published_field": "published",
+ "links": [
+  {
+   "link_doctype": "Team",
+   "link_fieldname": "club"
+  }
+ ],
+ "modified": "2023-09-25 06:47:36.992367",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",
@@ -170,6 +191,7 @@
    "write": 1
   }
  ],
+ "route": "clubs",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

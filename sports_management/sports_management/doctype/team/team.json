@@ -10,7 +10,6 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "medium_length_name",
   "short_name",
   "contact",
   "route",
@@ -26,22 +25,13 @@
   "description",
   "pictures_tab",
   "picture",
-  "copyright_of_the_image",
-  "advanced_tab",
-  "team_of_the_club_since",
-  "team_of_the_club_to"
+  "copyright_of_the_image"
  ],
  "fields": [
   {
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "fieldname": "medium_length_name",
-   "fieldtype": "Data",
-   "label": "Medium length name",
-   "options": "Name"
   },
   {
    "fieldname": "short_name",
@@ -120,21 +110,6 @@
    "label": "Copyright of the image"
   },
   {
-   "fieldname": "advanced_tab",
-   "fieldtype": "Tab Break",
-   "label": "Advanced"
-  },
-  {
-   "fieldname": "team_of_the_club_since",
-   "fieldtype": "Date",
-   "label": "Team of the club since"
-  },
-  {
-   "fieldname": "team_of_the_club_to",
-   "fieldtype": "Date",
-   "label": "Team of the club to"
-  },
-  {
    "fieldname": "section_break_tuepb",
    "fieldtype": "Section Break"
   },
@@ -154,7 +129,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-24 15:51:07.522204",
+ "modified": "2023-09-25 06:37:58.068407",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
