@@ -15,4 +15,5 @@ class Club(WebsiteGenerator):
 		# Get the venue doctype and add it to the context
 		context.venue = frappe.get_doc("Venue", self.venue)
 
-
+		# Get the teams that are associated with the club and add it to the context
+		context.teams = frappe.get_all("Team", filters={"club": self.name}, fields=["name", "route"])

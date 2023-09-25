@@ -16,3 +16,9 @@ class Team(WebsiteGenerator):
 			tournament.picture = frappe.get_value('Tournament', tournament.parent, 'picture')
 
 		context.tournaments = tournaments
+
+		# Get the club doctype of the team and add it to the context
+		context.club = frappe.get_doc("Club", self.club)
+
+		# Get the venue doctype and add it to the context
+		context.venue = frappe.get_doc("Venue", self.venue)

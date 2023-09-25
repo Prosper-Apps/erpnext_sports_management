@@ -131,11 +131,15 @@
  "is_published_field": "published",
  "links": [
   {
+   "link_doctype": "Team",
+   "link_fieldname": "venue"
+  },
+  {
    "link_doctype": "Match",
    "link_fieldname": "venue"
   }
  ],
- "modified": "2023-09-25 06:23:12.825874",
+ "modified": "2023-09-25 07:13:51.995252",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",

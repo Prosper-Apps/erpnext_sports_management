@@ -76,6 +76,23 @@
             </div>
         </div>
         {% endif %}        
+
+        <div class="page-header">
+            <h4>Teams</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for item in teams %}
+                        <tr>
+                            <td><a href="/{{ item.route }}">{{ item.name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         
     </div>
 </div>

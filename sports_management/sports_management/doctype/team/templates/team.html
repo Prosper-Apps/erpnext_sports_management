@@ -15,11 +15,13 @@
             <span class="badge badge-info">{{ short_name }}</span>
         </div>
         <div class="mt-4">
+
             {% if club %}
-            <div>Club: <strong>{{ club }}</strong></div>
+            <div>Club: <strong><a href="/{{ club.route}}">{{ club.name }}</a></strong></div>
             {% endif %}
+            
             {% if venue %}
-            <div>Venue: <strong>{{ venue }}</strong></div>
+            <div>Venue: <strong><a href="/{{ venue.route}}">{{ venue.name }}</a></strong></div>
             {% endif %}
         </div>
         <p>{{ description }}</p>
