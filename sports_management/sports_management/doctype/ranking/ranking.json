@@ -86,6 +86,7 @@
    "default": "0",
    "fieldname": "rank",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Rank",
    "non_negative": 1
   },
@@ -137,7 +138,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-26 10:39:39.131456",
+ "modified": "2023-09-26 11:15:45.270714",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",

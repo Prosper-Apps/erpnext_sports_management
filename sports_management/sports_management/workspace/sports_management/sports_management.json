@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"i_yNYjQjor\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ranking\",\"col\":3}},{\"id\":\"u-YSpriDcK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"x6yiKSnR2u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tournament\",\"col\":3}},{\"id\":\"iwYKAGxU6T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Game Day\",\"col\":3}},{\"id\":\"9-lslLHyjU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Match\",\"col\":3}},{\"id\":\"WbkvSX2IA7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XR42CjTf3R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"uw47FdG5ax\",\"type\":\"card\",\"data\":{\"card_name\":\"Events\",\"col\":4}},{\"id\":\"EDU_L3kcmL\",\"type\":\"card\",\"data\":{\"card_name\":\"Manager\",\"col\":4}}]",
+ "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"1XK5avdsbm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ranking\",\"col\":3}},{\"id\":\"u-YSpriDcK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"x6yiKSnR2u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tournament\",\"col\":3}},{\"id\":\"iwYKAGxU6T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Game Day\",\"col\":3}},{\"id\":\"9-lslLHyjU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Match\",\"col\":3}},{\"id\":\"WbkvSX2IA7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XR42CjTf3R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"uw47FdG5ax\",\"type\":\"card\",\"data\":{\"card_name\":\"Events\",\"col\":4}},{\"id\":\"EDU_L3kcmL\",\"type\":\"card\",\"data\":{\"card_name\":\"Manager\",\"col\":4}}]",
  "creation": "2023-09-22 14:34:51.711343",
  "custom_blocks": [],
  "docstatus": 0,
@@ -147,7 +147,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-09-26 10:42:34.152805",
+ "modified": "2023-09-26 11:22:19.080907",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
