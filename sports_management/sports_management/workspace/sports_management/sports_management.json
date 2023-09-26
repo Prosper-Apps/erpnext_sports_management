@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"A2MV0-1Qim\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sports Type\",\"col\":3}},{\"id\":\"WcYWZKxZFF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Age Group\",\"col\":3}},{\"id\":\"aBo4Inx_Lf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Association\",\"col\":3}},{\"id\":\"qGSYH15PWT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Federation\",\"col\":3}},{\"id\":\"dJaN8dOBsp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"League\",\"col\":3}},{\"id\":\"vVWQX290Hm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Season\",\"col\":3}},{\"id\":\"xxNO9gI5M_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Venue\",\"col\":3}},{\"id\":\"0C29girrqg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Position\",\"col\":3}},{\"id\":\"wq4HLvQ6TY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club\",\"col\":3}},{\"id\":\"RzvRohoc5J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Team\",\"col\":3}},{\"id\":\"ArMI0nD7BM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Person\",\"col\":3}},{\"id\":\"x6yiKSnR2u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tournament\",\"col\":3}},{\"id\":\"v4K5O3Zhbs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ranking\",\"col\":3}},{\"id\":\"iwYKAGxU6T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Game Day\",\"col\":3}},{\"id\":\"9-lslLHyjU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Match\",\"col\":3}}]",
+ "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"i_yNYjQjor\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ranking\",\"col\":3}},{\"id\":\"u-YSpriDcK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"x6yiKSnR2u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tournament\",\"col\":3}},{\"id\":\"iwYKAGxU6T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Game Day\",\"col\":3}},{\"id\":\"9-lslLHyjU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Match\",\"col\":3}},{\"id\":\"WbkvSX2IA7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XR42CjTf3R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"uw47FdG5ax\",\"type\":\"card\",\"data\":{\"card_name\":\"Events\",\"col\":4}},{\"id\":\"EDU_L3kcmL\",\"type\":\"card\",\"data\":{\"card_name\":\"Manager\",\"col\":4}}]",
  "creation": "2023-09-22 14:34:51.711343",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,8 +11,143 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "Sports Management",
- "links": [],
- "modified": "2023-09-25 18:31:32.776790",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sports Type",
+   "link_count": 0,
+   "link_to": "Sports Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Association",
+   "link_count": 0,
+   "link_to": "Association",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Federation",
+   "link_count": 0,
+   "link_to": "Federation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Age Group",
+   "link_count": 0,
+   "link_to": "Age Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Position",
+   "link_count": 0,
+   "link_to": "Position",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manager",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Club",
+   "link_count": 0,
+   "link_to": "Club",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Team",
+   "link_count": 0,
+   "link_to": "Team",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Person",
+   "link_count": 0,
+   "link_to": "Person",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Events",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "League",
+   "link_count": 0,
+   "link_to": "League",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Season",
+   "link_count": 0,
+   "link_to": "Season",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Venue",
+   "link_count": 0,
+   "link_to": "Venue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-09-26 10:42:34.152805",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
@@ -26,47 +161,10 @@
  "shortcuts": [
   {
    "color": "Grey",
-   "doc_view": "Report Builder",
-   "format": "{} Teams",
+   "doc_view": "List",
    "label": "Ranking",
    "link_to": "Ranking",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "format": "{} All",
-   "label": "Sports Type",
-   "link_to": "Sports Type",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Position",
-   "link_to": "Position",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Association",
-   "link_to": "Association",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Federation",
-   "link_to": "Federation",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Club",
-   "link_to": "Club",
-   "type": "DocType"
+   "type": "Report"
   },
   {
    "color": "Blue",
@@ -93,48 +191,6 @@
    "label": "Tournament",
    "link_to": "Tournament",
    "stats_filter": "{\"disabled\":[\"=\",0]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Team",
-   "link_to": "Team",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Season",
-   "link_to": "Season",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "League",
-   "link_to": "League",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Person",
-   "link_to": "Person",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Age Group",
-   "link_to": "Age Group",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Venue",
-   "link_to": "Venue",
    "type": "DocType"
   }
  ],

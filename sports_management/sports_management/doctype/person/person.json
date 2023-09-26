@@ -15,7 +15,6 @@
   "address",
   "birthday",
   "column_break_dyyce",
-  "death_day",
   "height",
   "weight",
   "route",
@@ -64,19 +63,16 @@
    "label": "Birthday"
   },
   {
-   "fieldname": "death_day",
-   "fieldtype": "Date",
-   "label": "Death day"
-  },
-  {
    "fieldname": "height",
-   "fieldtype": "Float",
-   "label": "Height"
+   "fieldtype": "Int",
+   "label": "Height (cm)",
+   "non_negative": 1
   },
   {
    "fieldname": "weight",
    "fieldtype": "Float",
-   "label": "Weight"
+   "label": "Weight (kg)",
+   "non_negative": 1
   },
   {
    "fieldname": "section_break_3f1pf",
@@ -203,7 +199,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-25 08:40:33.626487",
+ "modified": "2023-09-26 10:22:33.315065",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
