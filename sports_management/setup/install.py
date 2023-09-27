@@ -60,4 +60,14 @@ def add_permissions():
 		update_permission_property(doctype, "Sports User", 0, "report", 1)
 		update_permission_property(doctype, "Sports User", 0, "print", 1)
 		update_permission_property(doctype, "Sports User", 0, "share", 1)
+
+		add_permission(doctype, "Sports Manager", 0)
+		update_permission_property(doctype, "Sports User", 0, "if_owner", 1)
+		update_permission_property(doctype, "Sports User", 0, "create", 1)
+		update_permission_property(doctype, "Sports User", 0, "write", 1)
+		update_permission_property(doctype, "Sports User", 0, "delete", 1)
+		update_permission_property(doctype, "Sports User", 0, "read", 1)
+		update_permission_property(doctype, "Sports User", 0, "report", 1)
+		update_permission_property(doctype, "Sports User", 0, "print", 1)
+		update_permission_property(doctype, "Sports User", 0, "share", 1)
 	 
