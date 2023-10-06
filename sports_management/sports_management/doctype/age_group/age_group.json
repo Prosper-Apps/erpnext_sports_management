@@ -1,8 +1,8 @@
 {
  "actions": [],
- "allow_rename": 1,
  "allow_copy": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 15:42:37.225471",
  "default_view": "List",
@@ -11,10 +11,8 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "sports_type",
-  "country",
-  "column_break_hvczy",
   "age_to",
+  "column_break_hvczy",
   "age_from",
   "pictures_tab",
   "picture",
@@ -22,18 +20,6 @@
   "description"
  ],
  "fields": [
-  {
-   "fieldname": "country",
-   "fieldtype": "Link",
-   "label": "Country",
-   "options": "Country"
-  },
-  {
-   "fieldname": "sports_type",
-   "fieldtype": "Link",
-   "label": "Sports Type",
-   "options": "Sports Type"
-  },
   {
    "fieldname": "age_from",
    "fieldtype": "Int",
@@ -76,7 +62,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-25 05:04:26.950785",
+ "modified": "2023-10-06 09:11:38.517394",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",
@@ -85,10 +71,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
