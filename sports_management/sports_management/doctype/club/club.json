@@ -96,6 +96,7 @@
   {
    "fieldname": "copyright_of_the_image",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Copyright of the image"
   },
   {
