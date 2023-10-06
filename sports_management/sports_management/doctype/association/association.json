@@ -1,6 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "allow_copy": 1,
+ "allow_import": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 17:35:41.918626",
  "default_view": "List",
