@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 06:29:34.365646",
  "default_view": "List",
@@ -21,11 +21,6 @@
   "venue",
   "published",
   "section_break_tuepb",
-  "age_group",
-  "seasons",
-  "team_coach",
-  "team_player",
-  "team_staff",
   "description_tab",
   "description",
   "pictures_tab",
@@ -69,12 +64,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "age_group",
-   "fieldtype": "Table",
-   "label": "Age Group",
-   "options": "Team Age Group"
-  },
-  {
    "fieldname": "venue",
    "fieldtype": "Link",
    "label": "Venue",
@@ -83,12 +72,6 @@
   {
    "fieldname": "column_break_uuud3",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "seasons",
-   "fieldtype": "Table",
-   "label": "Seasons",
-   "options": "Team Season"
   },
   {
    "fieldname": "description_tab",
@@ -130,24 +113,6 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
-  },
-  {
-   "fieldname": "team_coach",
-   "fieldtype": "Table",
-   "label": "Team Coach",
-   "options": "Team Coach"
-  },
-  {
-   "fieldname": "team_player",
-   "fieldtype": "Table",
-   "label": "Team Player",
-   "options": "Team Player"
-  },
-  {
-   "fieldname": "team_staff",
-   "fieldtype": "Table",
-   "label": "Team Staff",
-   "options": "Team Staff"
   }
  ],
  "has_web_view": 1,
@@ -155,11 +120,26 @@
  "is_published_field": "published",
  "links": [
   {
+   "group": "Personnel",
+   "link_doctype": "Team Roster",
+   "link_fieldname": "team"
+  },
+  {
+   "group": "Personnel",
+   "link_doctype": "Team Coach",
+   "link_fieldname": "team"
+  },
+  {
+   "group": "Personnel",
+   "link_doctype": "Team Staff",
+   "link_fieldname": "team"
+  },
+  {
    "link_doctype": "Match",
    "link_fieldname": "home"
   }
  ],
- "modified": "2023-09-25 10:21:50.941383",
+ "modified": "2023-10-06 15:06:44.999036",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
@@ -168,10 +148,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

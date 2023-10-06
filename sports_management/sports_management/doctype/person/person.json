@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 06:42:54.934809",
  "default_view": "List",
@@ -22,20 +22,12 @@
   "route",
   "published",
   "disabled",
-  "section_break_3f1pf",
-  "association",
-  "requirements_tab",
-  "sports_type",
-  "position",
-  "age_group",
-  "description_tab",
-  "description",
-  "seasons_tab",
-  "seasons",
   "status_tab",
   "injury",
   "suspension",
   "absence",
+  "description_tab",
+  "description",
   "pictures_tab",
   "picture",
   "copyright_of_the_image"
@@ -77,33 +69,9 @@
    "non_negative": 1
   },
   {
-   "fieldname": "section_break_3f1pf",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "association",
-   "fieldtype": "Table",
-   "label": "Association",
-   "options": "Person Association"
-  },
-  {
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "fieldname": "sports_type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
-  },
-  {
-   "fieldname": "age_group",
-   "fieldtype": "Table",
-   "label": "Age Group",
-   "options": "Person Age Group"
   },
   {
    "fieldname": "description_tab",
@@ -114,17 +82,6 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
-  },
-  {
-   "fieldname": "seasons_tab",
-   "fieldtype": "Tab Break",
-   "label": "Seasons"
-  },
-  {
-   "fieldname": "seasons",
-   "fieldtype": "Table",
-   "label": "Participating Seasons",
-   "options": "Person Season"
   },
   {
    "fieldname": "status_tab",
@@ -176,11 +133,6 @@
    "label": "Disabled"
   },
   {
-   "fieldname": "requirements_tab",
-   "fieldtype": "Tab Break",
-   "label": "Requirements"
-  },
-  {
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
@@ -190,19 +142,13 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
-  },
-  {
-   "fieldname": "position",
-   "fieldtype": "Table",
-   "label": "Position",
-   "options": "Person Position"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-09-26 10:22:33.315065",
+ "modified": "2023-10-06 14:52:21.698145",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
@@ -211,10 +157,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
