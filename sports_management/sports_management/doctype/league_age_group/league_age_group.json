@@ -1,6 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "allow_copy": 1,
+ "allow_import": 1,
  "creation": "2023-09-22 18:03:55.221881",
  "doctype": "DocType",
  "editable_grid": 1,

@@ -1,6 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "allow_copy": 1,
+ "allow_import": 1,
  "creation": "2023-09-23 07:58:21.595452",
  "default_view": "List",
  "doctype": "DocType",

@@ -2,6 +2,8 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
+ "allow_copy": 1,
+ "allow_import": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 08:05:41.490504",
  "default_view": "List",
@@ -121,6 +123,7 @@
  "permissions": [
   {
    "create": 1,
+   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
