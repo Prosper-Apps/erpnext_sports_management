@@ -1,8 +1,9 @@
 {
  "actions": [],
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 14:40:42.033441",
  "default_view": "List",
@@ -11,7 +12,10 @@
  "engine": "InnoDB",
  "field_order": [
   "sport",
-  "picture"
+  "picture",
+  "description",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -28,11 +32,29 @@
    "fieldname": "picture",
    "fieldtype": "Attach Image",
    "label": "Picture"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-09-23 09:22:50.794758",
+ "modified": "2023-10-06 09:39:50.980940",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Type",
@@ -41,10 +63,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -74,6 +96,7 @@
    "share": 1
   }
  ],
+ "route": "sports-types",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
