@@ -41,6 +41,7 @@
  "permissions": [
   {
    "create": 1,
+   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
