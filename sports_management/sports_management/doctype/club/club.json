@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 06:14:31.871077",
  "default_view": "List",
@@ -22,8 +22,6 @@
   "venue",
   "route",
   "published",
-  "section_break_vkrqd",
-  "association",
   "pictures_tab",
   "picture",
   "copyright_of_the_image",
@@ -44,12 +42,6 @@
    "fieldtype": "Link",
    "label": "Contact",
    "options": "Contact"
-  },
-  {
-   "fieldname": "association",
-   "fieldtype": "Table",
-   "label": "Association",
-   "options": "Club Association"
   },
   {
    "fieldname": "club_manager",
@@ -120,10 +112,6 @@
    "label": "Description"
   },
   {
-   "fieldname": "section_break_vkrqd",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
@@ -149,7 +137,7 @@
    "link_fieldname": "club"
   }
  ],
- "modified": "2023-09-25 06:47:36.992367",
+ "modified": "2023-10-06 14:28:14.550257",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",
@@ -158,10 +146,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

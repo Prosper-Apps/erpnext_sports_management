@@ -4,7 +4,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2023-10-06 15:01:12.053354",
+ "creation": "2023-10-06 15:05:58.966166",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -13,7 +13,9 @@
   "naming_series",
   "team",
   "person",
-  "position"
+  "position",
+  "column_break_8cxpv",
+  "starting_lineup"
  ],
  "fields": [
   {
@@ -21,7 +23,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "TS-.team.-"
+   "options": "TR-.team.-"
   },
   {
    "fieldname": "team",
@@ -46,14 +48,26 @@
    "label": "Position",
    "options": "Position",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "starting_lineup",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Starting Lineup"
+  },
+  {
+   "fieldname": "column_break_8cxpv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 15:01:12.053354",
+ "modified": "2023-10-06 15:08:28.331037",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Team Staff",
+ "name": "Team Roster",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

@@ -5,7 +5,7 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 
-class TeamStaff(Document):
+class TeamRoster(Document):
 	def validate(self):
-		if frappe.db.exists('Team Staff', {'team': self.team, 'person': self.person}):
+		if frappe.db.exists('Team Coach', {'team': self.team, 'person': self.person}):
 			frappe.throw(_('A person with the same team already exists.'))
