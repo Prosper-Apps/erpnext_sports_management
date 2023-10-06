@@ -1,8 +1,8 @@
 {
  "actions": [],
- "allow_rename": 1,
  "allow_copy": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 17:35:41.918626",
  "default_view": "List",
@@ -70,6 +70,7 @@
   {
    "fieldname": "copyright_of_the_image",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Copyright of the image"
   },
   {
@@ -85,7 +86,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-25 05:08:52.501652",
+ "modified": "2023-10-06 08:25:05.312025",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Association",
@@ -94,10 +95,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
