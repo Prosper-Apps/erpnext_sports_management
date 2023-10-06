@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "prompt",
@@ -11,9 +12,11 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "age_to",
-  "column_break_hvczy",
   "age_from",
+  "column_break_hvczy",
+  "age_to",
+  "route",
+  "published",
   "pictures_tab",
   "picture",
   "description_tab",
@@ -58,11 +61,24 @@
    "fieldname": "description_tab",
    "fieldtype": "Tab Break",
    "label": "Description"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-10-06 09:11:38.517394",
+ "modified": "2023-10-06 09:24:04.630702",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",
@@ -104,6 +120,7 @@
    "share": 1
   }
  ],
+ "route": "age-groups",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
