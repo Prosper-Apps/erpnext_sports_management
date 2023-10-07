@@ -44,7 +44,7 @@
    "label": "Route"
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
@@ -54,7 +54,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-06 09:39:50.980940",
+ "modified": "2023-10-07 06:06:34.084055",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Type",
