@@ -20,7 +20,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Match Person",
-   "options": "Match Person",
+   "options": "Match Personnel",
    "reqd": 1
   },
   {
@@ -58,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 11:03:42.167993",
+ "modified": "2023-10-07 14:50:12.486838",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Event",

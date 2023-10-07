@@ -20,7 +20,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "MH-.match.-.person.-"
+   "options": "-.match.-.person.-"
   },
   {
    "fieldname": "match",
@@ -55,10 +55,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 10:57:14.073475",
+ "modified": "2023-10-07 14:56:32.999458",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Match Person",
+ "name": "Match Personnel",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

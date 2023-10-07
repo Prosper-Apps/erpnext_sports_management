@@ -24,7 +24,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "TR-.team.-"
+   "options": "-.team.-TR-"
   },
   {
    "fieldname": "team",
@@ -75,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 07:49:49.039774",
+ "modified": "2023-10-07 14:57:09.331526",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Personnel",
