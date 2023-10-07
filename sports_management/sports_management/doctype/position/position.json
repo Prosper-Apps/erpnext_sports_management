@@ -17,7 +17,6 @@
   "sports_type",
   "route",
   "published",
-  "disabled",
   "pictures_tab",
   "picture",
   "copyright_of_the_image",
@@ -53,12 +52,6 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Copyright of the image"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
   },
   {
    "default": "Player",
@@ -99,7 +92,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-06 14:42:55.555569",
+ "modified": "2023-10-07 06:24:22.010400",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Position",

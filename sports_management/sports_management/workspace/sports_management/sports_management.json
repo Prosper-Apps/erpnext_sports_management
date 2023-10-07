@@ -99,9 +99,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "League",
+   "label": "Venue",
    "link_count": 0,
-   "link_to": "League",
+   "link_to": "Venue",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -119,15 +119,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Venue",
+   "label": "League",
    "link_count": 0,
-   "link_to": "Venue",
+   "link_to": "League",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-09-26 11:22:19.080907",
+ "modified": "2023-10-07 06:47:30.796356",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
@@ -149,28 +149,28 @@
   {
    "color": "Blue",
    "doc_view": "List",
-   "format": "{} Enabled",
-   "label": "Match",
-   "link_to": "Match",
-   "stats_filter": "{\"disabled\":[\"=\",0]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "List",
-   "format": "{} Enabled",
-   "label": "Game Day",
-   "link_to": "Game Day",
-   "stats_filter": "{\"disabled\":[\"=\",0]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "List",
-   "format": "{} Enabled",
+   "format": "{} Published",
    "label": "Tournament",
    "link_to": "Tournament",
-   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "stats_filter": "{\"published\":[\"=\",1]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Published",
+   "label": "Game Day",
+   "link_to": "Game Day",
+   "stats_filter": "{\"published\":[\"=\",1]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Published",
+   "label": "Match",
+   "link_to": "Match",
+   "stats_filter": "{\"published\":[\"=\",1]}",
    "type": "DocType"
   }
  ],

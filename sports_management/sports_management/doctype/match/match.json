@@ -37,7 +37,6 @@
   "spectators",
   "route",
   "published",
-  "disabled",
   "match_preview_tab",
   "preview",
   "match_details_tab",
@@ -272,12 +271,6 @@
   {
    "fieldname": "section_break_dnckx",
    "fieldtype": "Section Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
   },
   {
    "fieldname": "tournament",

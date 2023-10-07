@@ -19,7 +19,6 @@
   "end",
   "route",
   "published",
-  "disabled",
   "picture_tab",
   "picture",
   "copyright_of_the_image",
@@ -77,12 +76,6 @@
   {
    "fieldname": "column_break_nlusw",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
   },
   {
    "fieldname": "route",

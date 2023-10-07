@@ -21,7 +21,6 @@
   "weight",
   "route",
   "published",
-  "disabled",
   "status_tab",
   "injury",
   "suspension",
@@ -125,12 +124,6 @@
   {
    "fieldname": "column_break_dyyce",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
   },
   {
    "fieldname": "route",
