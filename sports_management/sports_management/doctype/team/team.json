@@ -108,34 +108,19 @@
  "is_published_field": "published",
  "links": [
   {
-   "group": "Personnel",
-   "link_doctype": "Team Roster",
+   "link_doctype": "Team Personnel",
    "link_fieldname": "team"
-  },
-  {
-   "group": "Personnel",
-   "link_doctype": "Team Coach",
-   "link_fieldname": "team"
-  },
-  {
-   "group": "Personnel",
-   "link_doctype": "Team Staff",
-   "link_fieldname": "team"
-  },
-  {
-   "link_doctype": "Match",
-   "link_fieldname": "home"
   },
   {
    "link_doctype": "Team Tournament",
    "link_fieldname": "team"
   },
   {
-   "link_doctype": "Team Personnel",
-   "link_fieldname": "team"
+   "link_doctype": "Match",
+   "link_fieldname": "home"
   }
  ],
- "modified": "2023-10-07 07:27:28.025074",
+ "modified": "2023-10-07 09:50:12.358810",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
