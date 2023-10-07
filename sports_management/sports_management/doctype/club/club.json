@@ -15,11 +15,10 @@
   "address",
   "contact",
   "club_manager",
-  "president",
   "column_break_7labf",
+  "president",
   "club_foundation",
   "club_dissolved",
-  "venue",
   "route",
   "published",
   "pictures_tab",
@@ -58,18 +57,12 @@
   {
    "fieldname": "club_foundation",
    "fieldtype": "Date",
-   "label": "Club foundation"
+   "label": "Foundation"
   },
   {
    "fieldname": "club_dissolved",
    "fieldtype": "Date",
-   "label": "Club dissolved"
-  },
-  {
-   "fieldname": "venue",
-   "fieldtype": "Link",
-   "label": "Venue",
-   "options": "Venue"
+   "label": "Dissolved"
   },
   {
    "fieldname": "details_tab",
@@ -137,7 +130,7 @@
    "link_fieldname": "club"
   }
  ],
- "modified": "2023-10-06 14:28:14.550257",
+ "modified": "2023-10-07 05:59:26.120530",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",

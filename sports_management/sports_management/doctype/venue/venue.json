@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-23 05:54:21.887551",
  "default_view": "List",
@@ -16,12 +16,11 @@
   "nickname",
   "playing_surface",
   "google_map_address",
-  "address",
   "column_break_e20js",
+  "address",
   "website",
   "field_size",
   "max_capacity",
-  "club",
   "route",
   "published",
   "picture_tab",
@@ -69,12 +68,6 @@
    "fieldname": "max_capacity",
    "fieldtype": "Int",
    "label": "Max. Capacity"
-  },
-  {
-   "fieldname": "club",
-   "fieldtype": "Link",
-   "label": "Club owner",
-   "options": "Club"
   },
   {
    "fieldname": "column_break_e20js",
@@ -142,7 +135,7 @@
    "link_fieldname": "venue"
   }
  ],
- "modified": "2023-09-25 07:13:51.995252",
+ "modified": "2023-10-07 05:58:10.013208",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",
@@ -151,10 +144,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
