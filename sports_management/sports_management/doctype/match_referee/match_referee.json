@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2023-10-07 10:41:15.257255",
+ "creation": "2023-10-07 15:09:41.399151",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,9 +10,8 @@
  "field_order": [
   "naming_series",
   "match",
-  "role",
   "person",
-  "team"
+  "position"
  ],
  "fields": [
   {
@@ -20,7 +19,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "-.match.-.person.-"
+   "options": ".match.-.person.-R-"
   },
   {
    "fieldname": "match",
@@ -39,26 +38,19 @@
    "reqd": 1
   },
   {
-   "default": "Referee",
-   "fieldname": "role",
-   "fieldtype": "Select",
-   "label": "Role",
-   "options": "Player\nCoach\nStaff\nReferee",
-   "reqd": 1
-  },
-  {
-   "fieldname": "team",
+   "fieldname": "position",
    "fieldtype": "Link",
-   "label": "Team",
-   "options": "Team"
+   "label": "Position",
+   "options": "Position",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 14:56:32.999458",
+ "modified": "2023-10-07 15:14:41.432740",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Match Personnel",
+ "name": "Match Referee",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

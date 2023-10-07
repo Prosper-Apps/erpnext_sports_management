@@ -336,7 +336,7 @@
  "is_published_field": "published",
  "links": [
   {
-   "link_doctype": "Match Person",
+   "link_doctype": "Match Referee",
    "link_fieldname": "match"
   },
   {
@@ -344,7 +344,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-07 11:02:35.982990",
+ "modified": "2023-10-07 15:17:14.150932",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
