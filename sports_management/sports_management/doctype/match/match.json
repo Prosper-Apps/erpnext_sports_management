@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 08:13:50.687312",
  "default_view": "List",
@@ -334,8 +334,17 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
- "links": [],
- "modified": "2023-09-25 18:20:40.962749",
+ "links": [
+  {
+   "link_doctype": "Match Person",
+   "link_fieldname": "match"
+  },
+  {
+   "link_doctype": "Match Event",
+   "link_fieldname": "match"
+  }
+ ],
+ "modified": "2023-10-07 11:02:35.982990",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -344,10 +353,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

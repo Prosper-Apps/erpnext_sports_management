@@ -12,8 +12,8 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "sports_type",
   "league",
+  "sports_type",
   "season",
   "column_break_hxzug",
   "type",
@@ -72,13 +72,6 @@
   {
    "fieldname": "column_break_hxzug",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "sports_type",
-   "fieldtype": "Link",
-   "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
   },
   {
    "fieldname": "description_tab",
@@ -214,6 +207,12 @@
    "fieldname": "loss_points",
    "fieldtype": "Int",
    "label": "Loss Points"
+  },
+  {
+   "fetch_from": "league.sports_type",
+   "fieldname": "sports_type",
+   "fieldtype": "Read Only",
+   "label": "Sports Type"
   }
  ],
  "has_web_view": 1,
@@ -233,7 +232,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-10-07 06:54:37.752545",
+ "modified": "2023-10-07 10:17:57.772933",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",

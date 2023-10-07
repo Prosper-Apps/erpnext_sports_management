@@ -26,6 +26,12 @@ frappe.ui.form.on('Team Personnel', {
 		// Set position value to empty
 		frm.set_value("position", "");
 
+		// Refresh the frame
+		frm.refresh();
+		
+	},
+
+	refresh: function (frm) {
 		// Get the team sports type
 		var sports_type = frappe.db.get_value("Team", frm.doc.team, "sports_type", function (r) {
 			// Set the sports type
@@ -39,19 +45,6 @@ frappe.ui.form.on('Team Personnel', {
 			}
 			);
 		});
-	},
-
-	refresh: function (frm) {
-		// Limit the position column to only show the coach position
-		frm.set_query("position", function () {			
-			return {
-				"filters": [
-					["Position", "role", "=", frm.doc.role],
-					["Position", "sports_type", "=", ""]
-				]
-			};
-		}
-		);
 		
 	}
 });

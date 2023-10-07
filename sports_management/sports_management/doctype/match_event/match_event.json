@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-07 10:50:18.620510",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "match",
+  "match_person",
+  "events_type",
+  "time",
+  "picture",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "match_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Match Person",
+   "options": "Match Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "match",
+   "fieldtype": "Link",
+   "label": "Match",
+   "options": "Match",
+   "reqd": 1
+  },
+  {
+   "fieldname": "events_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Events Type",
+   "options": "Events Type",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-07 11:03:42.167993",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Match Event",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

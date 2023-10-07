@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-10-07 10:41:15.257255",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "match",
+  "role",
+  "person",
+  "team"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "MH-.match.-.person.-"
+  },
+  {
+   "fieldname": "match",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Match",
+   "options": "Match",
+   "reqd": 1
+  },
+  {
+   "fieldname": "person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Person",
+   "options": "Person",
+   "reqd": 1
+  },
+  {
+   "default": "Referee",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "label": "Role",
+   "options": "Player\nCoach\nStaff\nReferee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Link",
+   "label": "Team",
+   "options": "Team"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-07 10:57:14.073475",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Match Person",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
