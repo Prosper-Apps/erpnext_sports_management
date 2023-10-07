@@ -33,26 +33,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Association",
-   "link_count": 0,
-   "link_to": "Association",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Federation",
-   "link_count": 0,
-   "link_to": "Federation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Age Group",
    "link_count": 0,
    "link_to": "Age Group",
