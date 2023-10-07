@@ -137,9 +137,13 @@
   {
    "link_doctype": "Match",
    "link_fieldname": "home"
+  },
+  {
+   "link_doctype": "Team Tournament",
+   "link_fieldname": "team"
   }
  ],
- "modified": "2023-10-06 15:06:44.999036",
+ "modified": "2023-10-06 18:05:13.558415",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
