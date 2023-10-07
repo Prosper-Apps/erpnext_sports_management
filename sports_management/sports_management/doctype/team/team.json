@@ -14,11 +14,9 @@
   "details_tab",
   "short_name",
   "contact",
-  "route",
   "column_break_uuud3",
-  "sports_type",
   "club",
-  "venue",
+  "route",
   "published",
   "section_break_tuepb",
   "description_tab",
@@ -48,26 +46,12 @@
    "options": "Contact"
   },
   {
-   "fieldname": "sports_type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
-  },
-  {
    "fieldname": "club",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Club",
    "options": "Club",
    "reqd": 1
-  },
-  {
-   "fieldname": "venue",
-   "fieldtype": "Link",
-   "label": "Venue",
-   "options": "Venue"
   },
   {
    "fieldname": "column_break_uuud3",
@@ -143,7 +127,7 @@
    "link_fieldname": "team"
   }
  ],
- "modified": "2023-10-06 18:05:13.558415",
+ "modified": "2023-10-07 06:01:45.788792",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
