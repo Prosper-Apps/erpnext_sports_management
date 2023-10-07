@@ -4,7 +4,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2023-10-07 07:26:15.109554",
+ "creation": "2023-10-07 15:22:16.572865",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -27,12 +27,26 @@
    "options": ".team.-TR-"
   },
   {
+   "default": "Player",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Role",
+   "options": "Player\nCoach\nStaff",
+   "reqd": 1
+  },
+  {
    "fieldname": "team",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Team",
    "options": "Team",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8cxpv",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "person",
@@ -51,34 +65,20 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_8cxpv",
-   "fieldtype": "Column Break"
-  },
-  {
    "default": "1",
    "fieldname": "starting_lineup",
    "fieldtype": "Check",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Starting Lineup"
-  },
-  {
-   "default": "Player",
-   "fieldname": "role",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Role",
-   "options": "Player\nCoach\nStaff",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 15:17:47.236534",
+ "modified": "2023-10-07 15:22:16.572865",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Team Personnel",
+ "name": "Team Roster",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

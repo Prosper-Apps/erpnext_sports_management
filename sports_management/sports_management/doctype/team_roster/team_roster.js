@@ -1,7 +1,7 @@
 // Copyright (c) 2023, KAINOTOMO PH LTD and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Team Personnel', {
+frappe.ui.form.on('Team Roster', {
 
 	// When the role is changed if the role is player then show starting_lineup else hide
 	role: function (frm) {
