@@ -340,11 +340,15 @@
    "link_fieldname": "match"
   },
   {
+   "link_doctype": "Match Roster",
+   "link_fieldname": "match"
+  },
+  {
    "link_doctype": "Match Event",
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-07 15:17:14.150932",
+ "modified": "2023-10-07 15:26:41.034199",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
