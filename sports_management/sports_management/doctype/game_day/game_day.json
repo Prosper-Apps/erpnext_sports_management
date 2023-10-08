@@ -36,13 +36,14 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": ".tournament.-D-"
+   "options": ".tournament.-.start.-"
   },
   {
    "fieldname": "start",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Start"
+   "label": "Start",
+   "reqd": 1
   },
   {
    "fieldname": "end",
@@ -71,7 +72,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Tournament",
-   "options": "Tournament"
+   "options": "Tournament",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nlusw",
@@ -109,7 +111,7 @@
    "link_fieldname": "game_day"
   }
  ],
- "modified": "2023-10-07 18:11:27.480199",
+ "modified": "2023-10-08 07:52:19.125101",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",

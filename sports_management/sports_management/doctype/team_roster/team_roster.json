@@ -24,7 +24,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": ".team.-TR-"
+   "options": ".team.-.person.-"
   },
   {
    "default": "Player",
@@ -75,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 15:22:16.572865",
+ "modified": "2023-10-08 08:05:15.175396",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",

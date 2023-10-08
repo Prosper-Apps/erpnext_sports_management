@@ -25,7 +25,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": ".match.-R-"
+   "options": ".match.-.person.-"
   },
   {
    "fieldname": "match",
@@ -83,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 15:26:19.619758",
+ "modified": "2023-10-08 08:03:25.037247",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
