@@ -74,7 +74,6 @@ def generate_round(tournament, tournament_doc, round_number, starting_day, game_
 			match_doc.game_day = game_day_doc.name
 			match_doc.home = team_names[match[0]-1]
 			match_doc.guest = team_names[match[1]-1]
-			match_doc.venue = frappe.get_value('Team', match_doc.home, 'venue')
 			match_doc.date = game_days[r]
 			match_doc.time = time_for_games
 			match_doc.published = 1
