@@ -129,17 +129,8 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
- "links": [
-  {
-   "link_doctype": "Team",
-   "link_fieldname": "venue"
-  },
-  {
-   "link_doctype": "Match",
-   "link_fieldname": "venue"
-  }
- ],
- "modified": "2023-10-07 05:58:10.013208",
+ "links": [],
+ "modified": "2023-10-07 06:32:47.037213",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",

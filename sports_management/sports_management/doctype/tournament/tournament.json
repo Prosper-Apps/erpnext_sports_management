@@ -12,17 +12,17 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "sports_type",
   "league",
+  "sports_type",
   "season",
   "column_break_hxzug",
   "type",
   "country",
   "route",
   "published",
-  "disabled",
-  "section_break_jjbnz",
-  "age_group",
+  "pictures_tab",
+  "picture",
+  "copyright_of_the_image",
   "description_tab",
   "description",
   "competition_tab",
@@ -34,9 +34,6 @@
   "draw_points",
   "loss_points",
   "extra_time",
-  "pictures_tab",
-  "picture",
-  "copyright_of_the_image",
   "round_robin_tab",
   "schedule_type",
   "time_for_games",
@@ -75,23 +72,6 @@
   {
    "fieldname": "column_break_hxzug",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "sports_type",
-   "fieldtype": "Link",
-   "label": "Sports Type",
-   "options": "Sports Type",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_jjbnz",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "age_group",
-   "fieldtype": "Table",
-   "label": "Age Group",
-   "options": "Tournament Age Group"
   },
   {
    "fieldname": "description_tab",
@@ -184,12 +164,6 @@
    "reqd": 1
   },
   {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
-  },
-  {
    "fieldname": "column_break_btx5u",
    "fieldtype": "Column Break"
   },
@@ -237,6 +211,12 @@
    "fieldname": "loss_points",
    "fieldtype": "Int",
    "label": "Loss Points"
+  },
+  {
+   "fetch_from": "league.sports_type",
+   "fieldname": "sports_type",
+   "fieldtype": "Read Only",
+   "label": "Sports Type"
   }
  ],
  "has_web_view": 1,
@@ -256,7 +236,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-09-25 14:55:45.698650",
+ "modified": "2023-10-07 10:17:57.772933",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
@@ -265,10 +245,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

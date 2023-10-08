@@ -1,9 +1,9 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 0,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 08:05:41.490504",
  "default_view": "List",
@@ -19,7 +19,6 @@
   "end",
   "route",
   "published",
-  "disabled",
   "picture_tab",
   "picture",
   "copyright_of_the_image",
@@ -37,13 +36,14 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "D-.tournament.-"
+   "options": ".tournament.-.start.-"
   },
   {
    "fieldname": "start",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Start"
+   "label": "Start",
+   "reqd": 1
   },
   {
    "fieldname": "end",
@@ -73,17 +73,12 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Tournament",
-   "options": "Tournament"
+   "options": "Tournament",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nlusw",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
   },
   {
    "fieldname": "route",
@@ -120,7 +115,7 @@
    "link_fieldname": "game_day"
   }
  ],
- "modified": "2023-09-25 09:24:43.671036",
+ "modified": "2023-10-08 07:52:19.125101",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",
@@ -129,10 +124,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

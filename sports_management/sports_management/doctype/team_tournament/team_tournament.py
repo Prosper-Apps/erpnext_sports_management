@@ -9,3 +9,20 @@ class TeamTournament(Document):
 	def validate(self):
 		if frappe.db.exists('Team Tournament', {'team': self.team, 'tournament': self.tournament}):
 			frappe.throw(_('A tournament with the same team already exists.'))
+
+	# After save of Team Tournament, create a new Ranking for the team in the tournament if it does not aleady exist
+	def after_insert(self):
+		if not frappe.db.exists('Ranking', {'team': self.team, 'tournament': self.tournament}):
+			ranking = frappe.new_doc('Ranking')
+			ranking.team = self.team
+			ranking.tournament = self.tournament
+			ranking.save(ignore_permissions=True)
+			frappe.db.commit()
+	
+
+	# After delete of Team Tournament, disable the Ranking for the team in the tournament
+	def on_trash(self):
+		ranking = frappe.get_doc('Ranking', {'team': self.team, 'tournament': self.tournament})
+		ranking.disabled = 1
+		ranking.save(ignore_permissions=True)
+		frappe.db.commit()
