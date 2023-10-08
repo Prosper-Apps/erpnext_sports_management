@@ -1,8 +1,8 @@
 {
  "actions": [],
- "allow_copy": 1,
- "allow_import": 1,
  "allow_rename": 1,
+ "allow_copy": 0,
+ "allow_import": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 17:50:54.551719",
  "default_view": "List",
@@ -90,7 +90,8 @@
   {
    "fieldname": "description",
    "fieldtype": "Text Editor",
-   "label": "Description"
+   "label": "Description",
+   "no_copy": 1
   },
   {
    "fieldname": "age_group",
@@ -102,7 +103,12 @@
   {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
-   "label": "Picture"
+   "label": "Picture",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "section_break_rw6bn",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,

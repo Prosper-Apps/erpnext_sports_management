@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_copy": 1,
+ "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "prompt",
@@ -60,7 +60,8 @@
   {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
-   "label": "Picture"
+   "label": "Picture",
+   "no_copy": 1
   },
   {
    "fieldname": "map_with_flag",
@@ -81,7 +82,8 @@
   {
    "fieldname": "description",
    "fieldtype": "Text Editor",
-   "label": "Description"
+   "label": "Description",
+   "no_copy": 1
   }
  ],
  "index_web_pages_for_search": 1,

@@ -1,7 +1,7 @@
 {
  "actions": [],
- "allow_copy": 1,
  "allow_guest_to_view": 1,
+ "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -289,13 +289,15 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Route"
+   "label": "Route",
+   "no_copy": 1
   },
   {
    "default": "1",
    "fieldname": "published",
    "fieldtype": "Check",
-   "label": "Published"
+   "label": "Published",
+   "no_copy": 1
   },
   {
    "fieldname": "live_broadcast_link",

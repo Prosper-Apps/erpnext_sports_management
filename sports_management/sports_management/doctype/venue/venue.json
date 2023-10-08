@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_copy": 1,
+ "allow_copy": 0,
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
@@ -86,7 +86,8 @@
   {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
-   "label": "Picture"
+   "label": "Picture",
+   "no_copy": 1
   },
   {
    "fieldname": "copyright_of_the_image",
@@ -109,13 +110,15 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Route"
+   "label": "Route",
+   "no_copy": 1
   },
   {
    "default": "1",
    "fieldname": "published",
    "fieldtype": "Check",
-   "label": "Published"
+   "label": "Published",
+   "no_copy": 1
   },
   {
    "fieldname": "description",
