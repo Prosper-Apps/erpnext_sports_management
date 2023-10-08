@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2023-10-07 10:50:18.620510",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "match",
   "match_roster",
   "events_type",
@@ -51,17 +53,25 @@
    "fieldname": "match_roster",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Match Roster",
+   "label": "Person",
    "options": "Match Roster",
    "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": ".match.-.events_type.-"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 18:15:34.449076",
+ "modified": "2023-10-08 14:40:29.865381",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Event",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
