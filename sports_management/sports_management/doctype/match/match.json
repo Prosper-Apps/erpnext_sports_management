@@ -66,7 +66,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": ".tournament.-M-"
+   "options": ".game_day.-.home.-.guest.-"
   },
   {
    "fieldname": "date",
@@ -348,7 +348,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-07 18:11:09.932743",
+ "modified": "2023-10-08 06:54:12.447428",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
