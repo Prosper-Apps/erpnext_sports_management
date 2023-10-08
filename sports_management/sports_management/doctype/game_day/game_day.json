@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 08:05:41.490504",
  "default_view": "List",
@@ -36,7 +36,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "D-.tournament.-"
+   "options": ".tournament.-D-"
   },
   {
    "fieldname": "start",
@@ -109,7 +109,7 @@
    "link_fieldname": "game_day"
   }
  ],
- "modified": "2023-09-25 09:24:43.671036",
+ "modified": "2023-10-07 18:11:27.480199",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",
@@ -118,10 +118,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

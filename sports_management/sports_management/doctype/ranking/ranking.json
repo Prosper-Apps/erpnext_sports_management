@@ -105,7 +105,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "R-.tournament.-"
+   "options": ".tournament.-R-"
   },
   {
    "fieldname": "tournament",
@@ -147,7 +147,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 10:24:42.985156",
+ "modified": "2023-10-07 18:13:57.105503",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",
