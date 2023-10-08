@@ -17,7 +17,6 @@
   "sports_type",
   "route",
   "published",
-  "disabled",
   "pictures_tab",
   "picture",
   "copyright_of_the_image",
@@ -55,15 +54,10 @@
    "label": "Copyright of the image"
   },
   {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
-  },
-  {
    "default": "Player",
    "fieldname": "role",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Role",
    "options": "Player\nCoach\nStaff\nReferee",
    "reqd": 1
@@ -99,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-06 14:42:55.555569",
+ "modified": "2023-10-08 07:43:11.158113",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Position",

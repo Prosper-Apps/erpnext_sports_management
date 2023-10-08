@@ -1,8 +1,8 @@
 {
  "actions": [],
- "allow_rename": 1,
  "allow_copy": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 17:50:54.551719",
  "default_view": "List",
@@ -12,15 +12,13 @@
  "field_order": [
   "details_tab",
   "short_name",
-  "website",
-  "country",
-  "column_break_hhuqu",
   "sports_type",
+  "age_group",
+  "column_break_hhuqu",
+  "country",
   "league_level",
   "date_of_first_delivery",
   "league_end_date",
-  "section_break_rw6bn",
-  "age_group",
   "pictures_tab",
   "picture",
   "copyright_of_the_image",
@@ -39,12 +37,6 @@
    "in_list_view": 1,
    "label": "Short name",
    "reqd": 1
-  },
-  {
-   "fieldname": "website",
-   "fieldtype": "Data",
-   "label": "Website",
-   "options": "URL"
   },
   {
    "fieldname": "country",
@@ -102,23 +94,20 @@
   },
   {
    "fieldname": "age_group",
-   "fieldtype": "Table",
+   "fieldtype": "Link",
    "label": "Age Group",
-   "options": "League Age Group"
+   "options": "Age Group",
+   "reqd": 1
   },
   {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
    "label": "Picture"
-  },
-  {
-   "fieldname": "section_break_rw6bn",
-   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-25 05:15:38.041077",
+ "modified": "2023-10-07 06:44:54.688105",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",
@@ -127,10 +116,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

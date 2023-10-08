@@ -4,17 +4,18 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2023-10-06 15:05:58.966166",
+ "creation": "2023-10-07 15:22:16.572865",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "role",
   "team",
+  "column_break_8cxpv",
   "person",
   "position",
-  "column_break_8cxpv",
   "starting_lineup"
  ],
  "fields": [
@@ -23,7 +24,17 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "TR-.team.-"
+   "options": ".team.-.person.-"
+  },
+  {
+   "default": "Player",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Role",
+   "options": "Player\nCoach\nStaff",
+   "reqd": 1
   },
   {
    "fieldname": "team",
@@ -32,6 +43,10 @@
    "label": "Team",
    "options": "Team",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8cxpv",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "person",
@@ -50,21 +65,17 @@
    "reqd": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "starting_lineup",
    "fieldtype": "Check",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Starting Lineup"
-  },
-  {
-   "fieldname": "column_break_8cxpv",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 15:08:28.331037",
+ "modified": "2023-10-08 08:05:15.175396",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",

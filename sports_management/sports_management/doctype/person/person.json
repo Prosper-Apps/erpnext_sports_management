@@ -12,16 +12,15 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
+  "national_id",
   "contact",
-  "user",
   "address",
-  "birthday",
   "column_break_dyyce",
+  "birthday",
   "height",
   "weight",
   "route",
   "published",
-  "disabled",
   "status_tab",
   "injury",
   "suspension",
@@ -38,12 +37,6 @@
    "fieldtype": "Link",
    "label": "Contact",
    "options": "Contact"
-  },
-  {
-   "fieldname": "user",
-   "fieldtype": "Link",
-   "label": "User",
-   "options": "User"
   },
   {
    "fieldname": "address",
@@ -127,12 +120,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
-  },
-  {
    "fieldname": "route",
    "fieldtype": "Data",
    "hidden": 1,
@@ -143,13 +130,20 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "National ID / Passport",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-06 14:52:21.698145",
+ "modified": "2023-10-07 07:03:57.031749",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",

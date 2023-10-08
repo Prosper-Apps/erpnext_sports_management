@@ -13,17 +13,17 @@
  "field_order": [
   "details_tab",
   "short_name",
-  "contact",
+  "sports_type",
   "column_break_uuud3",
   "club",
+  "contact",
   "route",
   "published",
-  "section_break_tuepb",
-  "description_tab",
-  "description",
   "pictures_tab",
   "picture",
-  "copyright_of_the_image"
+  "copyright_of_the_image",
+  "description_tab",
+  "description"
  ],
  "fields": [
   {
@@ -84,10 +84,6 @@
    "label": "Copyright of the image"
   },
   {
-   "fieldname": "section_break_tuepb",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "route",
    "fieldtype": "Data",
    "hidden": 1,
@@ -98,6 +94,13 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type",
+   "options": "Sports Type",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
@@ -105,30 +108,19 @@
  "is_published_field": "published",
  "links": [
   {
-   "group": "Personnel",
    "link_doctype": "Team Roster",
    "link_fieldname": "team"
   },
   {
-   "group": "Personnel",
-   "link_doctype": "Team Coach",
-   "link_fieldname": "team"
-  },
-  {
-   "group": "Personnel",
-   "link_doctype": "Team Staff",
+   "link_doctype": "Team Tournament",
    "link_fieldname": "team"
   },
   {
    "link_doctype": "Match",
    "link_fieldname": "home"
-  },
-  {
-   "link_doctype": "Team Tournament",
-   "link_fieldname": "team"
   }
  ],
- "modified": "2023-10-07 06:01:45.788792",
+ "modified": "2023-10-08 07:07:21.908936",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",

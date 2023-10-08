@@ -1,17 +1,15 @@
 {
  "actions": [],
- "allow_copy": 1,
- "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2023-10-06 14:35:02.209278",
+ "creation": "2023-10-07 15:09:41.399151",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "team",
+  "match",
   "person",
   "position"
  ],
@@ -21,14 +19,14 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "TC-.team.-"
+   "options": ".match.-.person.-R-"
   },
   {
-   "fieldname": "team",
+   "fieldname": "match",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Team",
-   "options": "Team",
+   "label": "Match",
+   "options": "Match",
    "reqd": 1
   },
   {
@@ -42,7 +40,6 @@
   {
    "fieldname": "position",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Position",
    "options": "Position",
    "reqd": 1
@@ -50,10 +47,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 14:35:02.209278",
+ "modified": "2023-10-07 15:14:41.432740",
  "modified_by": "Administrator",
  "module": "Sports Management",
- "name": "Team Coach",
+ "name": "Match Referee",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
@@ -62,36 +59,10 @@
    "delete": 1,
    "email": 1,
    "export": 1,
-   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sports Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "if_owner": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sports User",
    "share": 1,
    "write": 1
   }

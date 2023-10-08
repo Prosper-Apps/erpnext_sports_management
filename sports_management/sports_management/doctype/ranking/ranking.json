@@ -1,8 +1,8 @@
 {
  "actions": [],
- "allow_rename": 1,
  "allow_copy": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 07:58:42.889528",
  "default_view": "List",
@@ -15,6 +15,7 @@
   "tournament",
   "column_break_jfqqk",
   "team",
+  "disabled",
   "statistics_tab",
   "rank",
   "section_break_pbcjn",
@@ -104,7 +105,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "R-.tournament.-"
+   "options": ".tournament.-.team.-"
   },
   {
    "fieldname": "tournament",
@@ -136,11 +137,17 @@
   {
    "fieldname": "section_break_pbcjn",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-26 11:15:45.270714",
+ "modified": "2023-10-08 07:50:10.662804",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",
@@ -149,10 +156,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,

@@ -1,9 +1,9 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
  "allow_copy": 1,
+ "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-09-23 08:13:50.687312",
  "default_view": "List",
@@ -37,7 +37,6 @@
   "spectators",
   "route",
   "published",
-  "disabled",
   "match_preview_tab",
   "preview",
   "match_details_tab",
@@ -67,7 +66,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "M-.tournament.-"
+   "options": ".tournament.-.date.-.home.-.guest.-"
   },
   {
    "fieldname": "date",
@@ -274,12 +273,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
-  },
-  {
    "fieldname": "tournament",
    "fieldtype": "Link",
    "label": "Tournament",
@@ -341,8 +334,21 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
- "links": [],
- "modified": "2023-09-25 18:20:40.962749",
+ "links": [
+  {
+   "link_doctype": "Match Referee",
+   "link_fieldname": "match"
+  },
+  {
+   "link_doctype": "Match Roster",
+   "link_fieldname": "match"
+  },
+  {
+   "link_doctype": "Match Event",
+   "link_fieldname": "match"
+  }
+ ],
+ "modified": "2023-10-08 07:54:51.163564",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -351,10 +357,10 @@
  "permissions": [
   {
    "create": 1,
-   "import": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
