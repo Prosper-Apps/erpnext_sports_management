@@ -11,20 +11,9 @@ DEFAULT_ROLE_PROFILES = {
 }
 
 def after_install():
-	create_domain()
 	create_user_roles()
 	create_default_role_profiles()
 	add_permissions()
-
-# Create domain Sports Management
-def create_domain():
-	# Check if the domain exists
-	if not frappe.db.exists("Domain", "Sports Management"):
-		domain = frappe.get_doc({
-			"doctype": "Domain",
-			"domain_name": "Sports Management"
-		})
-		domain.insert(ignore_permissions=True)
 
 def create_user_roles():
 	# Check if the role exists
@@ -33,7 +22,7 @@ def create_user_roles():
 			"doctype": "Role",
 			"role_name": "Sports User",
 			"desk_access": 1,
-			"restrict_to_domain": "Sports Management"
+			"restrict_to_domain": ""
 		})
 		role.insert(ignore_permissions=True)
 
@@ -107,37 +96,3 @@ def add_permissions():
 	update_permission_property(doctype, role, 0, "print", 0)
 	update_permission_property(doctype, role, 0, "share", 0)
 	update_permission_property(doctype, role, 0, "export", 1)
-	 
-# Remove permissions, roles, role profiles and domain upon uninstall
-def after_uninstall():
-	remove_permissions()
-	remove_default_role_profiles()
-	remove_user_roles()
-	remove_domain()
-
-def remove_permissions():
-	for doctype in ("Contact", "Address", "Company"):
-		role = "Sports User"
-		frappe.call("frappe.core.page.permission_manager.permission_manager.remove", doctype=doctype, role=role, permlevel=0)
-
-		role = "Sports Manager"
-		frappe.call("frappe.core.page.permission_manager.permission_manager.remove", doctype=doctype, role=role, permlevel=0)
-
-def remove_user_roles():
-	# Check if the role exists
-	if frappe.db.exists("Role", "Sports User"):
-		frappe.delete_doc("Role", "Sports User", ignore_permissions=True)
-
-	# Check if the role exists
-	if frappe.db.exists("Role", "Sports Manager"):
-		frappe.delete_doc("Role", "Sports Manager", ignore_permissions=True)
-
-def remove_default_role_profiles():
-	# Check if the role profile exists
-	if frappe.db.exists("Role Profile", "Sports"):
-		frappe.delete_doc("Role Profile", "Sports", ignore_permissions=True)
-
-def remove_domain():
-	# Check if the domain exists
-	if frappe.db.exists("Domain", "Sports Management"):
-		frappe.delete_doc("Domain", "Sports Management", ignore_permissions=True)
