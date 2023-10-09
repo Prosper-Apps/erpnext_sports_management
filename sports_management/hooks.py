@@ -70,7 +70,7 @@ after_install = "sports_management.setup.install.after_install"
 # ------------
 
 # before_uninstall = "sports_management.uninstall.before_uninstall"
-# after_uninstall = "sports_management.uninstall.after_uninstall"
+after_uninstall = "sports_management.setup.install.after_uninstall"
 
 # Integration Setup
 # ------------------
