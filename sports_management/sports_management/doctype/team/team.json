@@ -14,7 +14,7 @@
   "title",
   "short_name",
   "column_break_uuud3",
-  "contact",
+  "club",
   "route",
   "published",
   "pictures_tab",
@@ -38,12 +38,6 @@
    "length": 3,
    "options": "Name",
    "reqd": 1
-  },
-  {
-   "fieldname": "contact",
-   "fieldtype": "Link",
-   "label": "Contact",
-   "options": "Contact"
   },
   {
    "fieldname": "column_break_uuud3",
@@ -97,6 +91,12 @@
    "label": "Name",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "label": "Club",
+   "options": "Club"
   }
  ],
  "has_web_view": 1,
@@ -116,7 +116,7 @@
    "link_fieldname": "home"
   }
  ],
- "modified": "2023-10-09 08:45:10.263209",
+ "modified": "2023-10-09 11:17:11.150561",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",

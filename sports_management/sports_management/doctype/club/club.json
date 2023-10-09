@@ -9,55 +9,20 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "details_tab",
-  "title",
   "naming_series",
-  "address",
-  "contact",
-  "column_break_7labf",
-  "route",
-  "published",
-  "pictures_tab",
+  "title",
+  "column_break_jec4q",
   "picture",
-  "copyright_of_the_image",
+  "section_break_kt48v",
   "home_shirt",
+  "column_break_1juhm",
   "away_shirt",
-  "section_break_crlzl",
-  "description"
+  "section_break_loba9",
+  "description",
+  "route",
+  "published"
  ],
  "fields": [
-  {
-   "fieldname": "address",
-   "fieldtype": "Link",
-   "label": "Address",
-   "options": "Address"
-  },
-  {
-   "fieldname": "contact",
-   "fieldtype": "Link",
-   "label": "Contact",
-   "options": "Contact"
-  },
-  {
-   "fieldname": "details_tab",
-   "fieldtype": "Tab Break",
-   "label": "Details"
-  },
-  {
-   "fieldname": "column_break_7labf",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "pictures_tab",
-   "fieldtype": "Tab Break",
-   "label": "Pictures"
-  },
-  {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
-  },
   {
    "fieldname": "home_shirt",
    "fieldtype": "Attach Image",
@@ -67,11 +32,6 @@
    "fieldname": "away_shirt",
    "fieldtype": "Attach Image",
    "label": "Away Shirt"
-  },
-  {
-   "fieldname": "section_break_crlzl",
-   "fieldtype": "Tab Break",
-   "label": "Description"
   },
   {
    "fieldname": "description",
@@ -114,6 +74,22 @@
    "hidden": 1,
    "label": "Naming Series",
    "options": "SN-.title."
+  },
+  {
+   "fieldname": "column_break_jec4q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kt48v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_1juhm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_loba9",
+   "fieldtype": "Section Break"
   }
  ],
  "has_web_view": 1,
@@ -125,7 +101,7 @@
    "link_fieldname": "club"
   }
  ],
- "modified": "2023-10-09 08:51:50.651887",
+ "modified": "2023-10-09 11:18:41.316401",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",
@@ -172,7 +148,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "route": "clubs",
  "sort_field": "modified",
  "sort_order": "DESC",
