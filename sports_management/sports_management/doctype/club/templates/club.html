@@ -38,32 +38,6 @@
         <p>{{ description }}</p>
         {% endif %}
 
-        {% if address %}
-        <div class="mt-4 card">
-            <div class="card-header">Address</div>
-            <div class="card-body">
-                <strong>Address Line 1:</strong> {{ address.address_line1 }}<br />
-                <strong>Address Line 2:</strong> {{ address.address_line2 }}<br />
-                <strong>City:</strong> {{ address.city }}<br />
-                <strong>State:</strong> {{ address.state }}<br />
-                <strong>Pincode:</strong> {{ address.pincode }}<br />
-                <strong>Country:</strong> {{ address.country }}
-            </div>
-        </div>
-        {% endif %}
-
-        {% if contact %}
-        <div class="mt-4 card">
-            <div class="card-header">Contact</div>
-            <div class="card-body">
-                <strong>First Name:</strong> {{ contact.first_name }}<br/>
-                <strong>Last Name:</strong> {{ contact.last_name }}<br/>
-                <strong>Email:</strong> {{ contact.email_id }}<br/>
-                <strong>Mobile:</strong> {{ contact.mobile_no }}
-            </div>
-        </div>
-        {% endif %}
-
         {% if association %}
         <div class="page-header">
             <h4>Associations</h4>

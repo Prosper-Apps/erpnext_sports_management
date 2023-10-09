@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
@@ -13,10 +12,8 @@
  "field_order": [
   "details_tab",
   "national_id",
-  "contact",
-  "address",
-  "column_break_dyyce",
   "birthday",
+  "column_break_dyyce",
   "height",
   "weight",
   "route",
@@ -25,25 +22,12 @@
   "injury",
   "suspension",
   "absence",
-  "description_tab",
-  "description",
   "pictures_tab",
   "picture",
-  "copyright_of_the_image"
+  "description_tab",
+  "description"
  ],
  "fields": [
-  {
-   "fieldname": "contact",
-   "fieldtype": "Link",
-   "label": "Contact",
-   "options": "Contact"
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Link",
-   "label": "Address",
-   "options": "Address"
-  },
   {
    "fieldname": "birthday",
    "fieldtype": "Date",
@@ -112,12 +96,6 @@
    "no_copy": 1
   },
   {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
-  },
-  {
    "fieldname": "column_break_dyyce",
    "fieldtype": "Column Break"
   },
@@ -134,13 +112,18 @@
    "fieldtype": "Check",
    "label": "Published",
    "no_copy": 1
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National Id / Passport"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-07 07:03:57.031749",
+ "modified": "2023-10-09 11:22:09.308224",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
