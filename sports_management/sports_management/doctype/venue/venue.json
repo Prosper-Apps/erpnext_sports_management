@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
@@ -36,10 +35,12 @@
    "label": "Details"
   },
   {
+   "description": "Max 3 characters",
    "fieldname": "short_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Short name",
+   "length": 3,
    "reqd": 1
   },
   {
@@ -130,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-07 06:32:47.037213",
+ "modified": "2023-10-09 05:35:09.690884",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",

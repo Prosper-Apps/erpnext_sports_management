@@ -32,10 +32,12 @@
    "label": "Details"
   },
   {
+   "description": "Max 3 characters",
    "fieldname": "short_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Short name",
+   "length": 3,
    "reqd": 1
   },
   {

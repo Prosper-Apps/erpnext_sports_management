@@ -5,4 +5,7 @@
 from frappe.model.document import Document
 
 class League(Document):
-	pass
+	def before_save(self):
+		# Convert the short_name field to uppercase
+		if self.short_name:
+			self.short_name = self.short_name.upper()
