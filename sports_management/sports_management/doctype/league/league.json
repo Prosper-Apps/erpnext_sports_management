@@ -1,8 +1,7 @@
 {
  "actions": [],
- "allow_rename": 1,
- "allow_copy": 0,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-09-22 17:50:54.551719",
  "default_view": "List",
@@ -13,17 +12,20 @@
   "details_tab",
   "short_name",
   "sports_type",
-  "age_group",
   "column_break_hhuqu",
+  "age_group",
   "country",
   "league_level",
+  "section_break_m62li",
   "date_of_first_delivery",
+  "column_break_mx8gm",
   "league_end_date",
   "pictures_tab",
   "picture",
   "copyright_of_the_image",
   "description_tab",
-  "description"
+  "description",
+  "section_break_rw6bn"
  ],
  "fields": [
   {
@@ -111,11 +113,19 @@
   {
    "fieldname": "section_break_rw6bn",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_m62li",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mx8gm",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 06:44:54.688105",
+ "modified": "2023-10-10 06:38:01.159922",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",
@@ -157,6 +167,7 @@
    "share": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
