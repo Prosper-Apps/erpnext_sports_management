@@ -2,7 +2,15 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Team Tournament', {
-	// refresh: function(frm) {
+	// Limit the selection of tournaments to only those that have the same sports_type as the team
+	refresh: function(frm) {
+		frm.set_query("tournament", function() {
+			return {
+				filters: {
+					sports_type: frm.doc.sports_type
+				}
+			};
+		});
+	},
 
-	// }
 });
