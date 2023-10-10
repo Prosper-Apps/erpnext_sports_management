@@ -19,8 +19,10 @@
   "section_break_rqx5g",
   "section_break_dnckx",
   "home",
+  "home_name",
   "column_break_kw41f",
   "guest",
+  "guest_name",
   "section_break_ukssl",
   "full_time_home_result",
   "half_time_home_result",
@@ -95,15 +97,14 @@
   {
    "fieldname": "home",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Home",
+   "label": "Home Team",
    "options": "Team",
    "reqd": 1
   },
   {
    "fieldname": "guest",
    "fieldtype": "Link",
-   "label": "Guest",
+   "label": "Guest Team",
    "options": "Team",
    "reqd": 1
   },
@@ -323,6 +324,22 @@
   {
    "fieldname": "section_break_ukssl",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "home.team_name",
+   "fieldname": "home_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Home"
+  },
+  {
+   "fetch_from": "guest.team_name",
+   "fieldname": "guest_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Guest"
   }
  ],
  "has_web_view": 1,
@@ -342,7 +359,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-10 14:35:42.637820",
+ "modified": "2023-10-10 15:19:42.165001",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -385,6 +402,7 @@
   }
  ],
  "route": "matches",
+ "search_fields": "home,guest,tournament",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

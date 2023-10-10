@@ -1,16 +1,14 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-MR-{#####}",
  "creation": "2023-10-07 15:26:19.619758",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "match",
   "team",
   "role",
@@ -20,13 +18,6 @@
   "starting_lineup"
  ],
  "fields": [
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".match.-.person.-"
-  },
   {
    "fieldname": "match",
    "fieldtype": "Link",
@@ -40,7 +31,8 @@
    "in_list_view": 1,
    "label": "Team",
    "options": "Team",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "default": "Player",
@@ -50,7 +42,8 @@
    "in_standard_filter": 1,
    "label": "Role",
    "options": "Player\nCoach\nStaff",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "column_break_8cxpv",
@@ -63,7 +56,8 @@
    "in_list_view": 1,
    "label": "Person",
    "options": "Person",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "position",
@@ -71,7 +65,8 @@
    "in_list_view": 1,
    "label": "Position",
    "options": "Position",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "default": "1",
@@ -89,11 +84,11 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-08 15:24:39.323923",
+ "modified": "2023-10-10 15:23:31.179705",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -135,6 +130,7 @@
    "write": 1
   }
  ],
+ "search_fields": "person,team,role,position",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

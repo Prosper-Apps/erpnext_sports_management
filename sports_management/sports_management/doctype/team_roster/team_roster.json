@@ -2,29 +2,21 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-TP-{#####}",
  "creation": "2023-10-07 15:22:16.572865",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "role",
+  "person",
   "team",
   "column_break_8cxpv",
-  "person",
   "position",
+  "role",
   "starting_lineup"
  ],
  "fields": [
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".team.-.person.-"
-  },
   {
    "default": "Player",
    "fieldname": "role",
@@ -33,15 +25,18 @@
    "in_standard_filter": 1,
    "label": "Role",
    "options": "Player\nCoach\nStaff",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "team",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Team",
    "options": "Team",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "column_break_8cxpv",
@@ -51,9 +46,12 @@
    "fieldname": "person",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Person",
+   "no_copy": 1,
    "options": "Person",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "position",
@@ -62,7 +60,8 @@
    "in_standard_filter": 1,
    "label": "Position",
    "options": "Position",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "default": "1",
@@ -75,11 +74,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 07:50:30.381879",
+ "modified": "2023-10-10 15:00:39.239407",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -121,6 +120,7 @@
    "write": 1
   }
  ],
+ "search_fields": "person,team,position,role",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
