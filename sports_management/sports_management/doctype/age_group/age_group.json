@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:age_group_name",
  "creation": "2023-09-22 15:42:37.225471",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,6 +11,7 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
+  "age_group_name",
   "age_from",
   "column_break_hvczy",
   "age_to",
@@ -76,17 +77,25 @@
    "fieldtype": "Check",
    "label": "Published",
    "no_copy": 1
+  },
+  {
+   "fieldname": "age_group_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 06:13:18.151921",
+ "modified": "2023-10-10 07:08:49.841673",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

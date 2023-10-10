@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:venue_name",
  "creation": "2023-09-23 05:54:21.887551",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,6 +11,7 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
+  "venue_name",
   "short_name",
   "nickname",
   "playing_surface",
@@ -125,17 +126,24 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Sports venue description"
+  },
+  {
+   "fieldname": "venue_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 06:34:49.588104",
+ "modified": "2023-10-10 07:15:46.423625",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

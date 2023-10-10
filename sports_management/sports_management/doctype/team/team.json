@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:title",
+ "autoname": "format:{club}-{sports_type}-{team_name}",
  "creation": "2023-09-23 06:29:34.365646",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,10 +11,11 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "title",
+  "team_name",
   "short_name",
   "column_break_uuud3",
   "club",
+  "sports_type",
   "route",
   "published",
   "pictures_tab",
@@ -84,21 +85,28 @@
    "no_copy": 1
   },
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Name",
-   "options": "Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
    "fieldname": "club",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Club",
    "options": "Club",
+   "reqd": 1
+  },
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sports Type",
+   "options": "Sports Type",
    "reqd": 1
   }
  ],
@@ -119,12 +127,12 @@
    "link_fieldname": "home"
   }
  ],
- "modified": "2023-10-10 06:47:31.039000",
+ "modified": "2023-10-10 07:41:55.375956",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team",
  "name_case": "Title Case",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
