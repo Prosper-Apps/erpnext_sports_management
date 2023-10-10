@@ -12,8 +12,10 @@
  "field_order": [
   "details_tab",
   "national_id",
-  "birthday",
+  "phone",
+  "email",
   "column_break_dyyce",
+  "birthday",
   "height",
   "weight",
   "route",
@@ -117,13 +119,25 @@
    "fieldname": "national_id",
    "fieldtype": "Data",
    "label": "National Id / Passport"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-09 11:22:09.308224",
+ "modified": "2023-10-10 06:42:04.184504",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
@@ -169,6 +183,7 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "route": "persons",
  "sort_field": "modified",
  "sort_order": "DESC",

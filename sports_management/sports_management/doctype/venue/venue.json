@@ -131,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-09 05:35:09.690884",
+ "modified": "2023-10-10 06:34:49.588104",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Venue",
@@ -173,6 +173,7 @@
    "share": 1
   }
  ],
+ "quick_entry": 1,
  "route": "venues",
  "sort_field": "modified",
  "sort_order": "DESC",

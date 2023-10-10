@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
@@ -83,7 +82,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-07 06:12:23.677315",
+ "modified": "2023-10-10 06:13:18.151921",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",
@@ -125,6 +124,7 @@
    "share": 1
   }
  ],
+ "quick_entry": 1,
  "route": "age-groups",
  "sort_field": "modified",
  "sort_order": "DESC",
