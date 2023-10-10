@@ -31,8 +31,7 @@
    "in_list_view": 1,
    "label": "Team",
    "options": "Team",
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
    "default": "Player",
@@ -42,8 +41,7 @@
    "in_standard_filter": 1,
    "label": "Role",
    "options": "Player\nCoach\nStaff",
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
    "fieldname": "column_break_8cxpv",
@@ -56,8 +54,7 @@
    "in_list_view": 1,
    "label": "Person",
    "options": "Person",
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
    "fieldname": "position",
@@ -65,8 +62,7 @@
    "in_list_view": 1,
    "label": "Position",
    "options": "Position",
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
    "default": "1",
@@ -84,7 +80,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-10 15:23:31.179705",
+ "modified": "2023-10-10 15:40:24.520181",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
