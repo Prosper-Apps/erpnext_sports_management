@@ -95,25 +95,6 @@
         </div>
         {% endif %}
 
-        {%if seasons %}
-        <div class="page-header">
-            <h4>Seasons</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for item in seasons %}
-                        <tr>
-                            <td>{{ item.season }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
         {% if team_coach %}
         <div class="page-header">
             <h4>Coaches</h4>
