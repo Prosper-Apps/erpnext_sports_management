@@ -16,13 +16,15 @@ class TeamTournament(Document):
 			ranking = frappe.new_doc('Ranking')
 			ranking.team = self.team
 			ranking.tournament = self.tournament
+			ranking.disabled = 1
 			ranking.save(ignore_permissions=True)
 			frappe.db.commit()
 	
 
 	# After delete of Team Tournament, disable the Ranking for the team in the tournament
 	def on_trash(self):
-		ranking = frappe.get_doc('Ranking', {'team': self.team, 'tournament': self.tournament})
-		ranking.disabled = 1
-		ranking.save(ignore_permissions=True)
-		frappe.db.commit()
+		if frappe.db.exists('Ranking', {'team': self.team, 'tournament': self.tournament}):
+			ranking = frappe.get_doc('Ranking', {'team': self.team, 'tournament': self.tournament})
+			ranking.disabled = 1
+			ranking.save(ignore_permissions=True)
+			frappe.db.commit()

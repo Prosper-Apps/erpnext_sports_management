@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -12,7 +11,9 @@
  "field_order": [
   "naming_series",
   "team",
-  "tournament"
+  "tournament",
+  "column_break_5lk2u",
+  "sports_type"
  ],
  "fields": [
   {
@@ -36,11 +37,21 @@
    "label": "Tournament",
    "options": "Tournament",
    "reqd": 1
+  },
+  {
+   "fetch_from": "team.sports_type",
+   "fieldname": "sports_type",
+   "fieldtype": "Read Only",
+   "label": "Sports Type"
+  },
+  {
+   "fieldname": "column_break_5lk2u",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-06 18:03:48.975525",
+ "modified": "2023-10-10 08:32:14.014203",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Tournament",
