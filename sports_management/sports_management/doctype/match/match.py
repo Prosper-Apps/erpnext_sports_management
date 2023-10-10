@@ -22,7 +22,9 @@ class Match(WebsiteGenerator):
 	# create function when saving a match to calculate the points for each team
 	def on_update(self):
 		frappe.call('sports_management.sports_management.doctype.tournament.tournament.calculate_rankings', self.tournament)
-		
+
+	# after insert create the match rosters
+	def after_insert(self):
 		# create the match rosters
 		self.create_match_rosters()
 
@@ -38,7 +40,7 @@ class Match(WebsiteGenerator):
 			for roster in team_roster:
 				# Check if the match roster already exists for the same person, team, role and position
 				# If it does, skip it
-				match_roster_exists = frappe.db.exists('Match Roster', {'person': roster.person, 'team': roster.team, 'role': roster.role, 'position': roster.position})
+				match_roster_exists = frappe.db.exists('Match Roster', {'match': roster.match, 'person': roster.person, 'team': roster.team, 'role': roster.role, 'position': roster.position})
 				if not match_roster_exists:	
 					match_roster = frappe.new_doc('Match Roster')
 					match_roster.person = roster.person
