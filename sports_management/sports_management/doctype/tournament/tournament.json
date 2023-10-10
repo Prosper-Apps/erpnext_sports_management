@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:SM-T-{#####}",
  "creation": "2023-09-23 07:59:16.192765",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,6 +11,7 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
+  "tournament_name",
   "league",
   "sports_type",
   "column_break_hxzug",
@@ -48,7 +49,6 @@
   {
    "fieldname": "league",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "League",
    "options": "League",
    "reqd": 1
@@ -206,7 +206,18 @@
    "fetch_from": "league.sports_type",
    "fieldname": "sports_type",
    "fieldtype": "Read Only",
-   "label": "Sports Type"
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sports Type",
+   "search_index": 1
+  },
+  {
+   "fieldname": "tournament_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tournament Name",
+   "reqd": 1,
+   "search_index": 1
   }
  ],
  "has_web_view": 1,
@@ -226,11 +237,11 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-10-10 08:30:51.449036",
+ "modified": "2023-10-10 10:37:00.782509",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -269,7 +280,10 @@
   }
  ],
  "route": "tournaments",
+ "search_fields": "sports_type",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "tournament_name"
 }

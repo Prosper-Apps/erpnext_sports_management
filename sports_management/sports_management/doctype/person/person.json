@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-PER-{#####}",
  "creation": "2023-09-23 06:42:54.934809",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,7 +11,6 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "naming_series",
   "person_name",
   "national_id",
   "phone",
@@ -120,33 +119,29 @@
   {
    "fieldname": "national_id",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "National Id / Passport"
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Phone",
    "options": "Phone"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email",
    "options": "Email"
   },
   {
    "fieldname": "person_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".person_name.-"
+   "reqd": 1,
+   "search_index": 1
   }
  ],
  "has_web_view": 1,
@@ -158,11 +153,11 @@
    "link_fieldname": "person"
   }
  ],
- "modified": "2023-10-10 07:49:33.833581",
+ "modified": "2023-10-10 10:38:49.426063",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -206,7 +201,9 @@
  ],
  "quick_entry": 1,
  "route": "persons",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "person_name"
 }
