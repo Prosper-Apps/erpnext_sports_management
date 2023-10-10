@@ -2,6 +2,7 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "field:club_name",
  "creation": "2023-09-23 06:14:31.871077",
  "default_view": "List",
@@ -92,7 +93,7 @@
    "link_fieldname": "club"
   }
  ],
- "modified": "2023-10-10 07:30:46.101909",
+ "modified": "2023-10-10 14:46:46.740355",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",

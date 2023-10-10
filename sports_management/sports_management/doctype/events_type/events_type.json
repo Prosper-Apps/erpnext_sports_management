@@ -8,6 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "short_name",
   "picture",
   "description"
  ],
@@ -21,11 +22,18 @@
    "fieldname": "picture",
    "fieldtype": "Attach Image",
    "label": "Picture"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Short Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 10:46:53.889262",
+ "modified": "2023-10-10 15:13:18.699938",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Events Type",

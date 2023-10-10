@@ -26,11 +26,13 @@
   {
    "fieldname": "age_from",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Age from"
   },
   {
    "fieldname": "age_to",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Age to"
   },
   {
@@ -81,7 +83,6 @@
   {
    "fieldname": "age_group_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Name",
    "reqd": 1,
    "unique": 1
@@ -91,7 +92,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 07:08:49.841673",
+ "modified": "2023-10-10 10:32:00.038877",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",

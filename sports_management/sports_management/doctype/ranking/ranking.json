@@ -1,9 +1,8 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-R-{#####}",
  "creation": "2023-09-23 07:58:42.889528",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,7 +10,6 @@
  "engine": "InnoDB",
  "field_order": [
   "details_section",
-  "naming_series",
   "tournament",
   "column_break_jfqqk",
   "team",
@@ -36,7 +34,8 @@
    "in_list_view": 1,
    "label": "Team",
    "options": "Team",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "default": "0",
@@ -101,20 +100,14 @@
    "non_negative": 1
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".tournament.-.team.-"
-  },
-  {
    "fieldname": "tournament",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Tournament",
    "options": "Tournament",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "details_section",
@@ -147,11 +140,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-08 07:50:10.662804",
+ "modified": "2023-10-10 15:07:41.637543",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -189,6 +182,7 @@
    "share": 1
   }
  ],
+ "search_fields": "team,tournament",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

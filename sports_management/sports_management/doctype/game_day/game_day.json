@@ -1,10 +1,9 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-GD-{#####}",
  "creation": "2023-09-23 08:05:41.490504",
  "default_view": "List",
  "doctype": "DocType",
@@ -12,9 +11,9 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "naming_series",
   "start",
   "tournament",
+  "tournament_name",
   "column_break_nlusw",
   "end",
   "route",
@@ -30,13 +29,6 @@
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".tournament.-.start.-"
   },
   {
    "fieldname": "start",
@@ -104,6 +96,13 @@
    "fieldtype": "Text Editor",
    "label": "Description",
    "no_copy": 1
+  },
+  {
+   "fetch_from": "tournament.tournament_name",
+   "fieldname": "tournament_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Tournament Name"
   }
  ],
  "has_web_view": 1,
@@ -115,11 +114,11 @@
    "link_fieldname": "game_day"
   }
  ],
- "modified": "2023-10-08 07:52:19.125101",
+ "modified": "2023-10-10 10:49:09.801388",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -158,6 +157,7 @@
   }
  ],
  "route": "game_days",
+ "search_fields": "tournament_name,start",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

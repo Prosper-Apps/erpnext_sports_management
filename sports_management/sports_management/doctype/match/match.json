@@ -1,10 +1,9 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-M-{#####}",
  "creation": "2023-09-23 08:13:50.687312",
  "default_view": "List",
  "doctype": "DocType",
@@ -19,10 +18,11 @@
   "time",
   "section_break_rqx5g",
   "section_break_dnckx",
-  "naming_series",
   "home",
+  "home_name",
   "column_break_kw41f",
   "guest",
+  "guest_name",
   "section_break_ukssl",
   "full_time_home_result",
   "half_time_home_result",
@@ -62,13 +62,6 @@
  ],
  "fields": [
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".tournament.-.date.-.home.-.guest.-"
-  },
-  {
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -104,16 +97,14 @@
   {
    "fieldname": "home",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Home",
+   "label": "Home Team",
    "options": "Team",
    "reqd": 1
   },
   {
    "fieldname": "guest",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Guest",
+   "label": "Guest Team",
    "options": "Team",
    "reqd": 1
   },
@@ -262,7 +253,8 @@
    "fieldname": "game_day",
    "fieldtype": "Link",
    "label": "Game Day",
-   "options": "Game Day"
+   "options": "Game Day",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_kw41f",
@@ -276,7 +268,8 @@
    "fieldname": "tournament",
    "fieldtype": "Link",
    "label": "Tournament",
-   "options": "Tournament"
+   "options": "Tournament",
+   "reqd": 1
   },
   {
    "default": "Pending",
@@ -331,6 +324,22 @@
   {
    "fieldname": "section_break_ukssl",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "home.team_name",
+   "fieldname": "home_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Home"
+  },
+  {
+   "fetch_from": "guest.team_name",
+   "fieldname": "guest_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Guest"
   }
  ],
  "has_web_view": 1,
@@ -350,11 +359,11 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-08 07:54:51.163564",
+ "modified": "2023-10-10 15:19:42.165001",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -393,6 +402,7 @@
   }
  ],
  "route": "matches",
+ "search_fields": "home,guest,tournament",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
