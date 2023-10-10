@@ -14,7 +14,6 @@
   "details_tab",
   "league",
   "sports_type",
-  "season",
   "column_break_hxzug",
   "type",
   "country",
@@ -53,14 +52,6 @@
    "in_list_view": 1,
    "label": "League",
    "options": "League",
-   "reqd": 1
-  },
-  {
-   "fieldname": "season",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Season",
-   "options": "Season",
    "reqd": 1
   },
   {
