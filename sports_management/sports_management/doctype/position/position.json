@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:{sports_type}-{position_name}",
  "creation": "2023-09-23 06:47:46.058913",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,6 +11,7 @@
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
+  "position_name",
   "role",
   "column_break_pjscs",
   "sports_type",
@@ -92,17 +93,24 @@
    "fieldtype": "Text Editor",
    "label": "Description",
    "no_copy": 1
+  },
+  {
+   "fieldname": "position_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 06:32:48.768108",
+ "modified": "2023-10-10 07:46:51.316454",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Position",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

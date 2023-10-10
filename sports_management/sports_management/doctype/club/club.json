@@ -2,15 +2,14 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_import": 1,
- "autoname": "naming_series:",
+ "autoname": "field:club_name",
  "creation": "2023-09-23 06:14:31.871077",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "title",
+  "club_name",
   "column_break_jec4q",
   "picture",
   "section_break_kt48v",
@@ -59,24 +58,6 @@
    "label": "Large club logo (150x150px)"
   },
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Name",
-   "no_copy": 1,
-   "options": "Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": "SN-.title."
-  },
-  {
    "fieldname": "column_break_jec4q",
    "fieldtype": "Column Break"
   },
@@ -91,6 +72,15 @@
   {
    "fieldname": "section_break_loba9",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "club_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "has_web_view": 1,
@@ -102,12 +92,12 @@
    "link_fieldname": "club"
   }
  ],
- "modified": "2023-10-10 06:44:25.166470",
+ "modified": "2023-10-10 07:30:46.101909",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",
  "name_case": "Title Case",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -60,6 +59,7 @@
    "fieldname": "position",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Position",
    "options": "Position",
    "reqd": 1
@@ -75,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-08 08:05:15.175396",
+ "modified": "2023-10-10 07:50:30.381879",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",
