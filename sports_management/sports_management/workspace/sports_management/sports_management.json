@@ -33,7 +33,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Person",
+   "label": "People",
    "link_count": 0,
    "link_to": "Person",
    "link_type": "DocType",
@@ -43,7 +43,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Team",
+   "label": "My Teams",
    "link_count": 0,
    "link_to": "Team",
    "link_type": "DocType",
@@ -53,7 +53,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Club",
+   "label": "My Clubs",
    "link_count": 0,
    "link_to": "Club",
    "link_type": "DocType",
@@ -61,7 +61,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-10-10 08:51:52.651273",
+ "modified": "2023-10-10 09:13:33.728987",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
