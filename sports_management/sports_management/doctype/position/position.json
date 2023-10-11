@@ -19,7 +19,6 @@
   "published",
   "pictures_tab",
   "picture",
-  "copyright_of_the_image",
   "description_tab",
   "description"
  ],
@@ -48,12 +47,6 @@
    "fieldtype": "Attach Image",
    "label": "Picture",
    "no_copy": 1
-  },
-  {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
   },
   {
    "default": "Player",
@@ -106,7 +99,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 10:35:14.460700",
+ "modified": "2023-10-11 06:14:03.094457",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Position",

@@ -14,6 +14,7 @@
   "role",
   "column_break_8cxpv",
   "person",
+  "person_name",
   "position",
   "starting_lineup"
  ],
@@ -71,6 +72,12 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Starting Lineup"
+  },
+  {
+   "fetch_from": "person.person_name",
+   "fieldname": "person_name",
+   "fieldtype": "Read Only",
+   "label": "Name"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -80,7 +87,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-10 15:40:24.520181",
+ "modified": "2023-10-10 17:34:55.191028",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
@@ -126,7 +133,7 @@
    "write": 1
   }
  ],
- "search_fields": "person,team,role,position",
+ "search_fields": "person_name,team,role,position",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

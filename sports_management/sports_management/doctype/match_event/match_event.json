@@ -1,29 +1,24 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:SM-ME-{######}",
  "creation": "2023-10-07 10:50:18.620510",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "match",
   "match_roster",
+  "person_name",
+  "column_break_wbflz",
   "events_type",
-  "time",
+  "minute",
+  "section_break_dpdxr",
   "picture",
   "description"
  ],
  "fields": [
-  {
-   "fieldname": "time",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Time",
-   "reqd": 1
-  },
   {
    "fieldname": "picture",
    "fieldtype": "Attach Image",
@@ -58,20 +53,34 @@
    "reqd": 1
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": ".match.-.events_type.-"
+   "fieldname": "minute",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Minute",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wbflz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dpdxr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "match_roster.person",
+   "fieldname": "person_name",
+   "fieldtype": "Read Only"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-08 14:40:29.865381",
+ "modified": "2023-10-10 17:43:28.008315",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Event",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

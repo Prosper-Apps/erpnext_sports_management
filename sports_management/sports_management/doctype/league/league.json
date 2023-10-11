@@ -23,7 +23,6 @@
   "league_end_date",
   "pictures_tab",
   "picture",
-  "copyright_of_the_image",
   "description_tab",
   "description",
   "section_break_rw6bn"
@@ -86,12 +85,6 @@
    "label": "Pictures"
   },
   {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
-  },
-  {
    "fieldname": "description_tab",
    "fieldtype": "Tab Break",
    "label": "Description"
@@ -141,7 +134,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 10:35:01.020834",
+ "modified": "2023-10-11 06:20:24.676837",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",

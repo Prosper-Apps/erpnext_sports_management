@@ -20,8 +20,10 @@
   "section_break_dnckx",
   "home",
   "home_name",
+  "game_day",
   "column_break_kw41f",
   "guest",
+  "tournament",
   "guest_name",
   "section_break_ukssl",
   "full_time_home_result",
@@ -31,10 +33,8 @@
   "half_time_guest_result",
   "section_break_t9dyl",
   "venue",
-  "tournament",
-  "game_day",
+  "tournament_name",
   "column_break_yovge",
-  "spectators",
   "route",
   "published",
   "match_preview_tab",
@@ -50,12 +50,11 @@
   "new_score_home",
   "new_score_guest",
   "winner",
-  "score_sheet_tab",
-  "scoresheet",
   "advanced_tab",
   "link_to_the_external_match_report",
   "live_broadcast_link",
   "embed_live_broadcast_link",
+  "column_break_shouu",
   "weather",
   "temperature",
   "field_condition"
@@ -81,13 +80,6 @@
    "in_list_view": 1,
    "label": "Venue",
    "options": "Venue"
-  },
-  {
-   "default": "0",
-   "fieldname": "spectators",
-   "fieldtype": "Int",
-   "label": "Spectators",
-   "non_negative": 1
   },
   {
    "fieldname": "details_tab",
@@ -212,16 +204,6 @@
    "options": "None\nHome\nGuest\nBoth lose\nBoth win"
   },
   {
-   "fieldname": "score_sheet_tab",
-   "fieldtype": "Tab Break",
-   "label": "Score Sheet"
-  },
-  {
-   "fieldname": "scoresheet",
-   "fieldtype": "Text Editor",
-   "label": "Scoresheet"
-  },
-  {
    "fieldname": "advanced_tab",
    "fieldtype": "Tab Break",
    "label": "Advanced"
@@ -340,6 +322,17 @@
    "hidden": 1,
    "in_list_view": 1,
    "label": "Guest"
+  },
+  {
+   "fetch_from": "tournament.tournament_name",
+   "fieldname": "tournament_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Tournament Name"
+  },
+  {
+   "fieldname": "column_break_shouu",
+   "fieldtype": "Column Break"
   }
  ],
  "has_web_view": 1,
@@ -359,7 +352,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-10 15:19:42.165001",
+ "modified": "2023-10-10 17:51:12.933635",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -402,7 +395,7 @@
   }
  ],
  "route": "matches",
- "search_fields": "home,guest,tournament",
+ "search_fields": "home_name,guest_name,tournament_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
