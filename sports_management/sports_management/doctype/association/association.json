@@ -18,7 +18,6 @@
   "flag",
   "picture",
   "map_with_flag",
-  "copyright_of_the_image",
   "description_tab",
   "description"
  ],
@@ -69,12 +68,6 @@
    "fieldname": "map_with_flag",
    "fieldtype": "Attach Image",
    "label": "Map with flag"
-  },
-  {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
   },
   {
    "fieldname": "description_tab",

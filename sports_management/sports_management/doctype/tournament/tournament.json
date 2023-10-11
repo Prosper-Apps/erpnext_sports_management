@@ -21,7 +21,6 @@
   "published",
   "pictures_tab",
   "picture",
-  "copyright_of_the_image",
   "description_tab",
   "description",
   "competition_tab",
@@ -122,12 +121,6 @@
    "fieldtype": "Attach Image",
    "label": "Picture",
    "no_copy": 1
-  },
-  {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
   },
   {
    "fieldname": "round_robin_tab",

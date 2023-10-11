@@ -20,7 +20,6 @@
   "published",
   "picture_tab",
   "picture",
-  "copyright_of_the_image",
   "description_tab",
   "description"
  ],
@@ -52,12 +51,6 @@
    "fieldtype": "Attach Image",
    "label": "Picture",
    "no_copy": 1
-  },
-  {
-   "fieldname": "copyright_of_the_image",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Copyright of the image"
   },
   {
    "fieldname": "tournament",
