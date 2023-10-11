@@ -47,6 +47,7 @@ class Match(WebsiteGenerator):
 					match_roster.team = roster.team
 					match_roster.role = roster.role
 					match_roster.position = roster.position
+					match_roster.shirt_number = roster.shirt_number
 					match_roster.starting_lineup = roster.starting_lineup
 					match_roster.match = self.name
 					match_roster.save()

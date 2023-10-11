@@ -8,13 +8,15 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "details_tab",
   "match",
+  "tournament",
   "match_roster",
   "person_name",
   "column_break_wbflz",
   "events_type",
   "minute",
-  "section_break_dpdxr",
+  "extra_tab",
   "picture",
   "description"
  ],
@@ -32,6 +34,7 @@
   {
    "fieldname": "match",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Match",
    "options": "Match",
    "reqd": 1
@@ -40,14 +43,16 @@
    "fieldname": "events_type",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Events Type",
    "options": "Events Type",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "match_roster",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Person",
    "options": "Match Roster",
    "reqd": 1
@@ -65,18 +70,32 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_dpdxr",
-   "fieldtype": "Section Break"
+   "fetch_from": "match_roster.person_name",
+   "fieldname": "person_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Name"
   },
   {
-   "fetch_from": "match_roster.person",
-   "fieldname": "person_name",
-   "fieldtype": "Read Only"
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "extra_tab",
+   "fieldtype": "Tab Break",
+   "label": "Extra"
+  },
+  {
+   "fetch_from": "match.tournament",
+   "fieldname": "tournament",
+   "fieldtype": "Read Only",
+   "label": "Tournament"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 06:44:27.979551",
+ "modified": "2023-10-11 09:01:42.617552",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Event",

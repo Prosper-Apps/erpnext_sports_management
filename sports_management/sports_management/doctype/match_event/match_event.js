@@ -26,5 +26,12 @@ frappe.ui.form.on('Match Event', {
 				]
 			};
 		}); 
+	},
+
+	// After save navigate back to the match
+	after_save: function(frm) {
+		frappe.set_route("Form", "Match", frm.doc.match);
 	}
+
 });
+
