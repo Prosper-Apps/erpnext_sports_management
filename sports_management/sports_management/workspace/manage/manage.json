@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Manage</span>\",\"col\":12}},{\"id\":\"XR42CjTf3R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"uw47FdG5ax\",\"type\":\"card\",\"data\":{\"card_name\":\"Events\",\"col\":4}}]",
+ "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Manage</span>\",\"col\":12}},{\"id\":\"5qujBQresv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"League\",\"col\":3}},{\"id\":\"XR42CjTf3R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}}]",
  "creation": "2023-10-10 08:18:11.484610",
  "custom_blocks": [],
  "docstatus": 0,
@@ -26,7 +26,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Setup",
-   "link_count": 4,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -59,19 +59,9 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Events Type",
-   "link_count": 0,
-   "link_to": "Events Type",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2023-10-10 15:11:45.375759",
+ "modified": "2023-10-11 06:19:50.681142",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Manage",
@@ -90,6 +80,14 @@
   }
  ],
  "sequence_id": 1.1,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "League",
+   "link_to": "League",
+   "type": "DocType"
+  }
+ ],
  "title": "Manage"
 }

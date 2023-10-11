@@ -19,46 +19,29 @@
   "section_break_rqx5g",
   "section_break_dnckx",
   "home",
+  "full_time_home_result",
   "home_name",
+  "game_day",
   "column_break_kw41f",
   "guest",
-  "guest_name",
-  "section_break_ukssl",
-  "full_time_home_result",
-  "half_time_home_result",
-  "column_break_vdrjs",
   "full_time_guest_result",
-  "half_time_guest_result",
-  "section_break_t9dyl",
-  "venue",
   "tournament",
-  "game_day",
-  "column_break_yovge",
-  "spectators",
-  "route",
-  "published",
+  "guest_name",
+  "tournament_name",
   "match_preview_tab",
-  "preview",
-  "match_details_tab",
-  "details",
-  "is_cancel",
-  "reason_of_cancel",
-  "overtime",
-  "alternate_decision",
-  "decision_after_the_match",
-  "reasons_for_the_new_score",
-  "new_score_home",
-  "new_score_guest",
-  "winner",
-  "score_sheet_tab",
-  "scoresheet",
-  "advanced_tab",
+  "venue",
+  "section_break_3imfd",
   "link_to_the_external_match_report",
   "live_broadcast_link",
   "embed_live_broadcast_link",
+  "column_break_shouu",
   "weather",
   "temperature",
-  "field_condition"
+  "field_condition",
+  "section_break_kputn",
+  "preview",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -83,13 +66,6 @@
    "options": "Venue"
   },
   {
-   "default": "0",
-   "fieldname": "spectators",
-   "fieldtype": "Int",
-   "label": "Spectators",
-   "non_negative": 1
-  },
-  {
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
@@ -111,120 +87,24 @@
   {
    "fieldname": "full_time_home_result",
    "fieldtype": "Int",
-   "label": "Full Time Home Result",
+   "label": "Home Score",
    "non_negative": 1
-  },
-  {
-   "fieldname": "half_time_home_result",
-   "fieldtype": "Int",
-   "label": "Half Time Home Result",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "column_break_vdrjs",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "full_time_guest_result",
    "fieldtype": "Int",
-   "label": "Full Time Guest Result",
+   "label": "Guest Score",
    "non_negative": 1
-  },
-  {
-   "fieldname": "half_time_guest_result",
-   "fieldtype": "Int",
-   "label": "Half Time Guest Result",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "column_break_yovge",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "match_preview_tab",
    "fieldtype": "Tab Break",
-   "label": "Match Preview"
+   "label": "Information"
   },
   {
    "fieldname": "preview",
    "fieldtype": "Text Editor",
    "label": "Preview"
-  },
-  {
-   "fieldname": "match_details_tab",
-   "fieldtype": "Tab Break",
-   "label": "Match Details"
-  },
-  {
-   "fieldname": "details",
-   "fieldtype": "Heading",
-   "label": "Details"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_cancel",
-   "fieldtype": "Check",
-   "label": "Cancel / Relocation"
-  },
-  {
-   "fieldname": "reason_of_cancel",
-   "fieldtype": "Data",
-   "label": "Reason of cancel"
-  },
-  {
-   "fieldname": "overtime",
-   "fieldtype": "Int",
-   "label": "Overtime",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "alternate_decision",
-   "fieldtype": "Heading",
-   "label": "Alternate Decision"
-  },
-  {
-   "default": "0",
-   "fieldname": "decision_after_the_match",
-   "fieldtype": "Check",
-   "label": "Decision after the match"
-  },
-  {
-   "fieldname": "reasons_for_the_new_score",
-   "fieldtype": "Small Text",
-   "label": "Reasons for the new Score"
-  },
-  {
-   "fieldname": "new_score_home",
-   "fieldtype": "Int",
-   "label": "New Score Home",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "new_score_guest",
-   "fieldtype": "Int",
-   "label": "New Score Guest",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "winner",
-   "fieldtype": "Select",
-   "label": "Final victory / defeat decision",
-   "options": "None\nHome\nGuest\nBoth lose\nBoth win"
-  },
-  {
-   "fieldname": "score_sheet_tab",
-   "fieldtype": "Tab Break",
-   "label": "Score Sheet"
-  },
-  {
-   "fieldname": "scoresheet",
-   "fieldtype": "Text Editor",
-   "label": "Scoresheet"
-  },
-  {
-   "fieldname": "advanced_tab",
-   "fieldtype": "Tab Break",
-   "label": "Advanced"
   },
   {
    "fieldname": "link_to_the_external_match_report",
@@ -309,21 +189,12 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_t9dyl",
-   "fieldtype": "Section Break",
-   "label": "Extra"
-  },
-  {
    "fieldname": "column_break_ppsyd",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_ee061",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ukssl",
-   "fieldtype": "Section Break"
   },
   {
    "fetch_from": "home.team_name",
@@ -340,6 +211,25 @@
    "hidden": 1,
    "in_list_view": 1,
    "label": "Guest"
+  },
+  {
+   "fetch_from": "tournament.tournament_name",
+   "fieldname": "tournament_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Tournament Name"
+  },
+  {
+   "fieldname": "column_break_shouu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kputn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_3imfd",
+   "fieldtype": "Section Break"
   }
  ],
  "has_web_view": 1,
@@ -359,7 +249,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-10 15:19:42.165001",
+ "modified": "2023-10-11 06:39:29.172444",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -402,7 +292,7 @@
   }
  ],
  "route": "matches",
- "search_fields": "home,guest,tournament",
+ "search_fields": "home_name,guest_name,tournament_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
