@@ -10,6 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "person",
+  "shirt_number",
   "team",
   "column_break_8cxpv",
   "position",
@@ -70,11 +71,17 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Starting Lineup"
+  },
+  {
+   "fieldname": "shirt_number",
+   "fieldtype": "Int",
+   "label": "Shirt Number",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 15:00:39.239407",
+ "modified": "2023-10-11 08:41:42.954008",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",

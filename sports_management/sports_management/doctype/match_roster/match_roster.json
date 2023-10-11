@@ -77,7 +77,9 @@
    "fetch_from": "person.person_name",
    "fieldname": "person_name",
    "fieldtype": "Read Only",
-   "label": "Name"
+   "hidden": 1,
+   "label": "Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -87,7 +89,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-10 17:34:55.191028",
+ "modified": "2023-10-11 07:29:34.451183",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
