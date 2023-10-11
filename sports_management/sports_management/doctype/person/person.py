@@ -54,6 +54,8 @@ class Person(WebsiteGenerator):
 				else:
 					substitute_out = tournament.regular_play_time
 
+				match_roster.stats['substitute_in'] = substitute_in
+				match_roster.stats['substitute_out'] = substitute_out
 				match_roster.stats['minutes_played'] = substitute_out - substitute_in
 
 			# Order tournament.match_rosters by match date

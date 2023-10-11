@@ -91,14 +91,16 @@
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th colspan="9">{{ tournament.tournament_name }}</th>
+                            <th colspan="11">{{ tournament.tournament_name }}</th>
                         </tr>
                         <tr>
                             <th>Date</th>
-                            <th>Home</th>
+                            <th>Home Team</th>
                             <th colspan="2"></th>
-                            <th>Guest</th>
+                            <th>Guest Team</th>
                             <th>Minutes</th>
+                            <th>In</th>
+                            <th>Out</th>
                             <th>Goals</th>
                             <th>Yellow Cards</th>
                             <th>Red Cards</th>
@@ -112,7 +114,9 @@
                             <td>{{ item.match.full_time_home_result }}</td>
                             <td>{{ item.match.full_time_guest_result }}</td>
                             <td>{{ item.match.guest_name }}</td>
-                            <td>{{ item.stats.minutes_played }}</td>
+                            <td>{{ item.stats.minutes_played }}'</td>
+                            <td>{{ item.stats.substitute_in }}'</td>
+                            <td>{{ item.stats.substitute_out }}'</td>
                             <td>{{ item.stats.goals }}</td>
                             <td>{{ item.stats.yellow_cards }}</td>
                             <td>{{ item.stats.red_cards }}</td>
