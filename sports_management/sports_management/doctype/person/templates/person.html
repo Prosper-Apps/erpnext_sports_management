@@ -81,6 +81,51 @@
         </div>
         {% endif %}
 
+        {% if tournaments %}
+        <div class="page-header">
+            <h4>Played in</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% for tournament in tournaments %}
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th colspan="9">{{ tournament.tournament_name }}</th>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <th>Home</th>
+                            <th colspan="2"></th>
+                            <th>Guest</th>
+                            <th>Minutes</th>
+                            <th>Goals</th>
+                            <th>Yellow Cards</th>
+                            <th>Red Cards</th>
+                        </tr>
+                    <tbody>
+                        {% for item in tournament.match_rosters %}
+                        {% if item.match.status == "Completed" %}
+                        <tr>
+                            <td><a href="/{{ item.match.route }}">{{ item.match.date }}</a></td>
+                            <td>{{ item.match.home_name }}</td>
+                            <td>{{ item.match.full_time_home_result }}</td>
+                            <td>{{ item.match.full_time_guest_result }}</td>
+                            <td>{{ item.match.guest_name }}</td>
+                            <td>{{ item.stats.minutes_played }}</td>
+                            <td>{{ item.stats.goals }}</td>
+                            <td>{{ item.stats.yellow_cards }}</td>
+                            <td>{{ item.stats.red_cards }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
     </div>
 </div>
 

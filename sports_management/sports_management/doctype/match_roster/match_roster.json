@@ -10,10 +10,12 @@
  "engine": "InnoDB",
  "field_order": [
   "match",
+  "tournament",
   "team",
   "role",
   "column_break_8cxpv",
   "person",
+  "shirt_number",
   "person_name",
   "position",
   "starting_lineup"
@@ -80,6 +82,18 @@
    "hidden": 1,
    "label": "Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "shirt_number",
+   "fieldtype": "Int",
+   "label": "Shirt Number",
+   "non_negative": 1
+  },
+  {
+   "fetch_from": "match.tournament",
+   "fieldname": "tournament",
+   "fieldtype": "Read Only",
+   "label": "Tournament"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -89,7 +103,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-11 07:29:34.451183",
+ "modified": "2023-10-11 09:00:21.597292",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
