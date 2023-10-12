@@ -1,19 +1,20 @@
 {% extends "templates/web.html" %}
 
-{% block page_content %}
-
-<div class="py-20 row">
-    <div class="col-sm-2">
+{% block header %}
+<div class="py-10 row">
+    <div class="col">
         {% if picture %}
-        <img alt="{{ name }}" src="{{ picture }}" />
+        <img src="{{ picture }}" />
         {% endif %}
     </div>
     <div class="col">
-        <h1>{{ name }}</h1>
+        <h1>{{ team_name }}</h1>
+
         <p class="lead">Sports Type: {{ sports_type }}</p>
         <div>
             <span class="badge badge-info">{{ short_name }}</span>
         </div>
+        
         <div class="mt-4">
 
             {% if club %}
@@ -24,7 +25,19 @@
             <div>Venue: <strong><a href="/{{ venue.route}}">{{ venue.name }}</a></strong></div>
             {% endif %}
         </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_content %}
+
+<div class="row">
+    
+    <div class="col">        
+        
+        {% if description %}
         <p>{{ description }}</p>
+        {% endif %}
 
         {% if tournaments %}
         <div class="page-header">
@@ -51,8 +64,7 @@
                     <tbody>
                         {% for tournament in tournaments %}
                         <tr>
-                            <td><a href="/{{ tournament.route }}">{{ tournament.tournament }}</a></td>
-                            <td>{{ tournament.rank }}</td>
+                            <td><a href="/{{ tournament.route }}">{{ tournament.tournament_name }}</a></td>
                             {% if tournament.picture %}
                             <td><img alt="{{ tournament.team }}" src="{{ tournament.picture }}"
                                     style="width: 25px; height: 25px;" />
@@ -60,6 +72,7 @@
                             {% else %}
                             <td></td>
                             {% endif %}
+                            <td>{{ tournament.rank }}</td>
                             <td>{{ tournament.played }}</td>
                             <td>{{ tournament.wins }}</td>
                             <td>{{ tournament.draws }}</td>
@@ -179,8 +192,9 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
                             <th>Home</th>
                             <th></th>
                             <th></th>
@@ -190,12 +204,13 @@
                     <tbody>
                         {% for match in matches %}
                         <tr>
-                            <td><a href="/{{ match.route }}">{{ match.name }}</a></td>
-                            <td>{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
-                            <td>{{ match.home }}</td>
-                            <td>{% if match.full_time_home_result %} {{ match.full_time_home_result }}{% endif %}</td>
-                            <td>{% if match.full_time_guest_result %} {{ match.full_time_guest_result }}{% endif %}</td>
-                            <td>{{ match.guest }}</td>
+                            <td><a href="/{{ match.route }}">{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}</a></td>
+                            <td>{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
+                            <td>{{ match.status }}</td>
+                            <td>{{ match.home_name }}</td>
+                            <td>{% if match.status == 'Completed' %}{{ match.full_time_home_result }}{% endif %}</td>
+                            <td>{% if match.status == 'Completed' %}{{ match.full_time_guest_result }}{% endif %}</td>
+                            <td>{{ match.guest_name }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

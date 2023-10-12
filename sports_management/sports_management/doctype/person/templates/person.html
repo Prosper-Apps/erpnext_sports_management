@@ -1,8 +1,7 @@
 {% extends "templates/web.html" %}
 
-{% block page_content %}
-
-<div class="py-20 row">
+{% block header %}
+<div class="py-10 row">
     <div class="col-sm-2">
         {% if picture %}
         <img src="{{ picture }}" />
@@ -38,6 +37,14 @@
             {% endif %}
             
         </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_content %}
+
+<div class="row">
+    <div class="col">
 
         {% if description %}
         <p>{{ description }}</p>

@@ -7,6 +7,12 @@ from frappe.website.website_generator import WebsiteGenerator
 class Person(WebsiteGenerator):
 	def get_context(self, context):
 
+		# Define the title of the page
+		context.title = self.person_name
+
+		# Define breadcrumbs
+		context.parents = [{"name": "Home", "route":"/"}, {"name": "Persons", "route":"/persons"}]
+
 		# Get a list of the teams that the person is a member of
 		context.team_rosters = frappe.get_all("Team Roster", filters={"person": self.name}, fields=["team", "position", "role", "shirt_number"])
 
