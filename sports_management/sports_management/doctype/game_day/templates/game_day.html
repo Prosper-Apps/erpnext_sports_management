@@ -1,16 +1,24 @@
 {% extends "templates/web.html" %}
 
-{% block page_content %}
-
-<div class="py-20 row">
+{% block header %}
+<div class="py-10 row">
     <div class="col-sm-2">
         {% if picture %}
-        <img alt="{{ name }}" src="{{ picture }}" />
+        <img src="{{ picture }}" />
         {% endif %}
     </div>
     <div class="col">
         <h1>{{ name }}</h1>
-        <p class="lead">Tournament: <a href="/{{ tournament.route }}">{{ tournament.name }}</a></p>
+        <p class="lead">Tournament: <a href="/{{ tournament.route }}">{{ tournament.tournament_name }}</a></p>
+    </div>
+</div>
+    
+{% endblock %}
+
+{% block page_content %}
+
+<div class="row">
+    <div class="col">
 
         {% if description %}
         <p>{{ description }}</p>
@@ -22,11 +30,12 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped">
-                    <thead>
+                <table class="table">
+                    <thead class="thead-dark">
                         <tr>
-                            <th></th>
                             <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
                             <th>Home</th>
                             <th></th>
                             <th></th>
@@ -36,12 +45,13 @@
                     <tbody>
                         {% for match in matches %}
                         <tr>
-                            <td><a href="/{{ match.route }}">{{ match.name }}</a></td>
-                            <td>{{ frappe.format(match.date, {'fieldtype': 'Date'}) }} {{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
-                            <td>{{ match.home }}</td>
-                            <td>{% if match.full_time_home_result %} {{ match.full_time_home_result }}{% endif %}</td>
-                            <td>{% if match.full_time_guest_result %} {{ match.full_time_guest_result }}{% endif %}</td>
-                            <td>{{ match.guest }}</td>
+                            <td><a href="/{{ match.route }}">{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}</a></td>
+                            <td>{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
+                            <td>{{ match.status }}</td>
+                            <td>{{ match.home_name }}</td>
+                            <td>{% if match.status == 'Completed' %}{{ match.full_time_home_result }}{% endif %}</td>
+                            <td>{% if match.status == 'Completed' %}{{ match.full_time_guest_result }}{% endif %}</td>
+                            <td>{{ match.guest_name }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

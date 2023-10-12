@@ -1,82 +1,62 @@
 {% extends "templates/web.html" %}
 
-{% block page_content %}
-
-<div class="py-20 row">
-    <div class="col-sm-2">
+{% block header %}
+<div class="py-10 row">
+    <div class="col-sm-6">
         {% if picture %}
-        <img alt="{{ name }}" src="{{ picture }}" />
+        <img src="{{ picture }}" />
         {% endif %}
     </div>
     <div class="col">
         <h1>{{ name }}</h1>
-        <div class="mt-4">
-
-            {% if venue %}
-            <div>Venue: <strong><a href="/{{ venue.route }}">{{ venue.name }}</a></strong></div>
-            {% endif %}
-
-            {% if president %}
-            <div>President: <strong>{{ president }}</strong></div>
-            {% endif %}
-
-            {% if club_manager %}
-            <div>Manager: <strong>{{ club_manager }}</strong></div>
-            {% endif %}
-
-            {% if club_foundation %}
-            <div>Foundation: <strong>{{ club_foundation }}</strong></div>
-            {% endif %}
-
-            {% if club_dissolved %}
-            <div>Dissolved: <strong>{{ club_dissolved }}</strong></div>
-            {% endif %}
-
-        </div>
-
-        {% if description %}
-        <p>{{ description }}</p>
-        {% endif %}
-
-        {% if association %}
-        <div class="page-header">
-            <h4>Associations</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for item in association %}
-                        <tr>
-                            <td>{{ item.association }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if teams %}
-        <div class="page-header">
-            <h4>Teams</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for item in teams %}
-                        <tr>
-                            <td><a href="/{{ item.route }}">{{ item.name }}</a></td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
     </div>
+</div>
+
+{% endblock %}
+
+{% block page_content %}
+
+<div class="row">
+    {% if description %}
+    <p>{{ description }}</p>
+    {% endif %}
+</div>
+
+<div class="py-10 row">
+    <div class="col">
+        <h3>Home Shirt</h3>
+        {% if home_shirt %}
+        <img src="{{ home_shirt }}" style="max-height: 200px;" />
+        {% endif %}
+    </div>
+    <div class="col">
+        <h3>Away Shirt</h3>
+        {% if away_shirt %}
+        <img src="{{ away_shirt }}" style="max-height: 200px;" />
+        {% endif %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="page-header">
+        <h4>Teams</h4>
+    </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Sports Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in teams %}
+                    <tr>
+                        <td><a href="/{{ item.route }}">{{ item.team_name }}</a></td>
+                        <td>{{ item.sports_type }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 </div>
 
 {% endblock %}
