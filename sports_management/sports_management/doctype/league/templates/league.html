@@ -1,0 +1,66 @@
+{% extends "templates/web.html" %}
+
+{% block header %}
+<div class="py-10 row">
+    <div class="col-sm-2">
+        {% if picture %}
+        <img src="{{ picture }}" />
+        {% endif %}
+    </div>
+    <div class="col">
+        <h1>{{ league_name }}</h1>
+        <p class="lead"><span class="badge badge-primary">{{ short_name }}</span></p>        
+        <div class="mt-4">
+            <div>Sports Type: <strong>{{ sports_type }}</strong></div>
+            <div>Age Group: <strong>{{ age_group }}</strong></div>
+            <div>Level: <strong>{{ league_level }}</strong></div>
+
+            {% if country %}
+            <div>Country: <strong>{{ country }}</strong></div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% if description %}
+    <p>{{ description }}</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block page_content %}
+
+{% if tournaments %}
+<div class="py-10 row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h4>Tournaments</h4>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in tournaments %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="width: 25px; height: 25px;" />
+                        {% endif %}
+                    </td>
+                    <td><a href="/{{ item.route }}">{{ item.tournament_name }}</a></td>                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->
