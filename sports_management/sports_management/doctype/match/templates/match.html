@@ -44,6 +44,11 @@
     <div class="col">
         <span class="badge badge-info lead my-2">{{ status }}</span>
     </div>
+    {% if venue %}
+    <div class="col">
+        Venue: <a href="/{{ venue.route }}">{{ venue.venue_name }}</a>
+    </div>
+    {% endif %}
 </div>
 
 <div class="row">
@@ -104,6 +109,7 @@
             </thead>
             <tbody>
 
+                {% if home_coaches %}
                 <tr><th class="thead" colspan="4">Coaches</th></tr>
                 {% for item in home_coaches %}
                 <tr>
@@ -116,7 +122,9 @@
                     <td colspan="3">{{ item.position_name }}</td>
                 </tr>
                 {% endfor %}
+                {% endif %}
 
+                {% if home_rosters %}
                 <tr><th class="thead" colspan="4">Players</th></tr>
                 {% for item in home_rosters %}
                 <tr>
@@ -137,7 +145,9 @@
                     </td>
                 </tr>
                 {% endfor %}
+                {% endif %}
 
+                {% if home_staff %}
                 <tr><th class="thead" colspan="4">Staff</th></tr>
                 {% for item in home_staff %}
                 <tr>
@@ -150,6 +160,8 @@
                     <td colspan="3">{{ item.position_name }}</td>
                 </tr>
                 {% endfor %}
+                {% endif %}
+                
             </tbody>
         </table>
     </div>
@@ -167,6 +179,7 @@
                 </tr>
             </thead>
             <tbody>
+                {% if guest_coaches %}
                 <tr><th class="thead" colspan="4">Coaches</th></tr>
                 {% for item in guest_coaches %}
                 <tr>
@@ -179,7 +192,9 @@
                     <td colspan="3">{{ item.position_name }}</td>
                 </tr>
                 {% endfor %}
+                {% endif %}
 
+                {% if guest_rosters %}
                 <tr><th class="thead" colspan="4">Players</th></tr>
                 {% for item in guest_rosters %}
                 <tr>
@@ -200,7 +215,9 @@
                     </td>
                 </tr>
                 {% endfor %}
+                {% endif %}
 
+                {% if guest_staff %}
                 <tr><th class="thead" colspan="4">Staff</th></tr>
                 {% for item in guest_staff %}
                 <tr>
@@ -213,10 +230,66 @@
                     <td colspan="3">{{ item.position_name }}</td>
                 </tr>
                 {% endfor %}
+                {% endif %}
             </tbody>
         </table>
     </div>
 </div>
 
+{% if referees %}
+<h2>Referees</h2>
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in referees %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td>{{ item.position_name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+{% if events %}
+<h2>Events</h2>
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Minute</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Team</th>
+                </tr>
+            <tbody>
+                {% for item in events %}
+                <tr>
+                    <td>{{ item.minute }}'</td>
+                    <td>{{ item.events_type }}</td>
+                    <td>{{ item.person_name }}</td>
+                    <td>{{ item.team_name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}

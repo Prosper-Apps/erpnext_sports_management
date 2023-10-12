@@ -21,6 +21,8 @@ class Match(WebsiteGenerator):
 		context.home_club = frappe.get_doc('Club', context.home.club)
 		context.guest = frappe.get_doc('Team', self.guest)
 		context.guest_club = frappe.get_doc('Club', context.guest.club)
+		if context.venue:
+			context.venue = frappe.get_doc('Venue', self.venue)
 
 		# Get the match rosters
 		context.home_rosters = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
@@ -32,6 +34,9 @@ class Match(WebsiteGenerator):
 
 		# Get the match referees
 		context.referees = frappe.get_list('Match Referee', filters={'match': self.name}, fields=['person', 'person.route as person_route', 'person.person_name', 'position', 'position.position_name'], order_by='position desc')
+
+		# Get the match events
+		context.events = frappe.get_list('Match Event', filters={'match': self.name}, fields=['events_type', 'match_roster', 'person_name', 'match_roster.team', 'match_roster.team_name', 'minute'], order_by='minute')
 
 	# create function when saving a match to calculate the points for each team
 	def on_update(self):
