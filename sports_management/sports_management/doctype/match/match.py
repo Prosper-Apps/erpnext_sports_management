@@ -25,6 +25,13 @@ class Match(WebsiteGenerator):
 		# Get the match rosters
 		context.home_rosters = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
 		context.guest_rosters = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
+		context.home_coaches = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Coach'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')
+		context.guest_coaches = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Coach'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')	
+		context.home_staff = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Staff'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')	
+		context.guest_staff = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Staff'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')
+
+		# Get the match referees
+		context.referees = frappe.get_list('Match Referee', filters={'match': self.name}, fields=['person', 'person.route as person_route', 'person.person_name', 'position', 'position.position_name'], order_by='position desc')
 
 	# create function when saving a match to calculate the points for each team
 	def on_update(self):

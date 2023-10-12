@@ -70,7 +70,7 @@
 {% if preview %}
 <div class="row">
     <div class="col">
-        <h4>Preview</h4>
+        <h2>Preview</h2>
         <p>{{ preview }}</p>
     </div>
 </div>
@@ -79,7 +79,7 @@
 {% if embed_live_broadcast_link %}
 <div class="row">
     <div class="col">
-        <h4>Live Broadcast</h4>
+        <h2>Live Broadcast</h2>
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="{{ embed_live_broadcast_link }}" allowfullscreen></iframe>
         </div>
@@ -87,19 +87,37 @@
 </div>
 {% endif %}
 
-<h4>Rosters</h4>
+<h2>Rosters</h2>
 <div class="row">
     <div class="col">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">{{ home_name }}</th>
+                    <th colspan="4">{{ home_name }}</th>
+                </tr>
+                <tr>
+                    <th scope="col">Name</th>
                     <th scope="col">Position</th>
                     <th scope="col">Shirt Number</th>
                     <th scope="col">Starting Lineup</th>
                 </tr>
             </thead>
             <tbody>
+
+                <tr><th class="thead" colspan="4">Coaches</th></tr>
+                {% for item in home_coaches %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td colspan="3">{{ item.position_name }}</td>
+                </tr>
+                {% endfor %}
+
+                <tr><th class="thead" colspan="4">Players</th></tr>
                 {% for item in home_rosters %}
                 <tr>
                     <td>
@@ -119,6 +137,19 @@
                     </td>
                 </tr>
                 {% endfor %}
+
+                <tr><th class="thead" colspan="4">Staff</th></tr>
+                {% for item in home_staff %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td colspan="3">{{ item.position_name }}</td>
+                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
@@ -126,13 +157,30 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">{{ guest_name }}</th>
+                    <th colspan="4">{{ guest_name }}</th>
+                </tr>
+                <tr>
+                    <th scope="col">Name</th>
                     <th scope="col">Position</th>
                     <th scope="col">Shirt Number</th>
                     <th scope="col">Starting Lineup</th>
                 </tr>
             </thead>
             <tbody>
+                <tr><th class="thead" colspan="4">Coaches</th></tr>
+                {% for item in guest_coaches %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td colspan="3">{{ item.position_name }}</td>
+                </tr>
+                {% endfor %}
+
+                <tr><th class="thead" colspan="4">Players</th></tr>
                 {% for item in guest_rosters %}
                 <tr>
                     <td>
@@ -152,8 +200,23 @@
                     </td>
                 </tr>
                 {% endfor %}
+
+                <tr><th class="thead" colspan="4">Staff</th></tr>
+                {% for item in guest_staff %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td colspan="3">{{ item.position_name }}</td>
+                </tr>
+                {% endfor %}
             </tbody>
         </table>
+    </div>
 </div>
+
 
 {% endblock %}
