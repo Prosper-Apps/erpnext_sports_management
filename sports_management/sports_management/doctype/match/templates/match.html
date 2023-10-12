@@ -1,84 +1,159 @@
 {% extends "templates/web.html" %}
 
+{% block header %}
+<div class="row">
+    <div class="col">
+        <h1>
+            <a href="/{{ home.route }}">
+                {% if home_club.picture %}
+                <img src="{{ home_club.picture }}" style="max-height: 50px;">
+                {% endif %}
+                {{ home.team_name }}
+            </a>
+            {{ full_time_home_result }}
+            -
+            {{ full_time_guest_result }}
+            <a href="/{{ guest.route }}">
+                {% if guest_club.picture %}
+                <img src="{{ guest_club.picture }}" style="max-height: 50px;">
+                {% endif %}
+                {{ guest.team_name }}
+            </a>
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        {% if home_club.home_shirt %}
+        <img src="{{ home_club.home_shirt }}" style="max-height: 100px;">
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        {% if guest_club.away_shirt %}
+        <img class="float-right" src="{{ guest_club.away_shirt }}" style="max-height: 100px;">
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
 {% block page_content %}
 
-<div class="py-20 row">
-    <div class="col-sm-2">
-        {% if picture %}
-        <img alt="{{ name }}" src="{{ picture }}" />
+<div class="row">
+    <div class="col">
+        <span class="badge badge-info lead my-2">{{ status }}</span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        Tournament: <a href="/{{ tournament.route }}">{{ tournament.tournament_name }}</a>
+    </div>
+    <div class="col">Game Day: <a href="/{{ game_day.route }}">{{ frappe.format(date, {'fieldtype': 'Date'}) }}
+            {{frappe.format(time, {'fieldtype': 'Time'}) }}</a></div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {% if link_to_the_external_match_report %}
+        <a href="{{ link_to_the_external_match_report }}" target="_blank">Link to the external match report</a>
         {% endif %}
     </div>
     <div class="col">
-        <h1>{{ name }}</h1>
-        {% if venue %}
-        <p class="lead">Venue: <a href="/{{ venue.route }}">{{ venue.name }}</a></p>
+        {% if live_broadcast_link %}
+        <a href="{{ live_broadcast_link }}" target="_blank">Live broadcast link</a>
         {% endif %}
-        <p class="lead">{{ frappe.format(date, {'fieldtype': 'Date'}) }} {{ frappe.format(time, {'fieldtype': 'Time'}) }}</p>
-
-        <div class="mt-4">
-
-            <div><span class="badge badge-info">{{ status }}</span></div>
-
-            <div class="mt-2"><strong>{{ frappe.format(date, {'fieldtype': 'Date'}) }} {{ frappe.format(time, {'fieldtype': 'Time'}) }}</strong></div>
-
-            {% if venue %}
-            <div>Club: <strong><a href="/{{ venue.route }}">{{ venue.name }}</a></strong></div>
-            {% endif %}            
-
-            {% if tournament %}
-            <div>Tournament: <strong><a href="/{{ tournament.route }}">{{ tournament.name }}</a></strong></div>
-            {% endif %}
-
-            {% if game_day %}
-            <div>Game Day: <strong><a href="/{{ game_day.route }}">{{ game_day.name }}</a></strong></div>
-            {% endif %}
-
-            {% if spectators %}
-            <div>Spectators: <strong>{{ spectators }}</strong></div>
-            {% endif %}
-
-            <table class="table table-striped mt-4  ">
-                <tbody>
-                    <tr>
-                        <td class="font-weight-bold text-center"><a href="/{{ home.route }}">{{ home.name }}</a></td>
-                        <td class="font-weight-bold text-center"><a href="/{{ guest.route }}">{{ guest.name }}</a></td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">Full Time Result</td>
-                    </tr>
-                    <tr>
-                        <td class="font-weight-bold text-center">{{ full_time_home_result }}</td>
-                        <td class="font-weight-bold text-center">{{ full_time_guest_result }}</td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-            {% if link_to_the_external_match_report %}
-            <div><a href="{{ link_to_the_external_match_report }}" target="_blank">Link to the external match report</a></div>
-            {% endif %}
-
-            {% if live_broadcast_link %}
-            <div><a href="{{ live_broadcast_link }}" target="_blank">Live broadcast link</a></div>
-            {% endif %}
-            
-        </div>
-
-        {% if embed_live_broadcast_link %}
-        <div class="mt-4">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="{{ embed_live_broadcast_link }}" allowfullscreen></iframe>
-            </div>
-        </div>
-        {% endif %}
-
-        <div class="mt-4">
-            <h2>Information</h2>
-            <p>{{ preview }}</p>
-        </div>
-
     </div>
+</div>
+
+{% if preview %}
+<div class="row">
+    <div class="col">
+        <h4>Preview</h4>
+        <p>{{ preview }}</p>
+    </div>
+</div>
+{% endif %}
+
+{% if embed_live_broadcast_link %}
+<div class="row">
+    <div class="col">
+        <h4>Live Broadcast</h4>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ embed_live_broadcast_link }}" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<h4>Rosters</h4>
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">{{ home_name }}</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Shirt Number</th>
+                    <th scope="col">Starting Lineup</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in home_rosters %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td>{{ item.position_name }}</td>
+                    <td><span class="badge badge-info">{{ item.shirt_number }}</span></td>
+                    <td>
+                        {% if item.starting_lineup %}
+                        <span class="badge badge-success">✔</span>
+                        {% else %}
+                        <span class="badge badge-danger">✖</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">{{ guest_name }}</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Shirt Number</th>
+                    <th scope="col">Starting Lineup</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in guest_rosters %}
+                <tr>
+                    <td>
+                        {% if item.picture %}
+                        <img src="{{ item.picture }}" style="max-height: 50px;">
+                        {% endif %}
+                        <a href="/{{ item.person_route }}">{{ item.person_name }}</a>
+                    </td>
+                    <td>{{ item.position_name }}</td>
+                    <td><span class="badge badge-info">{{ item.shirt_number }}</span></td>
+                    <td>
+                        {% if item.starting_lineup %}
+                        <span class="badge badge-success">✔</span>
+                        {% else %}
+                        <span class="badge badge-danger">✖</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 </div>
 
 {% endblock %}
