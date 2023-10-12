@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:SM-L-{#####}",
@@ -17,6 +18,8 @@
   "age_group",
   "country",
   "league_level",
+  "route",
+  "published",
   "section_break_m62li",
   "date_of_first_delivery",
   "column_break_mx8gm",
@@ -130,11 +133,30 @@
    "label": "Name",
    "reqd": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "default": "1",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-10-11 06:20:24.676837",
+ "is_published_field": "published",
+ "links": [
+  {
+   "link_doctype": "Tournament",
+   "link_fieldname": "league"
+  }
+ ],
+ "modified": "2023-10-12 08:34:15.256920",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",
@@ -176,6 +198,7 @@
    "share": 1
   }
  ],
+ "route": "leagues",
  "search_fields": "short_name,sports_type,age_group",
  "show_title_field_in_link": 1,
  "sort_field": "modified",

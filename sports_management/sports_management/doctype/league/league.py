@@ -1,11 +1,22 @@
 # Copyright (c) 2023, KAINOTOMO PH LTD and contributors
 # For license information, please see license.txt
 
-# import frappe
-from frappe.model.document import Document
+import frappe
+from frappe.website.website_generator import WebsiteGenerator
 
-class League(Document):
+class League(WebsiteGenerator):
 	def before_save(self):
 		# Convert the short_name field to uppercase
 		if self.short_name:
 			self.short_name = self.short_name.upper()
+
+	def get_context(self, context):
+		
+		# Define the title of the page
+		context.title = self.league_name
+
+		# Define breadcrumbs
+		context.parents = [{"name": "Home", "route":"/"}, {"name": "Leagues", "route":"/leagues"}]
+
+		# Get the tournaments with name and route
+		context.tournaments = frappe.get_all('Tournament', filters={'league': self.name}, fields=['name', 'route', 'tournament_name'], order_by='tournament_name')

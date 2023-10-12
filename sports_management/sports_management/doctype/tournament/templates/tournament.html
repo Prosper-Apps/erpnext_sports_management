@@ -11,7 +11,7 @@
         <h1>{{ tournament_name }}</h1>
         <p class="lead">Sports Type: {{ sports_type }}</p>        
         <div class="mt-4">
-            <div>League: <strong>{{ league_name }}</strong></div>
+            <div>League: <strong><a href="/{{ league_route }}">{{ league_name }}</a></strong></div>
             <div>Type: <strong>{{ type }}</strong></div>
 
             {% if country %}

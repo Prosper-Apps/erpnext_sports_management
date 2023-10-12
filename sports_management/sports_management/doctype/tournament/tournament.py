@@ -16,6 +16,7 @@ class Tournament(WebsiteGenerator):
 
 		# Get the league name and route and assignt to context. Use frappe.get_all
 		context.league_name = frappe.get_value('League', self.league, ['league_name'])
+		context.league_route = frappe.get_value('League', self.league, ['route'])
 
 		# Get the rankings of the tournament
 		teams = frappe.get_all('Ranking', 
