@@ -1,26 +1,22 @@
 {% extends "templates/web.html" %}
-
-{% block page_content %}
-
-<div class="py-20 row">
-
-    <div class="col-sm-2">
-
+{% block header %}
+<div class="py-10 row">
+    <div class="col-sm-6">
         {% if picture %}
-        <img alt="{{ name }}" src="{{ picture }}" />
+        <img src="{{ picture }}" />
         {% endif %}
-
     </div>
     <div class="col">
-
-        <h1>{{ name }}</h1>
-        <p class="lead">Sports type: {{ sports_type }}</p>
-
-        {% if description %}
-        <p>{{ description }}</p>
-        {% endif %}
-
+        <h1>{{ position_name }}</h1>
+        <p class="lead">Sports Type: {{ sports_type }}</p>        
+        <div class="mt-4">
+            <div>Role: <strong>{{ role }}</strong></div>
+        </div>
     </div>
 </div>
-
+<div class="row">
+    {% if description %}
+    <p>{{ description }}</p>
+    {% endif %}
+</div>
 {% endblock %}
