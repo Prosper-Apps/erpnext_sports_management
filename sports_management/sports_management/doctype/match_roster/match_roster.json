@@ -12,6 +12,7 @@
   "match",
   "tournament",
   "team",
+  "team_name",
   "role",
   "column_break_8cxpv",
   "person",
@@ -94,6 +95,13 @@
    "fieldname": "tournament",
    "fieldtype": "Read Only",
    "label": "Tournament"
+  },
+  {
+   "fetch_from": "team.team_name",
+   "fieldname": "team_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Team Name"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -103,7 +111,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-11 09:00:21.597292",
+ "modified": "2023-10-12 16:07:54.887856",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
