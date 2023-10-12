@@ -5,4 +5,10 @@
 from frappe.website.website_generator import WebsiteGenerator
 
 class Position(WebsiteGenerator):
-	pass
+	def get_context(self, context):
+
+		# Insert page title
+		context.page_title = self.name
+
+		# Add bredcrumb
+		context.parents = [{'name': 'Positions', 'route': '/positions'}]
