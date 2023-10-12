@@ -8,13 +8,18 @@ from frappe.website.website_generator import WebsiteGenerator
 class Tournament(WebsiteGenerator):
 	def get_context(self, context):
 
+		# Define the title of the page
+		context.title = self.tournament_name
+
+		# Define breadcrumbs
+		context.parents = [{"name": "Home", "route":"/"}, {"name": "Tournaments", "route":"/tournaments"}]
+
+		# Get the league name and route and assignt to context. Use frappe.get_all
+		context.league_name = frappe.get_value('League', self.league, ['league_name'])
+
 		# Get the rankings of the tournament
 		teams = frappe.get_all('Ranking', 
-			filters={'tournament': self.name}, fields=['team', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	
-		# for each team get it's picture
-		for team in teams:
-			team.picture = frappe.get_value('Team', team.team, 'picture')
-			team.route = frappe.get_value('Team', team.team, 'route')
+			filters={'tournament': self.name}, fields=['team', 'team.team_name', 'team.route', 'team.picture', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	
 			
 		context.rankings = sorted(teams, key=lambda x: x.rank, reverse=False)
 
@@ -22,9 +27,7 @@ class Tournament(WebsiteGenerator):
 		context.game_days = frappe.get_all('Game Day', filters={'tournament': self.name}, fields=['name', 'route', 'start'], order_by='start')
 
 		# Get the matches with name and route
-		context.matches = frappe.get_all('Match', filters={'tournament': self.name}, fields=['name', 'route', 'home', 'guest', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result'], order_by='date')
-		for match in context.matches:
-			match.time = (datetime.datetime.min + match.time).time().strftime('%H:%M')
+		context.matches = frappe.get_all('Match', filters={'tournament': self.name}, fields=['name', 'route', 'home', 'home_name', 'guest', 'guest_name', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result', 'status'], order_by='date')
 
 @frappe.whitelist()
 def create_matches(tournament):
