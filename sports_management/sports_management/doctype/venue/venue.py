@@ -6,17 +6,15 @@ from frappe.website.website_generator import WebsiteGenerator
 
 class Venue(WebsiteGenerator):
 	def get_context(self, context):
-		# Get the address doctype of the venue and add it to the context
-		context.address = frappe.get_doc("Address", self.address)
 
-		# Get the club associated with the venue and add it to the context
-		context.club = frappe.get_doc("Club", self.club)
+		# Set the page title
+		context.page_title = self.name
 
-		# Get the teams that are associated with the club and add it to the context
-		context.teams = frappe.get_all("Team", filters={"club": self.club}, fields=["name", "route"])
+		# Set the breadcrumbs
+		context.parents = [{'name': 'Home', 'route':'/'}, {'name': 'Venues', 'route':'/venues'}]
 
 		# Get the matches that are associated with the venue and add it to the context
-		context.matches = frappe.get_all("Match", filters={"venue": self.name}, fields=["name", "route", "home", "guest", "full_time_home_result", "full_time_guest_result", "date", "time", "venue"], order_by="date asc")
+		context.matches = frappe.get_all("Match", filters={"venue": self.name}, fields=["name", "route", "tournament", "home", "home_name", "guest", "guest_name", "full_time_home_result", "full_time_guest_result", "date", "time", "status"], order_by="date asc")
 
 	def before_save(self):
 		# Convert the short_name field to uppercase
