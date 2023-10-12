@@ -1,15 +1,42 @@
 {% extends "templates/web.html" %}
 
+{% block header %}
+<div class="py-10 row">
+    <div class="col-sm-2">
+        {% if picture %}
+        <img src="{{ picture }}" />
+        {% endif %}
+    </div>
+    <div class="col">
+        <h1>{{ tournament_name }}</h1>
+        <p class="lead">Sports Type: {{ sports_type }}</p>        
+        <div class="mt-4">
+            <div>League: <strong>{{ league_name }}</strong></div>
+            <div>Type: <strong>{{ type }}</strong></div>
+
+            {% if country %}
+            <div>Country: <strong>{{ country }}</strong></div>
+            {% endif %}
+
+        </div>
+    </div>    
+</div>
+<div class="row">
+    {% if description %}
+    <p>{{ description }}</p>
+    {% endif %}
+</div>
+{% endblock %}
+
 {% block page_content %}
 
-<div class="page-header">
-    <h1>{{ name }}</h1>
-</div>
-
-<div class="row">
+<div class="py-10 row">
     <div class="col-md-12">
-        <table class="table table-striped">
-            <thead>
+        <div class="page-header">
+            <h4>Rankings</h4>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
                     <th>Rank</th>
                     <th></th>
@@ -29,12 +56,12 @@
                 <tr>
                     <td>{{ ranking.rank }}</td>
                     {% if ranking.picture %}
-                    <td><img alt="{{ ranking.team }}" src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
+                    <td><img src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
                     </td>
                     {% else %}
                     <td></td>
                     {% endif %}
-                    <td><a href="/{{ ranking.route }}">{{ ranking.team }}</a></td>
+                    <td><a href="/{{ ranking.route }}">{{ ranking.team_name }}</a></td>
                     <td>{{ ranking.played }}</td>
                     <td>{{ ranking.wins }}</td>
                     <td>{{ ranking.draws }}</td>
@@ -47,51 +74,6 @@
                 {% endfor %}
             </tbody>
         </table>
-    </div>
-</div>
-
-<div class="py-20 row">
-    {% if picture %}
-    <div class="col-sm-2">
-        {% if picture %}
-        <img alt="{{ name }}" src="{{ picture }}" />
-        {% endif %}
-    </div>
-    {% endif %}
-    <div class="col">
-        <p class="lead">Sports Type: {{ sports_type }}</p>        
-        <div class="mt-4">
-            <div>League: <strong>{{ league }}</strong></div>
-            <div>Type: <strong>{{ type }}</strong></div>
-
-            {% if country %}
-            <div>Country: <strong>{{ country }}</strong></div>
-            {% endif %}
-
-        </div>
-        
-        {% if description %}
-        <p>{{ description }}</p>
-        {% endif %}
-
-        {% if age_group %}
-        <div class="page-header">
-            <h4>Age Groups</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for ag in age_group %}
-                        <tr>
-                            <td>{{ ag.age_group }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
 
         {% if game_days %}
         <div class="page-header">
@@ -99,12 +81,16 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         {% for gd in game_days %}
                         <tr>
-                            <td><a href="/{{ gd.route }}">{{ gd.name }}</a></td>
-                            <td>{{ gd.start }}</td>
+                            <td><a href="/{{ gd.route }}">{{ gd.start }}</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -119,11 +105,13 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped">
-                    <thead>
+                
+                <table class="table">
+                    <thead class="thead-dark">
                         <tr>
-                            <th></th>
                             <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
                             <th>Home</th>
                             <th></th>
                             <th></th>
@@ -133,12 +121,13 @@
                     <tbody>
                         {% for match in matches %}
                         <tr>
-                            <td><a href="/{{ match.route }}">{{ match.name }}</a></td>
-                            <td>{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
-                            <td>{{ match.home }}</td>
-                            <td>{% if match.full_time_home_result %} {{ match.full_time_home_result }}{% endif %}</td>
-                            <td>{% if match.full_time_guest_result %} {{ match.full_time_guest_result }}{% endif %}</td>
-                            <td>{{ match.guest }}</td>
+                            <td><a href="/{{ match.route }}">{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}</a></td>
+                            <td>{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
+                            <td>{{ match.status }}</td>
+                            <td>{{ match.home_name }}</td>
+                            <td>{% if match.status == 'Completed' %}{{ match.full_time_home_result }}{% endif %}</td>
+                            <td>{% if match.status == 'Completed' %}{{ match.full_time_guest_result }}{% endif %}</td>
+                            <td>{{ match.guest_name }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -146,7 +135,6 @@
             </div>
         </div>
         {% endif %}
-
     </div>
 </div>
 
