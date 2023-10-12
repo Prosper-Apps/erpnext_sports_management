@@ -39,14 +39,116 @@
         <p>{{ description }}</p>
         {% endif %}
 
+        {% if coaches %}
+        <div class="page-header">
+            <h4>Coaches</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                        </tr>
+                    <tbody>
+                        {% for item in coaches %}
+                        <tr>
+                            <td>
+                                {% if item.picture %}
+                                <img src="{{ item.picture }}"
+                                    style="max-height: 50px;" />
+                                {% endif %}
+                            </td>
+                            <td><a href="/{{ item.person_route }}">{{ item.person_name }}</a></td>
+                            <td><a href="/{{ item.position_route }}">{{ item.position_name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if players %}
+        <div class="page-header">
+            <h4>Players</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Shirt Number</th>
+                        </tr>
+                    <tbody>
+                        {% for item in players %}
+                        <tr>
+                            <td>
+                                {% if item.picture %}
+                                <img src="{{ item.picture }}"
+                                    style="max-height: 50px;" />
+                                {% endif %}
+                            </td>
+                            <td><a href="/{{ item.person_route }}">{{ item.person_name }}</a></td>
+                            <td><a href="/{{ item.position_route }}">{{ item.position_name }}</a></td>
+                            <td>
+                                {% if item.shirt_number %}
+                                <span class="badge badge-primary">{{ item.shirt_number }}</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if staff %}
+        <div class="page-header">
+            <h4>Staff</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                        </tr>
+                    <tbody>
+                        {% for item in staff %}
+                        <tr>
+                            <td>
+                                {% if item.picture %}
+                                <img src="{{ item.picture }}"
+                                    style="max-height: 50px;" />
+                                {% endif %}
+                            </td>
+                            <td><a href="/{{ item.person_route }}">{{ item.person_name }}</a></td>
+                            <td><a href="/{{ item.position_route }}">{{ item.position_name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
         {% if tournaments %}
         <div class="page-header">
             <h4>Tournaments</h4>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped">
-                    <thead>
+                <table class="table">
+                    <thead class="thead-dark">
                         <tr>
                             <th>Tournament</th>
                             <th></th>
@@ -89,108 +191,21 @@
         </div>
         {% endif %}
 
-        {% if age_group %}
+        {% for tournament in tournaments %}
+        {% if tournament.matches %}
         <div class="page-header">
-            <h4>Age Groups</h4>
+            <h4>Matches in <a href="/{{ tournament.route }}">
+                {{ tournament.tournament_name }}
+                {% if tournament.picture %}
+                <img alt="{{ tournament.team }}" src="{{ tournament.picture }}"
+                    style="max-height: 50px;" />
+                {% endif %}
+            </a></h4>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for ag in age_group %}
-                        <tr>
-                            <td>{{ ag.age_group }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if team_coach %}
-        <div class="page-header">
-            <h4>Coaches</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for item in team_coach %}
-                        <tr>
-                            <td><a href="/{{ item.route }}">{{ item.person }}</a></td>
-                            <td>
-                                {% if item.picture %}
-                                <img alt="{{ item.person }}" src="{{ item.picture }}"
-                                    style="max-height: 50px;" />
-                                {% endif %}
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if team_player %}
-        <div class="page-header">
-            <h4>Players</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for item in team_player %}
-                        <tr>
-                            <td><a href="/{{ item.route }}">{{ item.person }}</a></td>
-                            <td>
-                                {% if item.picture %}
-                                <img alt="{{ item.person }}" src="{{ item.picture }}"
-                                    style="max-height: 50px;" />
-                                {% endif %}
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if team_staff %}
-        <div class="page-header">
-            <h4>Staff</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tbody>
-                        {% for item in team_staff %}
-                        <tr>
-                            <td><a href="/{{ item.route }}">{{ item.person }}</a></td>
-                            <td>
-                                {% if item.picture %}
-                                <img alt="{{ item.person }}" src="{{ item.picture }}"
-                                    style="max-height: 50px;" />
-                                {% endif %}
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if matches %}
-        <div class="page-header">
-            <h4>Matches</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <thead>
+                <table class="table">
+                    <thead class="thead-dark">
                         <tr>
                             <th>Date</th>
                             <th>Time</th>
@@ -202,7 +217,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for match in matches %}
+                        {% for match in tournament.matches %}
                         <tr>
                             <td><a href="/{{ match.route }}">{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}</a></td>
                             <td>{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
@@ -218,6 +233,7 @@
             </div>
         </div>
         {% endif %}
+        {% endfor %}
 
     </div>
 </div>
