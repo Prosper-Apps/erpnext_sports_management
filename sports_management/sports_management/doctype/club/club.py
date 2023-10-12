@@ -7,5 +7,11 @@ from frappe.website.website_generator import WebsiteGenerator
 class Club(WebsiteGenerator):
 	def get_context(self, context):
 
+		# Set the page title
+		context.page_title = self.name
+
+		# Set the breadcrumbs
+		context.parents = [{'name': 'Clubs', 'route': '/clubs'}]
+
 		# Get the teams that are associated with the club and add it to the context
-		context.teams = frappe.get_all("Team", filters={"club": self.name}, fields=["name", "route"])
+		context.teams = frappe.get_all("Team", filters={"club": self.name}, fields=["name", "route", "team_name", "sports_type"])
