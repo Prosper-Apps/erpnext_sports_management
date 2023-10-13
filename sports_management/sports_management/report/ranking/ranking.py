@@ -15,10 +15,10 @@ def get_columns():
         _("Team Name") + ":Data",
         _("Rank") + ":Int",
         _("Played") + ":Int",
+        _("Points") + ":Int",
         _("Wins") + ":Int",
         _("Draws") + ":Int",
         _("Losses") + ":Int",
-        _("Points") + ":Int",
         _("Score For") + ":Int",
         _("Score Against") + ":Int",
         _("Difference") + ":Int"
