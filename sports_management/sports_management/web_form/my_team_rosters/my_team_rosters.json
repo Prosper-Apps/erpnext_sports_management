@@ -40,7 +40,7 @@
  "list_title": "Team Roster",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-10-13 17:50:53.217389",
+ "modified": "2023-10-13 17:56:03.830459",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-team-rosters",
@@ -49,7 +49,7 @@
  "route": "my-team-rosters",
  "show_attachments": 0,
  "show_list": 1,
- "show_sidebar": 0,
+ "show_sidebar": 1,
  "title": "My Team Rosters",
  "web_form_fields": [
   {
@@ -130,5 +130,6 @@
    "reqd": 0,
    "show_in_filter": 0
   }
- ]
+ ],
+ "website_sidebar": "Sports Management"
 }
