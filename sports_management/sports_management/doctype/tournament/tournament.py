@@ -107,6 +107,9 @@ def generate_round(tournament, tournament_doc, round_number, starting_day, game_
 			match_doc.time = time_for_games
 			match_doc.published = 1
 			match_doc.insert()
+			# Update route with match name. Do it with frappe.db.set_value
+			if match_doc.route == None:
+				frappe.db.set_value('Match', match_doc.name, 'route', match_doc.name)
 
 	return game_days[r]
 	
