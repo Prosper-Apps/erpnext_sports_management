@@ -21,3 +21,15 @@ class GameDay(WebsiteGenerator):
 		context.matches = frappe.get_all('Match', filters={'game_day': self.name}, fields=['name', 'route', 'home', 'home_name', 'guest', 'guest_name', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result', 'status'], order_by='date')
 		for match in context.matches:
 			match.time = (datetime.datetime.min + match.time).time().strftime('%H:%M')
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Game Days",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)

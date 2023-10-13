@@ -199,3 +199,15 @@ def calculate_rankings(tournament, send_message=False):
 	# Send a frappe message to the user
 	if send_message:
 		frappe.msgprint('Rankings calculated successfully!')
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Tournaments",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)

@@ -15,3 +15,15 @@ class Club(WebsiteGenerator):
 
 		# Get the teams that are associated with the club and add it to the context
 		context.teams = frappe.get_all("Team", filters={"club": self.name}, fields=["name", "route", "team_name", "sports_type"])
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Clubs",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)

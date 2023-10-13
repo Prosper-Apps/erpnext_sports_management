@@ -6,3 +6,15 @@ from frappe.website.website_generator import WebsiteGenerator
 
 class SportsType(WebsiteGenerator):
 	pass
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Sports Types",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)

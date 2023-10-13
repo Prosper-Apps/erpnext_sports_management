@@ -1,11 +1,11 @@
-<div class="py-8 row">
+<div class="py-8 row border-bottom">
 	<div class="col-sm-1">
 		{% if doc.picture %}
-		<img alt="{{ doc.name }}" src="{{ doc.picture }}" />
+		<img src="{{ doc.picture }}" />
 		{% endif %}
 	</div>
 	<div class="col">
-		<a class="font-size-lg" href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+		<a class="font-size-lg" href="{{ doc.route }}">{{ doc.title or doc.position_name }}</a>
 		<p class="text-muted">{{ doc.sports_type }}</p>
 	</div>
 </div>

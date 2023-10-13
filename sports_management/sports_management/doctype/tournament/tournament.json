@@ -13,6 +13,7 @@
   "details_tab",
   "tournament_name",
   "league",
+  "league_name",
   "sports_type",
   "column_break_hxzug",
   "type",
@@ -211,6 +212,13 @@
    "label": "Tournament Name",
    "reqd": 1,
    "search_index": 1
+  },
+  {
+   "fetch_from": "league.league_name",
+   "fieldname": "league_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "League Name"
   }
  ],
  "has_web_view": 1,
@@ -230,7 +238,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-10-10 10:37:00.782509",
+ "modified": "2023-10-13 06:28:23.490010",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
