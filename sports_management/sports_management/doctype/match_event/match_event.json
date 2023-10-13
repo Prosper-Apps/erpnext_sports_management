@@ -37,7 +37,8 @@
    "in_standard_filter": 1,
    "label": "Match",
    "options": "Match",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "events_type",
@@ -95,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 09:01:42.617552",
+ "modified": "2023-10-13 08:32:16.584934",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Event",

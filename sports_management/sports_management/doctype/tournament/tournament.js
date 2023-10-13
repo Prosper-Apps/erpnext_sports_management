@@ -7,17 +7,49 @@ frappe.ui.form.on('Tournament', {
 			
 			frm.add_custom_button(__('Create Matches'), function() {
 				var tournament = frm.doc.name;
-				frappe.call({
-					method: 'sports_management.sports_management.doctype.tournament.tournament.create_matches',
-					args: {
-						tournament: tournament
+				frappe.confirm(
+					__('Are you sure you want to create matches for this tournament? The old matches will be deleted.'),
+					function(){
+						frappe.call({
+							method: 'sports_management.sports_management.doctype.tournament.tournament.create_matches',
+							args: {
+								tournament: tournament
+							},
+							callback: function(r) {
+								if (r.message) {
+									frappe.msgprint(r.message);
+								}
+							}
+						});
 					},
-					callback: function(r) {
-						if (r.message) {
-							frappe.msgprint(r.message);
-						}
+					function(){
+						// do nothing if user cancels
 					}
-				});
+				);
+			});
+
+			// Add a button that will delete the matches upon user confirmation
+			frm.add_custom_button(__('Delete Matches'), function() {
+				var tournament = frm.doc.name;
+				frappe.confirm(
+					__('Are you sure you want to delete the matches for this tournament?'),
+					function(){
+						frappe.call({
+							method: 'sports_management.sports_management.doctype.tournament.tournament.delete_matches',
+							args: {
+								tournament: tournament
+							},
+							callback: function(r) {
+								if (r.message) {
+									frappe.msgprint(r.message);
+								}
+							}
+						});
+					},
+					function(){
+						// do nothing if user cancels
+					}
+				);
 			});
 
 			frm.add_custom_button(__('Calculate Rankings'), function() {
