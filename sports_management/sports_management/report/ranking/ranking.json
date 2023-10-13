@@ -1,7 +1,7 @@
 {
  "add_total_row": 0,
  "columns": [],
- "creation": "2023-09-26 11:21:16.247126",
+ "creation": "2023-10-13 09:13:00.938187",
  "disable_prepared_report": 0,
  "disabled": 0,
  "docstatus": 0,
@@ -9,8 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "json": "{\"filters\":[],\"fields\":[[\"name\",\"Ranking\"],[\"tournament\",\"Ranking\"],[\"team\",\"Ranking\"],[\"rank\",\"Ranking\"],[\"played\",\"Ranking\"],[\"draws\",\"Ranking\"],[\"score_for\",\"Ranking\"],[\"difference\",\"Ranking\"],[\"wins\",\"Ranking\"],[\"losses\",\"Ranking\"],[\"points\",\"Ranking\"],[\"score_against\",\"Ranking\"],[\"idx\",\"Ranking\"]],\"order_by\":\"`tabRanking`.`rank` asc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"tournament\":120,\"team\":120,\"rank\":120,\"played\":120,\"draws\":120,\"score_for\":120,\"difference\":120,\"wins\":120,\"losses\":120,\"points\":120,\"score_against\":120,\"idx\":120},\"group_by\":null}",
- "modified": "2023-09-26 11:21:32.052838",
+ "modified": "2023-10-13 10:05:11.750467",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",
@@ -18,7 +17,8 @@
  "prepared_report": 0,
  "ref_doctype": "Ranking",
  "report_name": "Ranking",
- "report_type": "Report Builder",
+ "report_script": "",
+ "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
