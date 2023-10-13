@@ -258,7 +258,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-13 08:36:57.724192",
+ "modified": "2023-10-13 10:11:29.213235",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -302,9 +302,7 @@
  ],
  "route": "matches",
  "search_fields": "home_name,guest_name,tournament_name",
- "show_title_field_in_link": 1,
  "sort_field": "date",
  "sort_order": "ASC",
- "states": [],
- "title_field": "date_name"
+ "states": []
 }

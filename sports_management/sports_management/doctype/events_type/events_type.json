@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2023-10-07 10:46:11.563466",
@@ -33,7 +34,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 15:13:18.699938",
+ "modified": "2023-10-13 09:25:00.215427",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Events Type",

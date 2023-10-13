@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"1XK5avdsbm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ranking\",\"col\":3}},{\"id\":\"u-YSpriDcK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"x6yiKSnR2u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tournament\",\"col\":3}},{\"id\":\"iwYKAGxU6T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Game Day\",\"col\":3}},{\"id\":\"9-lslLHyjU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Match\",\"col\":3}},{\"id\":\"WbkvSX2IA7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"EDU_L3kcmL\",\"type\":\"card\",\"data\":{\"card_name\":\"Manager\",\"col\":4}}]",
+ "content": "[{\"id\":\"2RaX3IYm5Y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sports Management</span>\",\"col\":12}},{\"id\":\"lUuQlyVYoj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rankings\",\"col\":3}},{\"id\":\"u-YSpriDcK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"x6yiKSnR2u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tournaments\",\"col\":3}},{\"id\":\"iwYKAGxU6T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Game Days\",\"col\":3}},{\"id\":\"9-lslLHyjU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Matches\",\"col\":3}},{\"id\":\"WbkvSX2IA7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"EDU_L3kcmL\",\"type\":\"card\",\"data\":{\"card_name\":\"Manager\",\"col\":4}}]",
  "creation": "2023-09-22 14:34:51.711343",
  "custom_blocks": [],
  "docstatus": 0,
@@ -51,7 +51,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-10-10 09:13:33.728987",
+ "modified": "2023-10-13 10:09:52.763282",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",
@@ -67,7 +67,7 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Ranking",
+   "label": "Rankings",
    "link_to": "Ranking",
    "type": "Report"
   },
@@ -75,7 +75,7 @@
    "color": "Blue",
    "doc_view": "List",
    "format": "{} Published",
-   "label": "Tournament",
+   "label": "Tournaments",
    "link_to": "Tournament",
    "stats_filter": "{\"published\":[\"=\",1]}",
    "type": "DocType"
@@ -84,7 +84,7 @@
    "color": "Blue",
    "doc_view": "List",
    "format": "{} Published",
-   "label": "Game Day",
+   "label": "Game Days",
    "link_to": "Game Day",
    "stats_filter": "{\"published\":[\"=\",1]}",
    "type": "DocType"
@@ -93,7 +93,7 @@
    "color": "Blue",
    "doc_view": "List",
    "format": "{} Published",
-   "label": "Match",
+   "label": "Matches",
    "link_to": "Match",
    "stats_filter": "{\"published\":[\"=\",1]}",
    "type": "DocType"
