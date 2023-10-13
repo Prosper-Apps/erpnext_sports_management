@@ -107,7 +107,7 @@
    "link_fieldname": "game_day"
   }
  ],
- "modified": "2023-10-10 10:49:09.801388",
+ "modified": "2023-10-13 08:35:31.928272",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Game Day",
@@ -151,7 +151,7 @@
  ],
  "route": "game_days",
  "search_fields": "tournament_name,start",
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "start",
+ "sort_order": "ASC",
  "states": []
 }

@@ -140,7 +140,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 15:07:41.637543",
+ "modified": "2023-10-13 08:39:12.181368",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Ranking",
@@ -183,7 +183,7 @@
   }
  ],
  "search_fields": "team,tournament",
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "rank",
+ "sort_order": "ASC",
  "states": []
 }

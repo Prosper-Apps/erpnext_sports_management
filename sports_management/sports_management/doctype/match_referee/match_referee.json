@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 0,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -29,7 +28,8 @@
    "in_list_view": 1,
    "label": "Match",
    "options": "Match",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "person",
@@ -49,7 +49,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-07 15:14:41.432740",
+ "modified": "2023-10-13 08:31:49.400322",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Referee",

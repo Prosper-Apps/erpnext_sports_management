@@ -14,6 +14,7 @@
   "status",
   "column_break_ppsyd",
   "date",
+  "date_name",
   "column_break_ee061",
   "time",
   "section_break_rqx5g",
@@ -231,6 +232,13 @@
   {
    "fieldname": "section_break_3imfd",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "format_date(doc.date, \"YYYY-MM-DD\")",
+   "fieldname": "date_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Date Name"
   }
  ],
  "has_web_view": 1,
@@ -250,7 +258,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-11 14:50:07.272407",
+ "modified": "2023-10-13 08:36:57.724192",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
@@ -295,8 +303,8 @@
  "route": "matches",
  "search_fields": "home_name,guest_name,tournament_name",
  "show_title_field_in_link": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "date",
+ "sort_order": "ASC",
  "states": [],
- "title_field": "date"
+ "title_field": "date_name"
 }
