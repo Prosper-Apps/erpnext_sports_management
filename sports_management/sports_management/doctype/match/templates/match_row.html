@@ -6,6 +6,18 @@
 	</div>
 	<div class="col">
 		<a class="font-size-lg" href="{{ doc.route }}">{{ doc.home_name }} vs {{ doc.guest_name }}</a>
-		<p class="text-muted">{{ doc.tournament_name }} - ({{ frappe.format(doc.date, {'fieldtype': 'Date'}) }} {{ frappe.format(doc.time, {'fieldtype': 'Time'}) }})</p>
+		<p class="text-muted">{{ doc.tournament_name }}</p>
+		<div>
+			{% if doc.status == 'Pending' %}
+			<span class="badge badge-warning">{{ doc.status }}</span>
+			{% elif doc.status == 'Completed' %}
+			<span class="badge badge-success">{{ doc.status }}</span>
+			{% elif doc.status == 'Cancelled' %}
+			<span class="badge badge-danger">{{ doc.status }}</span>
+			{% else %}
+			<span class="badge badge-info">{{ doc.status }}</span>
+			{% endif %}
+			<span class="head">{{ frappe.format(doc.date, {'fieldtype': 'Date'}) }} {{ frappe.format(doc.time, {'fieldtype': 'Time'}) }}</span>
+		</div>
 	</div>
 </div>
