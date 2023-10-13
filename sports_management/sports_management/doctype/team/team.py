@@ -61,5 +61,12 @@ def get_list_context(context=None):
 			"no_breadcrumbs": False,
 			"title": "Teams",
 			"parents": [{"name": "Home", "route":"/"}],
-		}
+			"filters": {
+				"owner": frappe.session.user
+			}
+		}		
 	)
+
+	# If the route is teams then get all the teams
+	if frappe.local.request.path == "/teams":
+		del context.filters["owner"]

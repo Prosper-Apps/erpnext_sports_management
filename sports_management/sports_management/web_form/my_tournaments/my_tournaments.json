@@ -1,0 +1,78 @@
+{
+ "allow_comments": 0,
+ "allow_delete": 1,
+ "allow_edit": 1,
+ "allow_incomplete": 0,
+ "allow_multiple": 1,
+ "allow_print": 0,
+ "anonymous": 0,
+ "apply_document_permissions": 1,
+ "button_label": "Save",
+ "creation": "2023-10-13 17:53:49.417929",
+ "doc_type": "Team Tournament",
+ "docstatus": 0,
+ "doctype": "Web Form",
+ "idx": 0,
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Request to compete to selected tournaments.</p></div>",
+ "is_standard": 1,
+ "list_columns": [
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Read Only",
+   "label": "Team Name"
+  },
+  {
+   "fieldname": "tournament_name",
+   "fieldtype": "Read Only",
+   "label": "Tournament Name"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Read Only",
+   "label": "Sports Type"
+  }
+ ],
+ "list_title": "Tournaments",
+ "login_required": 1,
+ "max_attachment_size": 0,
+ "modified": "2023-10-13 17:55:40.476715",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "my-tournaments",
+ "owner": "Administrator",
+ "published": 1,
+ "route": "my-tournaments",
+ "show_attachments": 0,
+ "show_list": 1,
+ "show_sidebar": 1,
+ "title": "My Tournaments",
+ "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "team",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Team",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Team",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 1,
+   "fieldname": "tournament",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Tournament",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Tournament",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  }
+ ],
+ "website_sidebar": "Sports Management"
+}

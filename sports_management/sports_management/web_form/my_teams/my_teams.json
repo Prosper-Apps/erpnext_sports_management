@@ -1,0 +1,146 @@
+{
+ "allow_comments": 0,
+ "allow_delete": 1,
+ "allow_edit": 1,
+ "allow_incomplete": 0,
+ "allow_multiple": 1,
+ "allow_print": 0,
+ "anonymous": 0,
+ "apply_document_permissions": 1,
+ "breadcrumbs": "",
+ "button_label": "Save",
+ "condition": "",
+ "creation": "2023-10-13 15:14:54.612704",
+ "doc_type": "Team",
+ "docstatus": 0,
+ "doctype": "Web Form",
+ "idx": 0,
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Here you can add your teams</p></div>",
+ "is_standard": 1,
+ "list_columns": [
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "label": "Short name"
+  },
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "label": "Club"
+  },
+  {
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "label": "Sports Type"
+  }
+ ],
+ "list_title": "My Teams",
+ "login_required": 1,
+ "max_attachment_size": 10,
+ "modified": "2023-10-13 16:58:17.644802",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "my-teams",
+ "owner": "Administrator",
+ "published": 1,
+ "route": "my-teams",
+ "show_attachments": 0,
+ "show_list": 1,
+ "show_sidebar": 1,
+ "title": "My Teams",
+ "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "team_name",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Name",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Short name",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Club",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Club",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 1,
+   "fieldname": "sports_type",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Sports Type",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Sports Type",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 1
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "hidden": 0,
+   "label": "Picture",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "hidden": 0,
+   "label": "Description",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "1",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "hidden": 0,
+   "label": "Published",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  }
+ ],
+ "website_sidebar": "Sports Management"
+}

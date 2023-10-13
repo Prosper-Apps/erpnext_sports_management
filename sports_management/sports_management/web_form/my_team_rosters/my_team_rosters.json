@@ -1,0 +1,135 @@
+{
+ "allow_comments": 0,
+ "allow_delete": 1,
+ "allow_edit": 1,
+ "allow_incomplete": 0,
+ "allow_multiple": 1,
+ "allow_print": 0,
+ "anonymous": 0,
+ "apply_document_permissions": 1,
+ "button_label": "Save",
+ "creation": "2023-10-13 17:33:32.787370",
+ "doc_type": "Team Roster",
+ "docstatus": 0,
+ "doctype": "Web Form",
+ "idx": 0,
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Assign your team rosters</p></div>",
+ "is_standard": 1,
+ "list_columns": [
+  {
+   "fieldname": "person_name",
+   "fieldtype": "Read Only",
+   "label": "Person"
+  },
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Read Only",
+   "label": "Team"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "label": "Role"
+  },
+  {
+   "fieldname": "position_name",
+   "fieldtype": "Read Only",
+   "label": "Position"
+  }
+ ],
+ "list_title": "Team Roster",
+ "login_required": 1,
+ "max_attachment_size": 0,
+ "modified": "2023-10-13 17:56:03.830459",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "my-team-rosters",
+ "owner": "Administrator",
+ "published": 1,
+ "route": "my-team-rosters",
+ "show_attachments": 0,
+ "show_list": 1,
+ "show_sidebar": 1,
+ "title": "My Team Rosters",
+ "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "person",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Person",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Person",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 1
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "shirt_number",
+   "fieldtype": "Int",
+   "hidden": 0,
+   "label": "Shirt Number",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "team",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Team",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Team",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 1
+  },
+  {
+   "allow_read_on_all_link_options": 1,
+   "fieldname": "position",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Position",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Position",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 1
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "Player",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Role",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Player\nCoach\nStaff",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 1
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "1",
+   "fieldname": "starting_lineup",
+   "fieldtype": "Check",
+   "hidden": 0,
+   "label": "Starting Lineup",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  }
+ ],
+ "website_sidebar": "Sports Management"
+}
