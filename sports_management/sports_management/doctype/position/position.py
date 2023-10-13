@@ -12,3 +12,15 @@ class Position(WebsiteGenerator):
 
 		# Add bredcrumb
 		context.parents = [{'name': 'Positions', 'route': '/positions'}]
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Positions",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)

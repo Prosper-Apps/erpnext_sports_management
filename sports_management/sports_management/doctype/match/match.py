@@ -70,3 +70,15 @@ class Match(WebsiteGenerator):
 					match_roster.starting_lineup = roster.starting_lineup
 					match_roster.match = self.name
 					match_roster.save()
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Matches",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)

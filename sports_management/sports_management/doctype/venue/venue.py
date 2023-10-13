@@ -21,3 +21,14 @@ class Venue(WebsiteGenerator):
 		if self.short_name:
 			self.short_name = self.short_name.upper()
 			
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"show_sidebar": False,
+			"show_search": True,
+			"no_breadcrumbs": False,
+			"title": "Venues",
+			"parents": [{"name": "Home", "route":"/"}],
+		}
+	)
