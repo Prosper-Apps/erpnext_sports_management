@@ -31,6 +31,6 @@ def get_list_context(context=None):
 		}
 	)
 
-	# If the user is a guest, then show all clubs
-	if frappe.session.user == "Guest":
+	# If the route is clubs then get all the clubs
+	if frappe.local.request.path == "/clubs":
 		del context.filters["owner"]
