@@ -27,7 +27,8 @@
    "fieldtype": "Link",
    "label": "Match",
    "options": "Match",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "team",
@@ -111,7 +112,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-12 16:07:54.887856",
+ "modified": "2023-10-13 08:32:07.274843",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",

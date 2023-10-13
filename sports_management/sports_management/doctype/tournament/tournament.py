@@ -32,6 +32,9 @@ class Tournament(WebsiteGenerator):
 
 @frappe.whitelist()
 def create_matches(tournament):
+	# Delete all the matches and game days of the tournament
+	delete_matches(tournament, False)
+
 	# Get the tournament document
 	tournament_doc = frappe.get_doc('Tournament', tournament)
 	schedule_type = tournament_doc.schedule_type
@@ -44,12 +47,32 @@ def create_matches(tournament):
 	# Send a frappe message to the user
 	frappe.msgprint('Matches created successfully!')
 
+# Create a function that will delete all the matches and game days of a tournament
+# Before deleting the matches, check if there are any match roster entries for the matches and delete them.
+# The same do for match referees and match events
+@frappe.whitelist()
+def delete_matches(tournament, show_message=True):
+	# Get the matches of the tournament
+	matches = frappe.get_all('Match', filters={'tournament': tournament}, fields=['name'])
+	# Delete the match roster entries
+	for match in matches:
+		frappe.db.sql("delete from `tabMatch Roster` where `match`=%s", match.name)
+		frappe.db.sql("delete from `tabMatch Referee` where `match`=%s", match.name)
+		frappe.db.sql("delete from `tabMatch Event` where `match`=%s", match.name)
+	# Delete the matches
+	frappe.db.sql("delete from `tabMatch` where `tournament`=%s", tournament)
+	# Delete the game days
+	frappe.db.sql("delete from `tabGame Day` where `tournament`=%s", tournament)
+	# Send a frappe message to the user
+	if show_message:
+		frappe.msgprint('Matches deleted successfully!')
+
 def generate_round(tournament, tournament_doc, round_number, starting_day, game_day_interval=7):
 
 	# Get the necessary fields from the tournament document
 	time_for_games = tournament_doc.time_for_games
 	# Get the ranking of the tournament
-	rankings = frappe.get_all('Ranking', filters={'tournament': tournament}, fields=['team', 'rank'])
+	rankings = frappe.get_all('Ranking', filters={'tournament': tournament, 'disabled': 0}, fields=['team', 'rank'])
 
 	# Create a list of team names
 	team_names = [team.team for team in rankings]
@@ -80,7 +103,7 @@ def generate_round(tournament, tournament_doc, round_number, starting_day, game_
 			match_doc.game_day = game_day_doc.name
 			match_doc.home = team_names[match[0]-1]
 			match_doc.guest = team_names[match[1]-1]
-			match_doc.date = game_days[r]
+			match_doc.date = game_days[r].strftime('%Y-%m-%d')
 			match_doc.time = time_for_games
 			match_doc.published = 1
 			match_doc.insert()
