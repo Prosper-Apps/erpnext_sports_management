@@ -60,6 +60,8 @@ def generate_round(tournament, tournament_doc, round_number, starting_day, game_
 
 	# Create a list of game days
 	num_teams = len(team_names)
+	if num_teams < 3:
+		frappe.throw('You need at least 3 teams to create a tournament!')
 	num_rounds = num_teams - 1 if num_teams % 2 == 0 else num_teams
 	game_days = [starting_day + datetime.timedelta(days=i*game_day_interval) for i in range(num_rounds)]
 	  
