@@ -10,10 +10,13 @@
  "engine": "InnoDB",
  "field_order": [
   "person",
+  "person_name",
   "shirt_number",
   "team",
+  "team_name",
   "column_break_8cxpv",
   "position",
+  "position_name",
   "role",
   "starting_lineup"
  ],
@@ -77,11 +80,32 @@
    "fieldtype": "Int",
    "label": "Shirt Number",
    "non_negative": 1
+  },
+  {
+   "fetch_from": "person.person_name",
+   "fieldname": "person_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Person Name"
+  },
+  {
+   "fetch_from": "team.team_name",
+   "fieldname": "team_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Team Name"
+  },
+  {
+   "fetch_from": "position.position_name",
+   "fieldname": "position_name",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Position Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 08:41:42.954008",
+ "modified": "2023-10-13 17:50:39.701212",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",
