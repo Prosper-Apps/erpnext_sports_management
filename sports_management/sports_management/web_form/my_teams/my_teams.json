@@ -15,7 +15,7 @@
  "docstatus": 0,
  "doctype": "Web Form",
  "idx": 0,
- "introduction_text": "<div class=\"ql-editor read-mode\"><p>Here you can add your teams</p></div>",
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Add your teams. Each club can have many teams of the same Sports Type</p></div>",
  "is_standard": 1,
  "list_columns": [
   {
@@ -42,7 +42,7 @@
  "list_title": "My Teams",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-10-14 06:49:31.483914",
+ "modified": "2023-10-14 18:00:01.584438",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-teams",
