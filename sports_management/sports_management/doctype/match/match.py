@@ -25,18 +25,18 @@ class Match(WebsiteGenerator):
 			context.venue = frappe.get_doc('Venue', self.venue)
 
 		# Get the match rosters
-		context.home_rosters = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
-		context.guest_rosters = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
-		context.home_coaches = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Coach'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')
-		context.guest_coaches = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Coach'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')	
-		context.home_staff = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Staff'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')	
-		context.guest_staff = frappe.get_list('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Staff'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')
+		context.home_rosters = frappe.get_all('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
+		context.guest_rosters = frappe.get_all('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Player'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name', 'shirt_number', 'starting_lineup'], order_by='starting_lineup desc')
+		context.home_coaches = frappe.get_all('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Coach'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')
+		context.guest_coaches = frappe.get_all('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Coach'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')	
+		context.home_staff = frappe.get_all('Match Roster', filters={'match': self.name, 'team': self.home, 'role': 'Staff'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')	
+		context.guest_staff = frappe.get_all('Match Roster', filters={'match': self.name, 'team': self.guest, 'role': 'Staff'}, fields=['person', 'person.route as person_route', 'person_name', 'role', 'position', 'position.position_name'], order_by='position desc')
 
 		# Get the match referees
-		context.referees = frappe.get_list('Match Referee', filters={'match': self.name}, fields=['person', 'person.route as person_route', 'person.person_name', 'position', 'position.position_name'], order_by='position desc')
+		context.referees = frappe.get_all('Match Referee', filters={'match': self.name}, fields=['person', 'person.route as person_route', 'person.person_name', 'position', 'position.position_name'], order_by='position desc')
 
 		# Get the match events
-		context.events = frappe.get_list('Match Event', filters={'match': self.name}, fields=['events_type', 'match_roster', 'person_name', 'match_roster.team', 'match_roster.team_name', 'minute'], order_by='minute')
+		context.events = frappe.get_all('Match Event', filters={'match': self.name}, fields=['events_type', 'match_roster', 'person_name', 'match_roster.team', 'match_roster.team_name', 'minute'], order_by='minute')
 
 	# create function when saving a match to calculate the points for each team
 	def on_update(self):
@@ -54,7 +54,7 @@ class Match(WebsiteGenerator):
 		teams = [self.home, self.guest]
 		# for each team, get the team roster
 		for team in teams:
-			team_roster = frappe.get_list('Team Roster', filters={'team': team}, fields=['person', 'team', 'role', 'position', 'starting_lineup'])
+			team_roster = frappe.get_all('Team Roster', filters={'team': team}, fields=['person', 'team', 'role', 'position', 'starting_lineup'])
 			# for each team roster, create a match roster
 			for roster in team_roster:
 				# Check if the match roster already exists for the same person, team, role and position
@@ -71,7 +71,7 @@ class Match(WebsiteGenerator):
 					match_roster.match = self.name
 					match_roster.save()
 
-def get_list_context(context=None):
+def get_all_context(context=None):
 
 	context.update(
 		{
