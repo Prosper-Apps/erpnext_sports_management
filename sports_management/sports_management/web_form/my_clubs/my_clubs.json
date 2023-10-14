@@ -14,7 +14,7 @@
  "docstatus": 0,
  "doctype": "Web Form",
  "idx": 0,
- "introduction_text": "<div class=\"ql-editor read-mode\"><p>Welcome to your clubs. Here you can create and manage your clubs.</p></div>",
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Welcome to your clubs. Here you can create and manage your clubs.</p><p>Each club may have many teams.</p></div>",
  "is_standard": 1,
  "list_columns": [
   {
@@ -31,7 +31,7 @@
  "list_title": "My Clubs",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-10-14 09:20:32.611173",
+ "modified": "2023-10-14 09:43:15.182870",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-clubs",

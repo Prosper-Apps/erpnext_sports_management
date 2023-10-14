@@ -47,7 +47,7 @@
    "no_copy": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published",
@@ -93,7 +93,7 @@
    "link_fieldname": "club"
   }
  ],
- "modified": "2023-10-10 14:46:46.740355",
+ "modified": "2023-10-14 09:44:42.196965",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Club",
