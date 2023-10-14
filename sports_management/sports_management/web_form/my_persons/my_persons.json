@@ -32,10 +32,10 @@
    "label": "Email"
   }
  ],
- "list_title": "People",
+ "list_title": "My Persons",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-10-14 06:49:21.033005",
+ "modified": "2023-10-14 09:21:08.279337",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-persons",

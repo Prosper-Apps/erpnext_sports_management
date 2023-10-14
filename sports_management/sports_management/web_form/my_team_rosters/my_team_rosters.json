@@ -37,10 +37,10 @@
    "label": "Position"
   }
  ],
- "list_title": "Team Roster",
+ "list_title": "My Rosters",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-10-14 06:49:13.535303",
+ "modified": "2023-10-14 09:22:04.028200",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-team-rosters",
