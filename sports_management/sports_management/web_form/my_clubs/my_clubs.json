@@ -1,0 +1,121 @@
+{
+ "allow_comments": 0,
+ "allow_delete": 1,
+ "allow_edit": 1,
+ "allow_incomplete": 0,
+ "allow_multiple": 1,
+ "allow_print": 0,
+ "anonymous": 0,
+ "apply_document_permissions": 1,
+ "breadcrumbs": "",
+ "button_label": "Save",
+ "creation": "2023-10-13 14:39:11.357567",
+ "doc_type": "Club",
+ "docstatus": 0,
+ "doctype": "Web Form",
+ "idx": 0,
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Welcome to your clubs. Here you can create and manage your clubs.</p></div>",
+ "is_standard": 1,
+ "list_columns": [
+  {
+   "fieldname": "club_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  }
+ ],
+ "list_title": "Clubs",
+ "login_required": 1,
+ "max_attachment_size": 1,
+ "modified": "2023-10-14 06:49:04.103855",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "my-clubs",
+ "owner": "Administrator",
+ "published": 1,
+ "route": "my-clubs",
+ "show_attachments": 0,
+ "show_list": 1,
+ "show_sidebar": 0,
+ "title": "My Clubs",
+ "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "club_name",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Name",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "hidden": 0,
+   "label": "Large club logo (150x150px)",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "home_shirt",
+   "fieldtype": "Attach Image",
+   "hidden": 0,
+   "label": "Home shirt",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "away_shirt",
+   "fieldtype": "Attach Image",
+   "hidden": 0,
+   "label": "Away Shirt",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "hidden": 0,
+   "label": "Description",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "hidden": 0,
+   "label": "Published",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  }
+ ],
+ "website_sidebar": ""
+}
