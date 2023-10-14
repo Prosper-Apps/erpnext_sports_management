@@ -16,9 +16,29 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Manager",
-   "link_count": 3,
+   "link_count": 5,
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Teams Tournaments",
+   "link_count": 0,
+   "link_to": "Team Tournament",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Teams Rosters",
+   "link_count": 0,
+   "link_to": "Team Roster",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -33,7 +53,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "My Teams",
+   "label": "Teams",
    "link_count": 0,
    "link_to": "Team",
    "link_type": "DocType",
@@ -43,7 +63,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "My Clubs",
+   "label": "Clubs",
    "link_count": 0,
    "link_to": "Club",
    "link_type": "DocType",
@@ -51,7 +71,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-10-13 10:09:52.763282",
+ "modified": "2023-10-14 06:58:00.467418",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",

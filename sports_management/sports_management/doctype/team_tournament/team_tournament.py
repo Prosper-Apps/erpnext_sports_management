@@ -28,3 +28,17 @@ class TeamTournament(Document):
 			ranking.disabled = 1
 			ranking.save(ignore_permissions=True)
 			frappe.db.commit()
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"filters": {
+				"owner": frappe.session.user
+			}
+		}		
+	)
+
+	# If the route is teams then get all the teams
+	if frappe.local.request.path == "/team-tournaments":
+		del context.filters["owner"]
