@@ -43,7 +43,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "People",
+   "label": "Persons",
    "link_count": 0,
    "link_to": "Person",
    "link_type": "DocType",
@@ -71,7 +71,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-10-14 06:58:00.467418",
+ "modified": "2023-10-14 09:37:54.371513",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Management",

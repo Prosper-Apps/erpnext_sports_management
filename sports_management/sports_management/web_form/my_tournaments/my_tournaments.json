@@ -32,10 +32,10 @@
    "label": "Sports Type"
   }
  ],
- "list_title": "Tournaments",
+ "list_title": "My Tournaments",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-10-14 06:49:43.851009",
+ "modified": "2023-10-14 09:20:49.440800",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-tournaments",
