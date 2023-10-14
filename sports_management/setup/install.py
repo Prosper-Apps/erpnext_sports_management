@@ -21,10 +21,12 @@ def create_user_roles():
 		role = frappe.get_doc({
 			"doctype": "Role",
 			"role_name": "Sports User",
-			"desk_access": 1,
+			"desk_access": 0,
 			"restrict_to_domain": ""
 		})
 		role.insert(ignore_permissions=True)
+		role.desk_access = 0
+		role.save()
 
 	# Check if the role exists
 	if not frappe.db.exists("Role", "Sports Manager"):
