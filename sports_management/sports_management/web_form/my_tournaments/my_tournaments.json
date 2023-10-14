@@ -35,7 +35,7 @@
  "list_title": "Tournaments",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-10-13 17:55:40.476715",
+ "modified": "2023-10-14 06:49:43.851009",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-tournaments",
@@ -74,5 +74,5 @@
    "show_in_filter": 0
   }
  ],
- "website_sidebar": "Sports Management"
+ "website_sidebar": ""
 }

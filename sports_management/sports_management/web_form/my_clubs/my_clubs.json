@@ -31,7 +31,7 @@
  "list_title": "Clubs",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-10-14 06:40:41.363216",
+ "modified": "2023-10-14 06:49:04.103855",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-clubs",
@@ -40,7 +40,7 @@
  "route": "my-clubs",
  "show_attachments": 0,
  "show_list": 1,
- "show_sidebar": 1,
+ "show_sidebar": 0,
  "title": "My Clubs",
  "web_form_fields": [
   {
@@ -117,5 +117,5 @@
    "show_in_filter": 0
   }
  ],
- "website_sidebar": "Sports Management"
+ "website_sidebar": ""
 }

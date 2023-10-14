@@ -9,3 +9,17 @@ class TeamRoster(Document):
 	def before_insert(self):
 		if frappe.db.exists('Team Roster', {'team': self.team, 'person': self.person, 'role': self.role}):
 			frappe.throw(_('This person with same role is already part of this team.'))
+
+def get_list_context(context=None):
+
+	context.update(
+		{
+			"filters": {
+				"owner": frappe.session.user
+			}
+		}		
+	)
+
+	# If the route is teams then get all the teams
+	if frappe.local.request.path == "/team-rosters":
+		del context.filters["owner"]
