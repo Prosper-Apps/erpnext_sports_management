@@ -13,7 +13,7 @@
  "docstatus": 0,
  "doctype": "Web Form",
  "idx": 0,
- "introduction_text": "<div class=\"ql-editor read-mode\"><p>Add members of your clubs.</p></div>",
+ "introduction_text": "<div class=\"ql-editor read-mode\"><p>Add the persons that participate in your teams. Those can be players, coaches, or other staff for example doctor!!!</p></div>",
  "is_standard": 1,
  "list_columns": [
   {
@@ -35,7 +35,7 @@
  "list_title": "My Persons",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-10-14 09:21:08.279337",
+ "modified": "2023-10-14 18:01:04.113305",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-persons",
