@@ -7,6 +7,7 @@ from frappe.permissions import add_permission, update_permission_property
 DEFAULT_ROLE_PROFILES = {
 	"Sports": [
 		"Sports User",
+		"Customer",
 	]	
 }
 
