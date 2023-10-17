@@ -38,6 +38,16 @@ def create_user_roles():
 			"restrict_to_domain": ""
 		})
 		role.insert(ignore_permissions=True)
+
+	# Check if the role Sports Referee exists
+	if not frappe.db.exists("Role", "Sports Referee"):
+		role = frappe.get_doc({
+			"doctype": "Role",
+			"role_name": "Sports Referee",
+			"desk_access": 1,
+			"restrict_to_domain": ""
+		})
+		role.insert(ignore_permissions=True)
 	
 def create_default_role_profiles():
 	
