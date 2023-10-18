@@ -19,7 +19,7 @@ class League(WebsiteGenerator):
 		context.parents = [{"name": "Home", "route":"/"}, {"name": "Leagues", "route":"/leagues"}]
 
 		# Get the tournaments with name and route
-		context.tournaments = frappe.get_all('Tournament', filters={'league': self.name}, fields=['name', 'route', 'tournament_name', 'picture'], order_by='tournament_name')
+		context.tournaments = frappe.get_all('Tournament', filters={'league': self.name, "published": True}, fields=['name', 'route', 'tournament_name', 'picture'], order_by='tournament_name')
 
 def get_list_context(context=None):
 
@@ -30,5 +30,8 @@ def get_list_context(context=None):
 			"no_breadcrumbs": False,
 			"title": "Leagues",
 			"parents": [{"name": "Home", "route":"/"}],
+			"filters": {
+				"published": True
+			}
 		}
 	)

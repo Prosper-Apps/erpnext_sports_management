@@ -237,5 +237,8 @@ def get_list_context(context=None):
 			"no_breadcrumbs": False,
 			"title": "Tournaments",
 			"parents": [{"name": "Home", "route":"/"}],
+			"filters": {
+				"published": True
+			}
 		}
 	)
