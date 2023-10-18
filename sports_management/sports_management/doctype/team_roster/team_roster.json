@@ -105,7 +105,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 17:50:39.701212",
+ "modified": "2023-10-18 10:54:07.720998",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Team Roster",
@@ -149,6 +149,15 @@
    "role": "Sports User",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Referee",
+   "share": 1
   }
  ],
  "search_fields": "person,team,position,role",

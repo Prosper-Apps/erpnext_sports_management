@@ -157,7 +157,7 @@
    "link_fieldname": "person"
   }
  ],
- "modified": "2023-10-11 07:55:00.512442",
+ "modified": "2023-10-18 10:51:07.941090",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
@@ -201,6 +201,15 @@
    "role": "Sports User",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Referee",
+   "share": 1
   }
  ],
  "quick_entry": 1,

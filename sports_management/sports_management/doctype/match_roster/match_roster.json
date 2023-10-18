@@ -112,7 +112,7 @@
    "link_fieldname": "match_roster"
   }
  ],
- "modified": "2023-10-14 10:03:43.198982",
+ "modified": "2023-10-18 10:55:33.700746",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Roster",
@@ -152,6 +152,18 @@
    "report": 1,
    "role": "Sports User",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Referee",
+   "share": 1,
+   "write": 1
   }
  ],
  "search_fields": "person_name,team,role,position",
