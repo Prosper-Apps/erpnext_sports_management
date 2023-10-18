@@ -17,7 +17,6 @@
   "date_name",
   "column_break_ee061",
   "time",
-  "section_break_rqx5g",
   "section_break_dnckx",
   "home",
   "full_time_home_result",
@@ -190,10 +189,6 @@
    "options": "URL"
   },
   {
-   "fieldname": "section_break_rqx5g",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "column_break_ppsyd",
    "fieldtype": "Column Break"
   },
@@ -261,7 +256,7 @@
    "link_fieldname": "match"
   }
  ],
- "modified": "2023-10-17 11:41:11.561366",
+ "modified": "2023-10-18 11:25:20.266139",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match",
