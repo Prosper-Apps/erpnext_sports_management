@@ -96,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-14 10:01:53.905760",
+ "modified": "2023-10-17 07:41:48.514237",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Match Event",
@@ -135,6 +135,19 @@
    "report": 1,
    "role": "Sports User",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sports Referee",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
