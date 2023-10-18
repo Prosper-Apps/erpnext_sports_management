@@ -31,5 +31,8 @@ def get_list_context(context=None):
 			"no_breadcrumbs": False,
 			"title": "Game Days",
 			"parents": [{"name": "Home", "route":"/"}],
+			"filters": {
+				"published": True
+			}
 		}
 	)

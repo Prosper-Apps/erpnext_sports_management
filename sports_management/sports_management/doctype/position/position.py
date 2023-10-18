@@ -22,5 +22,8 @@ def get_list_context(context=None):
 			"no_breadcrumbs": False,
 			"title": "Positions",
 			"parents": [{"name": "Home", "route":"/"}],
+			"filters": {
+				"published": True
+			}
 		}
 	)
