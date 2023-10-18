@@ -2,7 +2,7 @@
 
 {% block header %}
 <div class="py-10 row">
-    <div class="col-sm-2">
+    <div class="col-sm-4">
         {% if picture %}
         <img src="{{ picture }}" />
         {% endif %}
@@ -32,7 +32,7 @@
 {% block page_content %}
 
 {% if tournaments %}
-<div class="py-10 row">
+<div class="row">
     <div class="col-md-12">
         <div class="page-header">
             <h4>Tournaments</h4>
@@ -40,19 +40,19 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th></th>
                     <th>Name</th>
                 </tr>
             </thead>
             <tbody>
                 {% for item in tournaments %}
                 <tr>
-                    <td>
+                    <td>                        
+                    <a href="/{{ item.route }}">
                         {% if item.picture %}
-                        <img src="{{ item.picture }}" style="width: 25px; height: 25px;" />
+                        <img src="{{ item.picture }}" style="max-height: 100px;" />
                         {% endif %}
-                    </td>
-                    <td><a href="/{{ item.route }}">{{ item.tournament_name }}</a></td>                    
+                        {{ item.tournament_name }}
+                    </a></td>                    
                 </tr>
                 {% endfor %}
             </tbody>
