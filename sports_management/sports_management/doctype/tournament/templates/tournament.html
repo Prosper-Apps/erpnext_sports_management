@@ -18,6 +18,10 @@
             <div>Country: <strong>{{ country }}</strong></div>
             {% endif %}
 
+            {% if website_item %}
+            <div>Register: <strong><a href="/{{ website_item.route }}">{{ website_item.web_item_name }}</a></strong></div>
+            {% endif %}
+
         </div>
     </div>    
 </div>

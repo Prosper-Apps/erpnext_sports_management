@@ -15,6 +15,7 @@
   "league",
   "league_name",
   "sports_type",
+  "website_item",
   "column_break_hxzug",
   "type",
   "country",
@@ -38,7 +39,8 @@
   "time_for_games",
   "column_break_btx5u",
   "game_day_interval",
-  "starting_day"
+  "starting_day",
+  "round_number"
  ],
  "fields": [
   {
@@ -219,6 +221,20 @@
    "fieldtype": "Read Only",
    "hidden": 1,
    "label": "League Name"
+  },
+  {
+   "fieldname": "website_item",
+   "fieldtype": "Link",
+   "label": "Website Item",
+   "options": "Website Item"
+  },
+  {
+   "default": "1",
+   "fieldname": "round_number",
+   "fieldtype": "Select",
+   "label": "Round Number",
+   "options": "1\n2",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
@@ -238,7 +254,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-10-13 06:28:23.490010",
+ "modified": "2023-10-19 07:27:38.955781",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
