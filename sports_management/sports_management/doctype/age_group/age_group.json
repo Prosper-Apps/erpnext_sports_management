@@ -69,7 +69,6 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Route",
    "no_copy": 1
   },
@@ -92,7 +91,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 10:32:00.038877",
+ "modified": "2023-10-19 08:30:09.602238",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Age Group",

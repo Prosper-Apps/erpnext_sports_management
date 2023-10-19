@@ -137,8 +137,8 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Route"
+   "label": "Route",
+   "no_copy": 1
   },
   {
    "default": "1",
@@ -156,7 +156,7 @@
    "link_fieldname": "league"
   }
  ],
- "modified": "2023-10-12 08:34:15.256920",
+ "modified": "2023-10-19 08:30:29.343845",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",

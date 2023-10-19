@@ -43,7 +43,6 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Route",
    "no_copy": 1
   },
@@ -66,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2023-10-10 07:09:03.842765",
+ "modified": "2023-10-19 08:29:50.641088",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Sports Type",
