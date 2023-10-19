@@ -30,6 +30,10 @@ class Tournament(WebsiteGenerator):
 		# Get the matches with name and route
 		context.matches = frappe.get_all('Match', filters={'tournament': self.name}, fields=['name', 'route', 'home', 'home_name', 'guest', 'guest_name', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result', 'status'], order_by='date')
 
+		# Get the related website item
+		if self.website_item:
+			context.website_item = frappe.get_doc('Website Item', self.website_item)
+
 @frappe.whitelist()
 def create_matches(tournament):
 	# Delete all the matches and game days of the tournament
