@@ -9,7 +9,6 @@ def asign_role_profile(doc, method):
         doc.save()
 
 def asign_portal_user(doc, method):
-    frappe.msgprint("Customer Updated")
     if doc.customer_type == "Individual":
-        doc.append("portal_users", {"user": doc.email_id})
+        doc.append("portal_users", {"user": doc.owner})
         doc.save()
