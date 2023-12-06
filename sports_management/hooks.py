@@ -123,7 +123,15 @@ after_install = "sports_management.setup.install.after_install"
 #		"on_cancel": "method",
 #		"on_trash": "method"
 #	}
-# }  
+# }
+doc_events = {
+    "User": {
+        "after_insert": "sports_management.sports_management.hooks.user.asign_role_profile",
+    },
+    "Customer": {
+        "after_insert": "sports_management.sports_management.hooks.user.asign_portal_user",
+    }
+}    
 
 # Scheduled Tasks
 # ---------------
