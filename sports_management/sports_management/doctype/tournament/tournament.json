@@ -53,7 +53,8 @@
    "fieldtype": "Link",
    "label": "League",
    "options": "League",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "type",
@@ -254,7 +255,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-10-19 07:27:38.955781",
+ "modified": "2023-12-07 10:37:51.553830",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
