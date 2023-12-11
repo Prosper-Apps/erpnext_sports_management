@@ -1,13 +1,17 @@
 {
+ "accept_payment": 0,
  "allow_comments": 0,
  "allow_delete": 1,
  "allow_edit": 1,
  "allow_incomplete": 0,
  "allow_multiple": 1,
  "allow_print": 0,
+ "amount": 0.0,
+ "amount_based_on_field": 0,
  "anonymous": 0,
  "apply_document_permissions": 1,
  "button_label": "Save",
+ "condition_json": "[]",
  "creation": "2023-10-13 17:03:04.048882",
  "doc_type": "Person",
  "docstatus": 0,
@@ -35,7 +39,7 @@
  "list_title": "My Persons",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-10-14 18:01:04.113305",
+ "modified": "2023-12-11 08:37:10.056686",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-persons",
@@ -210,5 +214,5 @@
    "show_in_filter": 0
   }
  ],
- "website_sidebar": ""
+ "website_sidebar": "Sports Sidebar"
 }
