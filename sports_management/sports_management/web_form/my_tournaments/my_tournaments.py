@@ -40,3 +40,23 @@ def get_website_item_route(team_tournament_name):
 
 	return website_item_route
 		
+@frappe.whitelist(allow_guest=False)
+def get_all_website_item_route():
+	website_item_routes = []
+
+	# Get all team_tournaments where the current user is the owner
+	team_tournaments = frappe.get_all('Team Tournament', filters={'owner': frappe.session.user}, fields=['*'])
+
+	# Get the Rankinkgs for each team_tournament
+	for team_tournament in team_tournaments:
+		rankings = frappe.get_all('Ranking', filters={'team': team_tournament['team']}, fields=['*'])
+		# Get the first ranking
+		if rankings:
+			ranking = rankings[0]
+			# If the ranking disabled get the tournament name
+			if ranking['disabled']:
+				tournament = frappe.get_doc('Tournament', ranking['tournament'])
+				# Get the website item route
+				website_item_routes.append(frappe.get_doc('Website Item', tournament.website_item).route)
+
+	return website_item_routes
