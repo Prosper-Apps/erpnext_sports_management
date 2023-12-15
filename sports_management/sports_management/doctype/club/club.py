@@ -20,6 +20,7 @@ def get_list_context(context=None):
 
 	context.update(
 		{
+			"title": "Clubs",
 			"filters": {
 				"owner": frappe.session.user
 			}
