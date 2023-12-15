@@ -56,6 +56,7 @@ def get_list_context(context=None):
 
 	context.update(
 		{
+			"title": "Teams",
 			"filters": {
 				"owner": frappe.session.user
 			}

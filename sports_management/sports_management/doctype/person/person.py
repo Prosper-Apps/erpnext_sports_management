@@ -89,6 +89,7 @@ def get_list_context(context=None):
 
 	context.update(
 		{
+			"title": "People",
 			"filters": {
 				"owner": frappe.session.user
 			}
