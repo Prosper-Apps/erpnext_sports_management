@@ -40,7 +40,7 @@
  "list_title": "My Tournaments",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-12-13 10:27:47.533687",
+ "modified": "2023-12-29 09:49:45.840601",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-tournaments",
@@ -51,6 +51,9 @@
  "show_attachments": 0,
  "show_list": 1,
  "show_sidebar": 1,
+ "success_message": "Item successfully created.",
+ "success_title": "Success",
+ "success_url": "/my",
  "title": "My Tournaments",
  "web_form_fields": [
   {

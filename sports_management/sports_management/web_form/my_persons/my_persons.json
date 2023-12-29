@@ -39,7 +39,7 @@
  "list_title": "My Persons",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-12-11 08:37:10.056686",
+ "modified": "2023-12-29 09:48:38.053045",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-persons",
@@ -49,6 +49,9 @@
  "show_attachments": 1,
  "show_list": 1,
  "show_sidebar": 1,
+ "success_message": "Item successfully created.",
+ "success_title": "Success",
+ "success_url": "/my",
  "title": "My Persons",
  "web_form_fields": [
   {
