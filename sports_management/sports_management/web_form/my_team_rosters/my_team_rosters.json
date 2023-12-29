@@ -44,7 +44,7 @@
  "list_title": "My Rosters",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-12-11 08:36:51.355171",
+ "modified": "2023-12-29 09:49:13.879918",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-team-rosters",
@@ -54,6 +54,9 @@
  "show_attachments": 0,
  "show_list": 1,
  "show_sidebar": 1,
+ "success_message": "Item successfully created.",
+ "success_title": "Success",
+ "success_url": "/my",
  "title": "My Team Rosters",
  "web_form_fields": [
   {

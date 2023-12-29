@@ -35,7 +35,7 @@
  "list_title": "My Clubs",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2023-12-11 08:28:13.112297",
+ "modified": "2023-12-29 09:47:17.932917",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-clubs",
@@ -45,6 +45,9 @@
  "show_attachments": 0,
  "show_list": 1,
  "show_sidebar": 1,
+ "success_message": "Item successfully created.",
+ "success_title": "Success",
+ "success_url": "/my",
  "title": "My Clubs",
  "web_form_fields": [
   {
