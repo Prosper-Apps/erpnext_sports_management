@@ -34,7 +34,8 @@
   {
    "fieldname": "birthday",
    "fieldtype": "Date",
-   "label": "Birthday"
+   "label": "Birthday",
+   "reqd": 1
   },
   {
    "fieldname": "height",
@@ -120,7 +121,9 @@
    "fieldname": "national_id",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "National Id / Passport"
+   "label": "National Id / Passport",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "phone",
@@ -157,7 +160,7 @@
    "link_fieldname": "person"
   }
  ],
- "modified": "2023-10-18 10:51:07.941090",
+ "modified": "2024-01-02 10:38:47.772415",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",
