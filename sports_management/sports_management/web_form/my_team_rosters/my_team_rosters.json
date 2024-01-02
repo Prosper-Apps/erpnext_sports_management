@@ -31,11 +31,6 @@
    "label": "Team"
   },
   {
-   "fieldname": "role",
-   "fieldtype": "Select",
-   "label": "Role"
-  },
-  {
    "fieldname": "position_name",
    "fieldtype": "Read Only",
    "label": "Position"
@@ -44,7 +39,7 @@
  "list_title": "My Rosters",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-12-29 09:49:13.879918",
+ "modified": "2024-01-02 17:23:23.503454",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-team-rosters",
@@ -115,14 +110,14 @@
    "default": "Player",
    "fieldname": "role",
    "fieldtype": "Select",
-   "hidden": 0,
+   "hidden": 1,
    "label": "Role",
    "max_length": 0,
    "max_value": 0,
    "options": "Player\nCoach\nStaff",
    "read_only": 0,
    "reqd": 1,
-   "show_in_filter": 1
+   "show_in_filter": 0
   },
   {
    "allow_read_on_all_link_options": 0,
