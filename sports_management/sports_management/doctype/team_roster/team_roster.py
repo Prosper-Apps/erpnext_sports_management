@@ -10,6 +10,12 @@ class TeamRoster(Document):
 		if frappe.db.exists('Team Roster', {'team': self.team, 'person': self.person, 'role': self.role}):
 			frappe.throw(_('This person with same role is already part of this team.'))
 
+		# The maximun number of players in a team is 15
+		# If the number of players is 15 then don't add the player
+		# This is a validation
+		if len(frappe.get_all('Team Roster', filters={'team': self.team})) == 15:
+			frappe.throw(_('The maximun number of players in a team is 15.'))
+
 def get_list_context(context=None):
 
 	context.update(
