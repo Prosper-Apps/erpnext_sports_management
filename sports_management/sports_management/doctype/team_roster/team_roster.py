@@ -16,6 +16,13 @@ class TeamRoster(Document):
 		if len(frappe.get_all('Team Roster', filters={'team': self.team})) == 15:
 			frappe.throw(_('The maximun number of players in a team is 15.'))
 
+		# Get all the team tournaments the team is part of,
+		# loop throuh them and in case the tournament is published and doesn't allow team rosters then don't add the player
+		for tournament in frappe.get_all('Team Tournament', filters={'team': self.team}, fields=['tournament_name', 'tournament']):		
+			if frappe.db.exists('Tournament', {'name': tournament.tournament, 'published': 1, 'allow_team_roster': 0}):
+				frappe.throw(_('The tournament {0} doesn\'t allow team rosters.'.format(tournament.tournament_name)))
+
+
 def get_list_context(context=None):
 
 	context.update(

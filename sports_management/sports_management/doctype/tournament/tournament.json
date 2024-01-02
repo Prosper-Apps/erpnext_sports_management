@@ -20,6 +20,7 @@
   "type",
   "country",
   "route",
+  "allow_team_roster",
   "published",
   "pictures_tab",
   "picture",
@@ -236,6 +237,12 @@
    "label": "Round Number",
    "options": "1\n2",
    "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_team_roster",
+   "fieldtype": "Check",
+   "label": "Allow Team Roster?"
   }
  ],
  "has_web_view": 1,
@@ -255,7 +262,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2023-12-07 10:37:51.553830",
+ "modified": "2024-01-02 10:53:47.557813",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
