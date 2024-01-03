@@ -1,24 +1,27 @@
-{% extends "templates/web.html" %}
-
+{% set tournament_doc = frappe.get_doc('Tournament', tournament) %}
+{% set website_item = frappe.get_doc('Website Item', tournament_doc.website_item) %}
+{% set rankings = frappe.get_all('Ranking', filters={'tournament': tournament}, fields=['team', 'team.team_name', 'team.route', 'team.picture', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	%}
+{% set game_days = frappe.get_all('Game Day', filters={'tournament': tournament}, fields=['name', 'route', 'start'], order_by='start') %}
+{% set matches = frappe.get_all('Match', filters={'tournament': tournament}, fields=['name', 'route', 'home', 'home_name', 'guest', 'guest_name', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result', 'status'], order_by='date') %}
 {% block header %}
 <div class="py-10 row">
     <div class="col-sm-4">
-        {% if picture %}
-        <img src="{{ picture }}" />
+        {% if tournament_doc.picture %}
+        <img src="{{ tournament_doc.picture }}" />
         {% endif %}
     </div>
     <div class="col">
-        <h1>{{ tournament_name }}</h1>
-        <p class="lead">Sports Type: {{ sports_type }}</p>        
+        <h1>{{ tournament_doc.tournament_name }}</h1>
+        <p class="lead">Sports Type: {{ tournament_doc.sports_type }}</p>        
         <div class="mt-4">
-            <div>League: <strong><a href="/{{ league_route }}">{{ league_name }}</a></strong></div>
-            <div>Type: <strong>{{ type }}</strong></div>
+            <div>League: <strong><a href="/{{ tournament_doc.league_route }}">{{ tournament_doc.league_name }}</a></strong></div>
+            <div>Type: <strong>{{ tournament_doc.type }}</strong></div>
 
-            {% if country %}
-            <div>Country: <strong>{{ country }}</strong></div>
+            {% if tournament_doc.country %}
+            <div>Country: <strong>{{ tournament_doc.country }}</strong></div>
             {% endif %}
 
-            {% if website_item %}
+            {% if tournament_doc.website_item %}
             <div>Register: <strong><a href="/login#signup">{{ website_item.web_item_name }}</a></strong></div>
             {% endif %}
 
@@ -26,8 +29,8 @@
     </div>    
 </div>
 <div class="row">
-    {% if description %}
-    <p>{{ description }}</p>
+    {% if tournament_doc.description %}
+    <p>{{ tournament_doc.description }}</p>
     {% endif %}
 </div>
 {% endblock %}
@@ -143,3 +146,4 @@
 </div>
 
 {% endblock %}
+
