@@ -2,7 +2,7 @@
   <h2 class="section-title">{{ _('Latest Blog Posts') }}</h2>
   <p class="section-description">{{ _('Check out our latest blog posts') }}</p>
   <div class="row">
-    {% for post in frappe.get_all("Blog Post", fields=["title", "blogger", "blog_intro", "route", "meta_image"], order_by="published_on desc", limit=6) %}
+    {% for post in frappe.get_all("Blog Post", filters={"published": 1}, fields=["title", "blogger", "blog_intro", "route", "meta_image"], order_by="published_on desc", limit=6) %}
     <div class="col-md-4 mb-4">
       <div class="card h-100">
         <img src={{ post.meta_image }} alt="" class="image-wiih-blur card-img-top image-loaded" max-width="400" max-height="400">
