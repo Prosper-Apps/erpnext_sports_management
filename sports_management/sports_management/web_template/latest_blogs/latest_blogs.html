@@ -2,7 +2,7 @@
   {% set blog_category_doc = frappe.get_doc("Blog Category", blog_category) %}
   {% set posts = frappe.get_all("Blog Post", filters={"published": 1, "blog_category": blog_category}, fields=["title", "blogger", "blog_intro",
   "route", "meta_image", "featured", "published_on"], order_by="published_on desc", limit=6) %}
-  <h2 class="section-title">{{ _(blog_category_doc.title) }}</h2>
+  <a href="{{blog_category_doc.route}}"><h2><span class="text-dark">{{ _(blog_category_doc.title) }}</span></h2></a>
   <p class="section-description">{{ _(blog_category_doc.description) }}</p>
   <div class="blog-list-content">
     <div data-doctype="Blog Post" data-txt="[notxt]">
