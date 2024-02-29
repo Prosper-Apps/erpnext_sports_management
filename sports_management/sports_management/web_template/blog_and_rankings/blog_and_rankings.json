@@ -1,0 +1,27 @@
+{
+ "__islocal": true,
+ "__unsaved": 1,
+ "creation": "2024-02-29 08:16:53.566509",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "blog_category",
+   "fieldtype": "Link",
+   "label": "Blog Category",
+   "options": "Blog Category",
+   "reqd": 1
+  }
+ ],
+ "idx": 0,
+ "modified": "2024-02-29 08:16:53.566509",
+ "modified_by": "Administrator",
+ "module": "Sports Management",
+ "name": "Blog and Rankings",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Section"
+}
