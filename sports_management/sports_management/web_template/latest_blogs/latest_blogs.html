@@ -1,8 +1,9 @@
 <section class="container my-5">
-  {% set posts = frappe.get_all("Blog Post", filters={"published": 1}, fields=["title", "blogger", "blog_intro",
-  "route", "meta_image", "featured", "published_on", "blog_category", "blogger"], order_by="published_on desc", limit=6) %}
-  <h2 class="section-title">{{ _('Latest Blog Posts') }}</h2>
-  <p class="section-description">{{ _('Check out our latest blog posts') }}</p>
+  {% set blog_category_doc = frappe.get_doc("Blog Category", blog_category) %}
+  {% set posts = frappe.get_all("Blog Post", filters={"published": 1, "blog_category": blog_category}, fields=["title", "blogger", "blog_intro",
+  "route", "meta_image", "featured", "published_on"], order_by="published_on desc", limit=6) %}
+  <h2 class="section-title">{{ _(blog_category_doc.title) }}</h2>
+  <p class="section-description">{{ _(blog_category_doc.description) }}</p>
   <div class="blog-list-content">
     <div data-doctype="Blog Post" data-txt="[notxt]">
       <div id="blog-list" class="blog-list result row">
