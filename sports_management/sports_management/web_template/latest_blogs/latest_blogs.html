@@ -1,52 +1,53 @@
-<section class="container my-5">
-  {% set blog_category_doc = frappe.get_doc("Blog Category", blog_category) %}
-  {% set posts = frappe.get_all("Blog Post", filters={"published": 1, "blog_category": blog_category}, fields=["title", "blogger", "blog_intro",
-  "route", "meta_image", "featured", "published_on"], order_by="published_on desc", limit=6) %}
-  <a href="{{blog_category_doc.route}}"><h2><span class="text-dark">{{ _(blog_category_doc.title) }}</span></h2></a>
-  <p class="section-description">{{ _(blog_category_doc.description) }}</p>
-  <div class="blog-list-content">
-    <div data-doctype="Blog Post" data-txt="[notxt]">
-      <div id="blog-list" class="blog-list result row">
-        {% for post in posts %}
-        <div class="blog-card col-sm-12 {{ 'col-md-8' if post.featured else 'col-md-4' }}">
-          <div class="card h-100">
-            <div class="card-img-top">
-              {% if post.meta_image %}
-                <img src="{{ post.meta_image }}" alt="{{post.title}} - Cover Image">
-              {% else %}
-                <div class="default-cover">
-                  <span>{{ post.title }}</span>
-                </div>
-              {% endif %}
+{% set blog_category_doc = frappe.get_doc("Blog Category", blog_category) %}
+{% set posts = frappe.get_all("Blog Post", filters={"published": 1, "blog_category": blog_category}, fields=["title",
+"blogger", "blog_intro",
+"route", "meta_image", "featured", "published_on"], order_by="published_on desc", limit=6) %}
+<a href="{{blog_category_doc.route}}">
+  <h2><span class="text-dark">{{ _(blog_category_doc.title) }}</span></h2>
+</a>
+<p class="section-description">{{ _(blog_category_doc.description) }}</p>
+<div class="blog-list-content">
+  <div data-doctype="Blog Post" data-txt="[notxt]">
+    <div id="blog-list" class="blog-list result row">
+      {% for post in posts %}
+      <div class="blog-card col-sm-12 {{ 'col-md-8' if post.featured else 'col-md-4' }}">
+        <div class="card h-100">
+          <div class="card-img-top">
+            {% if post.meta_image %}
+            <img src="{{ post.meta_image }}" alt="{{post.title}} - Cover Image">
+            {% else %}
+            <div class="default-cover">
+              <span>{{ post.title }}</span>
             </div>
-            <div class="card-body">
-              <div>
-                <div class="text-muted small text-uppercase">
-                  {%- if post.featured -%}
-                    <span class="text-body">{{ _('Featured') }} &middot; </span>
-                  {%- endif -%}
-                </div>
-                {%- if post.featured -%}
-                  <h5 class="mt-1"><span class="text-dark">{{ post.title }}</span></h5>
-                {%- else -%}
-                  <h5 class="mt-1"><span class="text-dark">{{ post.title }}</span></h5>
-                {%- endif -%}
-                <p class="post-description text-muted">{{ post.blog_intro }}</p>
-              </div>
-              <div class="blog-card-footer">
-                <div class="text-muted">
-                  <div class="small">
-                    {{ frappe.format_date(post.published_on) }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="stretched-link" href="/{{ post.route }}"></a>
+            {% endif %}
           </div>
+          <div class="card-body">
+            <div>
+              <div class="text-muted small text-uppercase">
+                {%- if post.featured -%}
+                <span class="text-body">{{ _('Featured') }} &middot; </span>
+                {%- endif -%}
+              </div>
+              {%- if post.featured -%}
+              <h5 class="mt-1"><span class="text-dark">{{ post.title }}</span></h5>
+              {%- else -%}
+              <h5 class="mt-1"><span class="text-dark">{{ post.title }}</span></h5>
+              {%- endif -%}
+              <p class="post-description text-muted">{{ post.blog_intro }}</p>
+            </div>
+            <div class="blog-card-footer">
+              <div class="text-muted">
+                <div class="small">
+                  {{ frappe.format_date(post.published_on) }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="stretched-link" href="/{{ post.route }}"></a>
         </div>
-        {% endfor %}
       </div>
-      <button class="btn btn-light btn-more btn hidden">Load More</button>
+      {% endfor %}
     </div>
-  </div>  
-</section>
+    <button class="btn btn-light btn-more btn hidden">Load More</button>
+  </div>
+</div>
