@@ -14,12 +14,14 @@
   "league_name",
   "short_name",
   "sports_type",
+  "ordering",
   "column_break_hhuqu",
   "age_group",
   "country",
   "league_level",
   "route",
   "published",
+  "disabled",
   "section_break_m62li",
   "date_of_first_delivery",
   "column_break_mx8gm",
@@ -27,8 +29,7 @@
   "pictures_tab",
   "picture",
   "description_tab",
-  "description",
-  "section_break_rw6bn"
+  "description"
  ],
  "fields": [
   {
@@ -115,10 +116,6 @@
    "no_copy": 1
   },
   {
-   "fieldname": "section_break_rw6bn",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "section_break_m62li",
    "fieldtype": "Section Break"
   },
@@ -145,6 +142,18 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "default": "0",
+   "fieldname": "ordering",
+   "fieldtype": "Int",
+   "label": "Ordering"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "has_web_view": 1,
@@ -156,7 +165,7 @@
    "link_fieldname": "league"
   }
  ],
- "modified": "2023-10-19 08:30:29.343845",
+ "modified": "2024-02-29 10:12:20.872727",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "League",
@@ -201,8 +210,8 @@
  "route": "leagues",
  "search_fields": "short_name,sports_type,age_group",
  "show_title_field_in_link": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "ordering",
+ "sort_order": "ASC",
  "states": [],
  "title_field": "league_name"
 }

@@ -20,8 +20,10 @@
   "type",
   "country",
   "route",
+  "ordering",
   "allow_team_roster",
   "published",
+  "disabled",
   "pictures_tab",
   "picture",
   "description_tab",
@@ -243,6 +245,18 @@
    "fieldname": "allow_team_roster",
    "fieldtype": "Check",
    "label": "Allow Team Roster?"
+  },
+  {
+   "default": "0",
+   "fieldname": "ordering",
+   "fieldtype": "Int",
+   "label": "Ordering"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "has_web_view": 1,
@@ -262,7 +276,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2024-01-02 10:53:47.557813",
+ "modified": "2024-02-29 10:12:42.721261",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
@@ -307,8 +321,8 @@
  "route": "tournaments",
  "search_fields": "sports_type",
  "show_title_field_in_link": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "ordering",
+ "sort_order": "ASC",
  "states": [],
  "title_field": "tournament_name"
 }

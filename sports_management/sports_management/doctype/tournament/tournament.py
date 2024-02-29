@@ -243,6 +243,7 @@ def get_list_context(context=None):
 			"parents": [{"name": "Home", "route":"/"}],
 			"filters": {
 				"published": True
-			}
+			},
+			"order_by": "ordering asc"
 		}
 	)
