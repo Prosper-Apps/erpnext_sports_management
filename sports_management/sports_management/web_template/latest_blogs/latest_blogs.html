@@ -1,24 +1,51 @@
 <section class="container my-5">
+  {% set posts = frappe.get_all("Blog Post", filters={"published": 1}, fields=["title", "blogger", "blog_intro",
+  "route", "meta_image", "featured", "published_on", "blog_category", "blogger"], order_by="published_on desc", limit=6) %}
   <h2 class="section-title">{{ _('Latest Blog Posts') }}</h2>
   <p class="section-description">{{ _('Check out our latest blog posts') }}</p>
-  <div class="row">
-    {% set posts = frappe.get_all("Blog Post", filters={"published": 1}, fields=["title", "blogger", "blog_intro", "route", "meta_image"], order_by="published_on desc", limit=6) %}
-    {% for post in posts %}
-    <div class="col-md-4 mb-4">
-      <div class="card h-100">
-        {% if post.meta_image %}
-        <img src={{ post.meta_image }} alt="" class="image-with-blur card-img-top image-loaded" max-width="400" max-height="400">
-        {% endif %}
-        <div class="card-body">
-          <h5 class="card-title">{{ post.title }}</h5>
-          <p class="card-subtitle mb-2 text-muted">{{ _('By {0}').format(post.blogger) }}</p>
-          <p class="card-text">{{ post.blog_intro }}</p>
+  <div class="blog-list-content">
+    <div data-doctype="Blog Post" data-txt="[notxt]">
+      <div id="blog-list" class="blog-list result row">
+        {% for post in posts %}
+        <div class="blog-card col-sm-12 {{ 'col-md-8' if post.featured else 'col-md-4' }}">
+          <div class="card h-100">
+            <div class="card-img-top">
+              {% if post.meta_image %}
+                <img src="{{ post.meta_image }}" alt="{{post.title}} - Cover Image">
+              {% else %}
+                <div class="default-cover">
+                  <span>{{ post.title }}</span>
+                </div>
+              {% endif %}
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="text-muted small text-uppercase">
+                  {%- if post.featured -%}
+                    <span class="text-body">{{ _('Featured') }} &middot; </span>
+                  {%- endif -%}
+                </div>
+                {%- if post.featured -%}
+                  <h5 class="mt-1"><span class="text-dark">{{ post.title }}</span></h5>
+                {%- else -%}
+                  <h5 class="mt-1"><span class="text-dark">{{ post.title }}</span></h5>
+                {%- endif -%}
+                <p class="post-description text-muted">{{ post.blog_intro }}</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="text-muted">
+                  <div class="small">
+                    {{ frappe.format_date(post.published_on) }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="stretched-link" href="/{{ post.route }}"></a>
+          </div>
         </div>
-        <div class="card-body flex-grow-0">
-          <a href={{ post.route }} class="card-link">{{ _('Read More') }}</a>
-        </div>
+        {% endfor %}
       </div>
+      <button class="btn btn-light btn-more btn hidden">Load More</button>
     </div>
-    {% endfor %}
-  </div>
+  </div>  
 </section>
