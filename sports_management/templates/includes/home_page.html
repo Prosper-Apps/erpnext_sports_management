@@ -2,101 +2,34 @@
 
 {% set tournament_doc = frappe.get_doc('Tournament', tournament) %}
 {% set rankings = frappe.get_all('Ranking', filters={'tournament': tournament}, fields=['team', 'team.team_name', 'team.route', 'team.picture', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	%}
-{% set game_days = frappe.get_all('Game Day', filters={'tournament': tournament}, fields=['name', 'route', 'start'], order_by='start') %}
-{% set matches = frappe.get_all('Match', filters={'tournament': tournament}, fields=['name', 'route', 'home', 'home_name', 'guest', 'guest_name', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result', 'status'], order_by='date') %}
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="page-header">
-            <h4><a href="/{{ tournament_doc.route }}">{{ tournament_doc.tournament_name }}</a> ({{ tournament_doc.league_name }})</h4>
-        </div>
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                    <th>Rank</th>
-                    <th></th>
-                    <th>Team</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for ranking in rankings %}
-                <tr>
-                    <td>{{ ranking.rank }}</td>
-                    {% if ranking.picture %}
-                    <td><img src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
-                    </td>
-                    {% else %}
-                    <td></td>
-                    {% endif %}
-                    <td><a href="/{{ ranking.route }}">{{ ranking.team_name }}</a></td>
-                    <td>{{ ranking.points }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-
-        {% if game_days %}
-        <div class="page-header">
-            <h4>Game Days</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for gd in game_days %}
-                        <tr>
-                            <td><a href="/{{ gd.route }}">{{ gd.start }}</a></td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if matches %}
-        <div class="page-header">
-            <h4>Matches</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                
-                <table class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                            <th>Home</th>
-                            <th></th>
-                            <th></th>
-                            <th>Guest</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for match in matches %}
-                        <tr>
-                            <td><a href="/{{ match.route }}">{{ frappe.format(match.date, {'fieldtype': 'Date'}) }}</a></td>
-                            <td>{{ frappe.format(match.time, {'fieldtype': 'Time'}) }}</td>
-                            <td>{{ match.status }}</td>
-                            <td>{{ match.home_name }}</td>
-                            <td>{% if match.status == 'Completed' %}{{ match.full_time_home_result }}{% endif %}</td>
-                            <td>{% if match.status == 'Completed' %}{{ match.full_time_guest_result }}{% endif %}</td>
-                            <td>{{ match.guest_name }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-    </div>
+<div class="page-header">
+    <h4><a href="/{{ tournament_doc.route }}">{{ tournament_doc.tournament_name }}</a> ({{ tournament_doc.league_name }})</h4>
 </div>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Rank</th>
+            <th></th>
+            <th>Team</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ranking in rankings %}
+        <tr>
+            <td>{{ ranking.rank }}</td>
+            {% if ranking.picture %}
+            <td><img src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
+            </td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td><a href="/{{ ranking.route }}">{{ ranking.team_name }}</a></td>
+            <td>{{ ranking.points }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 {% endmacro %}
