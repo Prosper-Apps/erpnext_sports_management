@@ -23,6 +23,7 @@
   "ordering",
   "allow_team_roster",
   "published",
+  "disabled",
   "pictures_tab",
   "picture",
   "description_tab",
@@ -250,6 +251,12 @@
    "fieldname": "ordering",
    "fieldtype": "Int",
    "label": "Ordering"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "has_web_view": 1,
@@ -269,7 +276,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2024-02-29 09:54:17.428620",
+ "modified": "2024-02-29 10:12:42.721261",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",

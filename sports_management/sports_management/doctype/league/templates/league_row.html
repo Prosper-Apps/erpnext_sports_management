@@ -6,6 +6,9 @@
 	</div>
 	<div class="col">
 		<a class="font-size-lg" href="{{ doc.route }}">{{ doc.title or doc.league_name }}</a>
+		{% if doc.disabled %}
+		<span class="badge badge-danger">{{ _("Disabled") }}</span>
+		{% endif %}
 		<p class="text-muted">{{ doc.sports_type }} - {{ doc.age_group }}</p>
-	</div>
+	</div>	
 </div>
