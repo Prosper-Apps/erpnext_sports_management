@@ -8,7 +8,6 @@
 {% set game_days = frappe.get_all('Game Day', filters={'tournament': tournament.name}, fields=['name', 'route', 'start'], order_by='start') %}
 {% set matches = frappe.get_all('Match', filters={'tournament': tournament.name}, fields=['name', 'route', 'home', 'home_name', 'guest', 'guest_name', 'date', 'time', 'venue', 'full_time_home_result', 'full_time_guest_result', 'status'], order_by='date') %}
 
-{% block header %}
 <div class="py-10 row">
     <div class="col-sm-4">
         {% if tournament_doc.picture %}
@@ -33,14 +32,12 @@
         </div>
     </div>    
 </div>
+
 <div class="row">
     {% if tournament_doc.description %}
     <p>{{ tournament_doc.description }}</p>
     {% endif %}
 </div>
-{% endblock %}
-
-{% block page_content %}
 
 <div class="row">
     <div class="col-md-12">
@@ -149,7 +146,5 @@
         {% endif %}
     </div>
 </div>
-
-{% endblock %}
 
 {% endmacro %}
