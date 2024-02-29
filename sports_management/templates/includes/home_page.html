@@ -3,33 +3,35 @@
 {% set tournament_doc = frappe.get_doc('Tournament', tournament) %}
 {% set rankings = frappe.get_all('Ranking', filters={'tournament': tournament}, fields=['team', 'team.team_name', 'team.route', 'team.picture', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	%}
 
-<div class="page-header">
-    <h4><a href="/{{ tournament_doc.route }}">{{ tournament_doc.tournament_name }}</a> ({{ tournament_doc.league_name }})</h4>
+<div class="border rounded shadow m-4 p-4">
+    <div class="page-header">
+        <h4><a href="/{{ tournament_doc.route }}">{{ tournament_doc.tournament_name }}</a> ({{ tournament_doc.league_name }})</h4>
+    </div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Rank</th>
+                <th></th>
+                <th>Team</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ranking in rankings %}
+            <tr>
+                <td>{{ ranking.rank }}</td>
+                {% if ranking.picture %}
+                <td><img src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
+                </td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                <td><a href="/{{ ranking.route }}">{{ ranking.team_name }}</a></td>
+                <td>{{ ranking.points }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-<table class="table">
-    <thead class="thead-light">
-        <tr>
-            <th>Rank</th>
-            <th></th>
-            <th>Team</th>
-            <th>Points</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for ranking in rankings %}
-        <tr>
-            <td>{{ ranking.rank }}</td>
-            {% if ranking.picture %}
-            <td><img src="{{ ranking.picture }}" style="width: 25px; height: 25px;" />
-            </td>
-            {% else %}
-            <td></td>
-            {% endif %}
-            <td><a href="/{{ ranking.route }}">{{ ranking.team_name }}</a></td>
-            <td>{{ ranking.points }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
 
 {% endmacro %}
