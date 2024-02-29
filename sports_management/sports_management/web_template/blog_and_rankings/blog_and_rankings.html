@@ -1,10 +1,11 @@
-from "sports_management/templates/includes/home_page.html" import rankings
+{% from "sports_management/templates/includes/home_page.html" import render_rankings %}
+
 <div class="blog-card col-sm-12 col-md-8">
     {% include "sports_management/web_template/latest_blogs/latest_blogs.html" %}
 </div>
 <div class="blog-card col-sm-12 col-md-4">
     {% set tournaments = frappe.get_all('Tournament', filters={'published': 1}, fields=['name'], order_by='creation desc') %}
     {% for tournament in tournaments %}
-    {{ rankings(tournament.name) }}
+    {{ render_rankings(tournament.name) }}
     {% endfor %}
 </div>

@@ -1,4 +1,4 @@
-{% macro rankings(tournament) %}
+{% macro render_rankings(tournament) %}
 
 {% set tournament_doc = frappe.get_doc('Tournament', tournament.name) %}
 {% if tournament_doc.website_item %}
