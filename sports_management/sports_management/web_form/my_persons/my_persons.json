@@ -39,7 +39,7 @@
  "list_title": "My Persons",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2024-01-02 10:39:46.535977",
+ "modified": "2025-01-31 11:22:04.189203",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-persons",
@@ -75,7 +75,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -87,7 +87,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -188,7 +188,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
