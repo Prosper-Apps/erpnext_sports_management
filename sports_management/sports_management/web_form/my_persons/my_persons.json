@@ -39,7 +39,7 @@
  "list_title": "My Persons",
  "login_required": 1,
  "max_attachment_size": 1,
- "modified": "2025-01-31 11:22:04.189203",
+ "modified": "2025-02-01 07:57:37.156494",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-persons",
@@ -68,26 +68,14 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "national_id",
-   "fieldtype": "Data",
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
    "hidden": 0,
-   "label": "National Id / Passport",
+   "label": "Picture",
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "birthday",
-   "fieldtype": "Date",
-   "hidden": 0,
-   "label": "Birthday",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -118,10 +106,34 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "fieldname": "birthday",
+   "fieldtype": "Date",
+   "hidden": 0,
+   "label": "Birthday",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
    "fieldname": "height",
    "fieldtype": "Int",
    "hidden": 0,
    "label": "Height (cm)",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "National Id / Passport",
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
@@ -177,18 +189,6 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "picture",
-   "fieldtype": "Attach Image",
-   "hidden": 0,
-   "label": "Picture",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 1,
    "show_in_filter": 0
   },
   {

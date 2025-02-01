@@ -31,15 +31,15 @@
    "label": "Team"
   },
   {
-   "fieldname": "position_name",
-   "fieldtype": "Read Only",
-   "label": "Position"
+   "fieldname": "shirt_number",
+   "fieldtype": "Int",
+   "label": "Shirt Number"
   }
  ],
  "list_title": "My Rosters",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2024-01-02 17:23:23.503454",
+ "modified": "2025-02-01 07:56:30.506556",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "my-team-rosters",
@@ -94,6 +94,7 @@
   },
   {
    "allow_read_on_all_link_options": 1,
+   "default": "Player",
    "fieldname": "position",
    "fieldtype": "Link",
    "hidden": 0,
@@ -101,9 +102,9 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Position",
-   "read_only": 0,
+   "read_only": 1,
    "reqd": 1,
-   "show_in_filter": 1
+   "show_in_filter": 0
   },
   {
    "allow_read_on_all_link_options": 0,
