@@ -20,7 +20,7 @@ class Tournament(WebsiteGenerator):
 
 		# Get the rankings of the tournament
 		teams = frappe.get_all('Ranking', 
-			filters={'tournament': self.name}, fields=['team', 'team.team_name', 'team.route', 'team.picture', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	
+			filters={'tournament': self.name, 'disabled': 0}, fields=['team', 'team.team_name', 'team.route', 'team.picture', 'rank', 'played', 'wins', 'draws', 'losses', 'points', 'score_for', 'score_against', 'difference'], order_by='rank')	
 			
 		context.rankings = sorted(teams, key=lambda x: x.rank, reverse=False)
 

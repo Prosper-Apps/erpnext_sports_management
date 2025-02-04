@@ -5,7 +5,7 @@
             {% include "sports_management/web_template/latest_blogs/latest_blogs.html" %}
         </div>
         <div class="col-sm-12 col-md-4">
-            {% set tournaments = frappe.get_all('Tournament', filters={'published': 1, 'disabled': 0}, fields=['name'], order_by='creation desc') %}
+            {% set tournaments = frappe.get_all('Tournament', filters={'published': 1, 'disabled': 0}, fields=['name', 'sports_type'], order_by='ordering asc') %}
             {% for tournament in tournaments %}
             {{ render_rankings(tournament.name) }}
             {% endfor %}
