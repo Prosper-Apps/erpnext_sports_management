@@ -7,7 +7,9 @@ frappe.ui.form.on('Team Tournament', {
 		frm.set_query("tournament", function() {
 			return {
 				filters: {
-					sports_type: frm.doc.sports_type
+					sports_type: frm.doc.sports_type,
+					disabled: 0,
+					published: 1
 				}
 			};
 		});
