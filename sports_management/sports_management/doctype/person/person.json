@@ -12,6 +12,7 @@
  "field_order": [
   "details_tab",
   "person_name",
+  "points",
   "national_id",
   "phone",
   "email",
@@ -120,7 +121,6 @@
   {
    "fieldname": "national_id",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "National Id / Passport",
    "unique": 1
   },
@@ -144,6 +144,13 @@
    "label": "Name",
    "reqd": 1,
    "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "points",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Points"
   }
  ],
  "has_web_view": 1,
@@ -159,7 +166,7 @@
    "link_fieldname": "person"
   }
  ],
- "modified": "2025-01-31 11:21:35.259318",
+ "modified": "2025-02-19 08:29:08.205086",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Person",

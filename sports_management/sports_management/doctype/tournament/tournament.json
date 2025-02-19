@@ -167,7 +167,6 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Route",
    "no_copy": 1
   },
@@ -276,7 +275,7 @@
    "link_fieldname": "tournament"
   }
  ],
- "modified": "2024-02-29 10:12:42.721261",
+ "modified": "2025-02-19 07:44:37.851734",
  "modified_by": "Administrator",
  "module": "Sports Management",
  "name": "Tournament",
