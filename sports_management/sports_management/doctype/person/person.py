@@ -99,3 +99,16 @@ def get_list_context(context=None):
 	# If the route is teams then get all the teams
 	if frappe.local.request.path == "/persons":
 		del context.filters["owner"]
+
+@frappe.whitelist(allow_guest=False)
+def calculate_person_points(person):
+	# Get a list of the teams that the person is a member of
+	team_rosters = frappe.get_all("Team Roster", filters={"person": person}, fields=["team", "position", "role", "shirt_number"])
+	for team_roster in team_rosters:
+		# Get a list of the rankings that the team is a member of
+		rankings = frappe.get_all("Ranking", filters={"team": team_roster.team}, fields=["points"])
+		# Calculate the person points
+		person_points = sum([ranking.points for ranking in rankings])
+		# Save the person points
+		frappe.db.set_value("Person", person, "points", person_points)
+	return "Person points calculated successfully!"

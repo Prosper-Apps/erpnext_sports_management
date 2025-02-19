@@ -227,6 +227,17 @@ def calculate_rankings(tournament, send_message=False):
 			'score_against': rankings[i].score_against,
 			'difference': rankings[i].difference
 		})
+
+	# Calculate all persons points
+	# Get a list of the match rosters for the tournament
+	match_rosters = frappe.get_all("Match Roster", filters={"tournament": tournament}, fields=["person", "team", "starting_lineup"])
+	for match_roster in match_rosters:
+		# Get a list of the rankings that the team is a member of
+		rankings = frappe.get_all("Ranking", filters={"team": match_roster.team}, fields=["points"])
+		# Calculate the person points
+		person_points = sum([ranking.points for ranking in rankings])
+		# Save the person points
+		frappe.db.set_value("Person", match_roster.person, "points", person_points)
 		
 	# Send a frappe message to the user
 	if send_message:
